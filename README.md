@@ -29,6 +29,13 @@ For developing you will also need:
  - doxygen
  - moxygen
 
+## Building examples
+```shell
+# In one of the example folders (e.g. example/stm32f1)
+make
+```
+The resulting binaries can then be found in the `build` folder.
+
 ## Examples & How you can help
 You can find all the examples in the
 [example directory](https://github.com/petoknm/DHT22/blob/master/example).
