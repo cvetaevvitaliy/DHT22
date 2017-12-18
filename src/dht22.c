@@ -3,6 +3,10 @@
 #define DHT22_StartIT()	if(HAL_TIM_IC_Start_IT(&handle->timHandle, handle->timChannel) != HAL_OK) return DHT22_ERROR
 #define DHT22_StopIT()	if(HAL_TIM_IC_Stop_IT(&handle->timHandle, handle->timChannel) != HAL_OK) return DHT22_ERROR
 
+/**
+ * Sets up the pin as an output
+ * @param	handle - a pointer to the DHT22 handle
+ */
 void DHT22_SetPinOUT(DHT22_HandleTypeDef* handle) {
 
 	#ifdef STM32F1
@@ -27,6 +31,10 @@ void DHT22_SetPinOUT(DHT22_HandleTypeDef* handle) {
 
 }
 
+/**
+ * Sets up the pin as an input
+ * @param	handle - a pointer to the DHT22 handle
+ */
 void DHT22_SetPinIN(DHT22_HandleTypeDef* handle) {
 
 	#ifdef STM32F1
@@ -54,6 +62,27 @@ void DHT22_SetPinIN(DHT22_HandleTypeDef* handle) {
 
 }
 
+/**
+ * Initiates a transfer of sensor data
+ * @param	handle - a pointer to the DHT22 handle
+ */
+DHT22_RESULT DHT22_InitiateTransfer(DHT22_HandleTypeDef* handle) {
+
+	DHT22_SetPinOUT(handle);
+	HAL_GPIO_WritePin(handle->gpioPort, handle->gpioPin, GPIO_PIN_RESET);
+	HAL_Delay(2);
+	DHT22_SetPinIN(handle);
+
+	handle->bitPos = -1;
+	for (int i = 0; i < 5; i++) {
+		handle->bitsRX[i] = 0;
+	}
+	handle->state = DHT22_RECEIVING;
+	DHT22_StartIT();
+
+	return DHT22_OK;
+}
+
 DHT22_RESULT DHT22_Init(DHT22_HandleTypeDef* handle) {
 	handle->timHandle.Init.Period = 0xFFFF;
 	handle->timHandle.Init.Prescaler = 0;
@@ -74,23 +103,6 @@ DHT22_RESULT DHT22_Init(DHT22_HandleTypeDef* handle) {
 }
 
 DHT22_RESULT DHT22_DeInit(DHT22_HandleTypeDef* handle) {
-	return DHT22_OK;
-}
-
-DHT22_RESULT DHT22_InitiateTransfer(DHT22_HandleTypeDef* handle) {
-
-	DHT22_SetPinOUT(handle);
-	HAL_GPIO_WritePin(handle->gpioPort, handle->gpioPin, GPIO_PIN_RESET);
-	HAL_Delay(2);
-	DHT22_SetPinIN(handle);
-
-	handle->bitPos = -1;
-	for (int i = 0; i < 5; i++) {
-		handle->bitsRX[i] = 0;
-	}
-	handle->state = DHT22_RECEIVING;
-	DHT22_StartIT();
-
 	return DHT22_OK;
 }
 

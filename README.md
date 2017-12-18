@@ -45,6 +45,11 @@ leave a comment in the issue [#4](https://github.com/petoknm/DHT22/issues/4)
 about microcontroller support, so that I can add it to the list of supported
 micros.
 
+## Updating documentation
+```shell
+make clean && make docs
+```
+
 ## Implementation details
 The library uses timer input capture functionality of timers to measure the
 timing of the waveform coming from the sensor. It uses a custom protocol and

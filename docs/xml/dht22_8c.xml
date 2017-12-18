@@ -65,7 +65,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dht22.c" line="6" column="1" bodyfile="src/dht22.c" bodystart="6" bodyend="28"/>
+        <location file="src/dht22.c" line="10" column="1" bodyfile="src/dht22.c" bodystart="10" bodyend="32"/>
         <references refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" compoundref="dht22_8h" startline="45">DHT22_HandleTypeDef::timerIRQn</references>
         <references refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" compoundref="dht22_8h" startline="42">DHT22_HandleTypeDef::gpioPin</references>
         <references refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" compoundref="dht22_8h" startline="43">DHT22_HandleTypeDef::gpioPort</references>
@@ -93,11 +93,46 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dht22.c" line="30" column="1" bodyfile="src/dht22.c" bodystart="30" bodyend="55"/>
+        <location file="src/dht22.c" line="38" column="1" bodyfile="src/dht22.c" bodystart="38" bodyend="63"/>
         <references refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" compoundref="dht22_8h" startline="42">DHT22_HandleTypeDef::gpioPin</references>
         <references refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" compoundref="dht22_8h" startline="43">DHT22_HandleTypeDef::gpioPort</references>
         <references refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" compoundref="dht22_8h" startline="45">DHT22_HandleTypeDef::timerIRQn</references>
         <references refid="struct_d_h_t22___handle_type_def_1a025afdfcfc3449de5e0c629588497bee" compoundref="dht22_8h" startline="46">DHT22_HandleTypeDef::gpioAlternateFunction</references>
+      </memberdef>
+      <memberdef kind="function" id="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
+        <definition>DHT22_RESULT DHT22_InitiateTransfer</definition>
+        <argsstring>(DHT22_HandleTypeDef *handle)</argsstring>
+        <name>DHT22_InitiateTransfer</name>
+        <param>
+          <type><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initiates a transfer of sensor data <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a pointer to the DHT22 handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dht22.c" line="69" column="1" bodyfile="src/dht22.c" bodystart="69" bodyend="84"/>
+        <references refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" compoundref="dht22_8c" startline="10" endline="32">DHT22_SetPinOUT</references>
+        <references refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" compoundref="dht22_8h" startline="43">DHT22_HandleTypeDef::gpioPort</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" compoundref="dht22_8h" startline="42">DHT22_HandleTypeDef::gpioPin</references>
+        <references refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" compoundref="dht22_8c" startline="38" endline="63">DHT22_SetPinIN</references>
+        <references refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" compoundref="dht22_8h" startline="44">DHT22_HandleTypeDef::bitPos</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" compoundref="dht22_8h" startline="34">DHT22_HandleTypeDef::bitsRX</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="38">DHT22_HandleTypeDef::state</references>
+        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" compoundref="dht22_8h" startline="26">DHT22_RECEIVING</references>
+        <references refid="dht22_8c_1a045a01d0be5da934965d41a69ad3cd18" compoundref="dht22_8c" startline="3">DHT22_StartIT</references>
+        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="16">DHT22_OK</references>
       </memberdef>
       <memberdef kind="function" id="dht22_8c_1a29bc88c0b83860a982455f6e81174334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
@@ -123,7 +158,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dht22.c" line="57" column="1" bodyfile="src/dht22.c" bodystart="57" bodyend="74"/>
+        <location file="src/dht22.c" line="86" column="1" bodyfile="src/dht22.c" bodystart="86" bodyend="103"/>
         <references refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" compoundref="dht22_8h" startline="39">DHT22_HandleTypeDef::timHandle</references>
         <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" compoundref="dht22_8h" startline="17">DHT22_ERROR</references>
         <references refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" compoundref="dht22_8h" startline="40">DHT22_HandleTypeDef::timICHandle</references>
@@ -154,42 +189,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dht22.c" line="76" column="1" bodyfile="src/dht22.c" bodystart="76" bodyend="78"/>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="16">DHT22_OK</references>
-      </memberdef>
-      <memberdef kind="function" id="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
-        <definition>DHT22_RESULT DHT22_InitiateTransfer</definition>
-        <argsstring>(DHT22_HandleTypeDef *handle)</argsstring>
-        <name>DHT22_InitiateTransfer</name>
-        <param>
-          <type><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref> *</type>
-          <declname>handle</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Initiates a transfer of sensor data <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>handle</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>- a pointer to the DHT22 handle </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/dht22.c" line="80" column="1" bodyfile="src/dht22.c" bodystart="80" bodyend="95"/>
-        <references refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" compoundref="dht22_8c" startline="6" endline="28">DHT22_SetPinOUT</references>
-        <references refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" compoundref="dht22_8h" startline="43">DHT22_HandleTypeDef::gpioPort</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" compoundref="dht22_8h" startline="42">DHT22_HandleTypeDef::gpioPin</references>
-        <references refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" compoundref="dht22_8c" startline="30" endline="55">DHT22_SetPinIN</references>
-        <references refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" compoundref="dht22_8h" startline="44">DHT22_HandleTypeDef::bitPos</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" compoundref="dht22_8h" startline="34">DHT22_HandleTypeDef::bitsRX</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="38">DHT22_HandleTypeDef::state</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" compoundref="dht22_8h" startline="26">DHT22_RECEIVING</references>
-        <references refid="dht22_8c_1a045a01d0be5da934965d41a69ad3cd18" compoundref="dht22_8c" startline="3">DHT22_StartIT</references>
+        <location file="src/dht22.c" line="105" column="1" bodyfile="src/dht22.c" bodystart="105" bodyend="107"/>
         <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="16">DHT22_OK</references>
       </memberdef>
       <memberdef kind="function" id="dht22_8c_1a561512a49c1b6a49d3124eca8d26928b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -215,7 +215,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dht22.c" line="97" column="1" bodyfile="src/dht22.c" bodystart="97" bodyend="170"/>
+        <location file="src/dht22.c" line="109" column="1" bodyfile="src/dht22.c" bodystart="109" bodyend="182"/>
         <references refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" compoundref="dht22_8h" startline="39">DHT22_HandleTypeDef::timHandle</references>
         <references refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" compoundref="dht22_8h" startline="41">DHT22_HandleTypeDef::timChannel</references>
         <references refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" compoundref="dht22_8h" startline="47">DHT22_HandleTypeDef::lastVal</references>
@@ -252,8 +252,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dht22.c" line="172" column="1" bodyfile="src/dht22.c" bodystart="172" bodyend="185"/>
-        <references refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" compoundref="dht22_8c" startline="80" endline="95">DHT22_InitiateTransfer</references>
+        <location file="src/dht22.c" line="184" column="1" bodyfile="src/dht22.c" bodystart="184" bodyend="197"/>
+        <references refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" compoundref="dht22_8c" startline="69" endline="84">DHT22_InitiateTransfer</references>
         <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="38">DHT22_HandleTypeDef::state</references>
         <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" compoundref="dht22_8h" startline="26">DHT22_RECEIVING</references>
         <references refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" compoundref="dht22_8h" startline="37">DHT22_HandleTypeDef::crcErrorFlag</references>
@@ -274,186 +274,186 @@
 <codeline lineno="3" refid="dht22_8c_1a045a01d0be5da934965d41a69ad3cd18" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DHT22_StartIT()<sp/>if(HAL_TIM_IC_Start_IT(&amp;handle-&gt;timHandle,<sp/>handle-&gt;timChannel)<sp/>!=<sp/>HAL_OK)<sp/>return<sp/>DHT22_ERROR</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4" refid="dht22_8c_1ac4102d598485c6a623db004f78622aca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DHT22_StopIT()<sp/><sp/>if(HAL_TIM_IC_Stop_IT(&amp;handle-&gt;timHandle,<sp/>handle-&gt;timChannel)<sp/>!=<sp/>HAL_OK)<sp/>return<sp/>DHT22_ERROR</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="dht22_8h_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" kindref="member">DHT22_SetPinOUT</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>STM32F1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_DisableIRQ(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_OUTPUT_OD;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_FREQ_HIGH;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_DisableIRQ(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_OUTPUT_OD;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_HIGH;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="dht22_8h_1ad4175670c5d079ac695155e1f2d6122e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" kindref="member">DHT22_SetPinIN</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
+<codeline lineno="10" refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" kindref="member">DHT22_SetPinOUT</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>STM32F1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_DisableIRQ(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_OUTPUT_OD;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_FREQ_HIGH;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_DisableIRQ(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_OUTPUT_OD;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_HIGH;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>STM32F1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_AF_INPUT;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_FREQ_HIGH;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_EnableIRQ(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_SetPriority(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>,<sp/>0,<sp/>0);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_AF_OD;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_HIGH;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Alternate<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a025afdfcfc3449de5e0c629588497bee" kindref="member">gpioAlternateFunction</ref>;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_EnableIRQ(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_SetPriority(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>,<sp/>0,<sp/>0);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="dht22_8h_1a29bc88c0b83860a982455f6e81174334" refkind="member"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8c_1a29bc88c0b83860a982455f6e81174334" kindref="member">DHT22_Init</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>.Init.Period<sp/>=<sp/>0xFFFF;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>.Init.Prescaler<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>.Init.ClockDivision<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>.Init.CounterMode<sp/>=<sp/>TIM_COUNTERMODE_UP;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_TIM_IC_Init(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>)<sp/>!=<sp/>HAL_OK)<sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>.ICPolarity<sp/>=<sp/>TIM_ICPOLARITY_FALLING;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>.ICSelection<sp/>=<sp/>TIM_ICSELECTION_DIRECTTI;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>.ICPrescaler<sp/>=<sp/>TIM_ICPSC_DIV1;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>.ICFilter<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_TIM_IC_ConfigChannel(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>,<sp/>&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>,</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" kindref="member">timChannel</ref>)<sp/>!=<sp/>HAL_OK)<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" kindref="member">DHT22_SetPinIN</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>STM32F1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_AF_INPUT;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_FREQ_HIGH;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_EnableIRQ(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_SetPriority(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitTypeDef<sp/>GPIO_InitStruct;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pin<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Mode<sp/>=<sp/>GPIO_MODE_AF_OD;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Pull<sp/>=<sp/>GPIO_PULLUP;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Speed<sp/>=<sp/>GPIO_SPEED_HIGH;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.Alternate<sp/>=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a025afdfcfc3449de5e0c629588497bee" kindref="member">gpioAlternateFunction</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_EnableIRQ(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_NVIC_SetPriority(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" kindref="member">timerIRQn</ref>,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" refkind="member"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" kindref="member">DHT22_InitiateTransfer</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" kindref="member">DHT22_SetPinOUT</ref>(handle);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_Delay(2);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" kindref="member">DHT22_SetPinIN</ref>(handle);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="dht22_8h_1ada5d62c92505f78d77c3fa785ba8982a" refkind="member"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8c_1ada5d62c92505f78d77c3fa785ba8982a" kindref="member">DHT22_DeInit</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="dht22_8h_1aa50c742eb8df892ed970ac68c0c09e6f" refkind="member"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" kindref="member">DHT22_InitiateTransfer</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" kindref="member">DHT22_SetPinOUT</ref>(handle);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" kindref="member">gpioPort</ref>,<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" kindref="member">gpioPin</ref>,<sp/>GPIO_PIN_RESET);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_Delay(2);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" kindref="member">DHT22_SetPinIN</ref>(handle);</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>=<sp/>-1;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[i]<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref><sp/>=<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" kindref="member">DHT22_RECEIVING</ref>;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8c_1a045a01d0be5da934965d41a69ad3cd18" kindref="member">DHT22_StartIT</ref>();</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97" refid="dht22_8h_1a561512a49c1b6a49d3124eca8d26928b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8c_1a561512a49c1b6a49d3124eca8d26928b" kindref="member">DHT22_InterruptHandler</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>val<sp/>=<sp/>HAL_TIM_ReadCapturedValue(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>,</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" kindref="member">timChannel</ref>);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>freq<sp/>=<sp/>HAL_RCC_GetPCLK2Freq();</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>val2;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val<sp/>&gt;<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" kindref="member">lastVal</ref>)</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val2<sp/>=<sp/>val<sp/>-<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" kindref="member">lastVal</ref>;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val2<sp/>=<sp/>65535<sp/>+<sp/>val<sp/>-<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" kindref="member">lastVal</ref>;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" kindref="member">lastVal</ref><sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time<sp/>=<sp/>1000000.0<sp/>*<sp/>val2<sp/>/<sp/>freq;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref><sp/>=<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" kindref="member">DHT22_RECEIVING</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8c_1a045a01d0be5da934965d41a69ad3cd18" kindref="member">DHT22_StartIT</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="dht22_8h_1a29bc88c0b83860a982455f6e81174334" refkind="member"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8c_1a29bc88c0b83860a982455f6e81174334" kindref="member">DHT22_Init</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>.Init.Period<sp/>=<sp/>0xFFFF;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>.Init.Prescaler<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>.Init.ClockDivision<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>.Init.CounterMode<sp/>=<sp/>TIM_COUNTERMODE_UP;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_TIM_IC_Init(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>)<sp/>!=<sp/>HAL_OK)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>.ICPolarity<sp/>=<sp/>TIM_ICPOLARITY_FALLING;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>.ICSelection<sp/>=<sp/>TIM_ICSELECTION_DIRECTTI;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>.ICPrescaler<sp/>=<sp/>TIM_ICPSC_DIV1;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>.ICFilter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_TIM_IC_ConfigChannel(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>,<sp/>&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" kindref="member">timChannel</ref>)<sp/>!=<sp/>HAL_OK)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="dht22_8h_1ada5d62c92505f78d77c3fa785ba8982a" refkind="member"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8c_1ada5d62c92505f78d77c3fa785ba8982a" kindref="member">DHT22_DeInit</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="dht22_8h_1a561512a49c1b6a49d3124eca8d26928b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8c_1a561512a49c1b6a49d3124eca8d26928b" kindref="member">DHT22_InterruptHandler</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>val<sp/>=<sp/>HAL_TIM_ReadCapturedValue(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" kindref="member">timChannel</ref>);</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>&gt;<sp/>155.0<sp/>&amp;&amp;<sp/>time<sp/>&lt;<sp/>165.0)<sp/>{</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>&lt;<sp/>40)<sp/>{</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>&gt;<sp/>78.0<sp/>&amp;&amp;<sp/>time<sp/>&lt;<sp/>97.0)<sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>/<sp/>8]<sp/>&amp;=<sp/>~(1</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(7<sp/>-<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>%<sp/>8));</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref>++;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>&gt;<sp/>120.0<sp/>&amp;&amp;<sp/>time<sp/>&lt;<sp/>145.0)<sp/>{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>/<sp/>8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(7<sp/>-<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>%<sp/>8);</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref>++;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>=<sp/>-1;</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_TIM_IC_Stop_IT(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>,<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" kindref="member">timChannel</ref>);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref><sp/>=<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kindref="member">DHT22_READY</ref>;</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref>==40){</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>=<sp/>-1;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_TIM_IC_Stop_IT(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>,<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" kindref="member">timChannel</ref>);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>sum<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>4;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[i];</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum<sp/>==<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[4])<sp/>{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" kindref="member">crcErrorFlag</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/>temp10<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[2]<sp/>&amp;<sp/>0x80)<sp/>==<sp/>0x80)<sp/>{</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>|=<sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[2]<sp/>&amp;<sp/>0x7F)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[3];</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>*=<sp/>-1;</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[2]<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[3];</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" kindref="member">temp</ref><sp/>=<sp/>0.1<sp/>*<sp/>temp10;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/>hum10<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[0]<sp/>&amp;<sp/>0x80)<sp/>==<sp/>0x80)<sp/>{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>|=<sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[0]<sp/>&amp;<sp/>0x7F)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[1];</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>*=<sp/>-1;</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[0]<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[1];</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" kindref="member">hum</ref><sp/>=<sp/>0.1<sp/>*<sp/>hum10;</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" kindref="member">crcErrorFlag</ref><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref><sp/>=<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" kindref="member">DHT22_RECEIVED</ref>;</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172" refid="dht22_8h_1ad3d02d9f971cc36c866b8759ce3c9bfa" refkind="member"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8c_1ad3d02d9f971cc36c866b8759ce3c9bfa" kindref="member">DHT22_ReadData</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" kindref="member">DHT22_InitiateTransfer</ref>(handle);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>startTick=HAL_GetTick();</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref><sp/>==<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" kindref="member">DHT22_RECEIVING</ref><sp/>&amp;&amp;<sp/>HAL_GetTick()-startTick&lt;1000);</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" kindref="member">crcErrorFlag</ref>==1){</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a54070a4d524153da2bcfb47392c981e5" kindref="member">DHT22_CRC_ERROR</ref>;</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>!=<ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" kindref="member">DHT22_RECEIVED</ref>){</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>;</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>=<ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kindref="member">DHT22_READY</ref>;</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>;</highlight></codeline>
-<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>freq<sp/>=<sp/>HAL_RCC_GetPCLK2Freq();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>val2;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val<sp/>&gt;<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" kindref="member">lastVal</ref>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val2<sp/>=<sp/>val<sp/>-<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" kindref="member">lastVal</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val2<sp/>=<sp/>65535<sp/>+<sp/>val<sp/>-<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" kindref="member">lastVal</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" kindref="member">lastVal</ref><sp/>=<sp/>val;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time<sp/>=<sp/>1000000.0<sp/>*<sp/>val2<sp/>/<sp/>freq;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>&gt;<sp/>155.0<sp/>&amp;&amp;<sp/>time<sp/>&lt;<sp/>165.0)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>&lt;<sp/>40)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>&gt;<sp/>78.0<sp/>&amp;&amp;<sp/>time<sp/>&lt;<sp/>97.0)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>/<sp/>8]<sp/>&amp;=<sp/>~(1</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(7<sp/>-<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>%<sp/>8));</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref>++;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>&gt;<sp/>120.0<sp/>&amp;&amp;<sp/>time<sp/>&lt;<sp/>145.0)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>/<sp/>8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(7<sp/>-<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>%<sp/>8);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref>++;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_TIM_IC_Stop_IT(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>,<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" kindref="member">timChannel</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref><sp/>=<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kindref="member">DHT22_READY</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref>==40){</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" kindref="member">bitPos</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_TIM_IC_Stop_IT(&amp;handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>,<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" kindref="member">timChannel</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>sum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>4;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[i];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum<sp/>==<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[4])<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" kindref="member">crcErrorFlag</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/>temp10<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[2]<sp/>&amp;<sp/>0x80)<sp/>==<sp/>0x80)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>|=<sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[2]<sp/>&amp;<sp/>0x7F)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[3];</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>*=<sp/>-1;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[2]<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[3];</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" kindref="member">temp</ref><sp/>=<sp/>0.1<sp/>*<sp/>temp10;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/>hum10<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[0]<sp/>&amp;<sp/>0x80)<sp/>==<sp/>0x80)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>|=<sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[0]<sp/>&amp;<sp/>0x7F)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[1];</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>*=<sp/>-1;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[0]<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum10<sp/>|=<sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" kindref="member">bitsRX</ref>[1];</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" kindref="member">hum</ref><sp/>=<sp/>0.1<sp/>*<sp/>hum10;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" kindref="member">crcErrorFlag</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref><sp/>=<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" kindref="member">DHT22_RECEIVED</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="dht22_8h_1ad3d02d9f971cc36c866b8759ce3c9bfa" refkind="member"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8c_1ad3d02d9f971cc36c866b8759ce3c9bfa" kindref="member">DHT22_ReadData</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" kindref="member">DHT22_InitiateTransfer</ref>(handle);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>startTick=HAL_GetTick();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref><sp/>==<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" kindref="member">DHT22_RECEIVING</ref><sp/>&amp;&amp;<sp/>HAL_GetTick()-startTick&lt;1000);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" kindref="member">crcErrorFlag</ref>==1){</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a54070a4d524153da2bcfb47392c981e5" kindref="member">DHT22_CRC_ERROR</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>!=<ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" kindref="member">DHT22_RECEIVED</ref>){</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle-&gt;<ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>=<ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kindref="member">DHT22_READY</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/dht22.c"/>
   </compounddef>

@@ -105,7 +105,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="56" column="1" bodyfile="src/dht22.c" bodystart="57" bodyend="74"/>
+        <location file="inc/dht22.h" line="56" column="1" bodyfile="src/dht22.c" bodystart="86" bodyend="103"/>
         <references refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" compoundref="dht22_8h" startline="39">DHT22_HandleTypeDef::timHandle</references>
         <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" compoundref="dht22_8h" startline="17">DHT22_ERROR</references>
         <references refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" compoundref="dht22_8h" startline="40">DHT22_HandleTypeDef::timICHandle</references>
@@ -136,7 +136,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="63" column="1" bodyfile="src/dht22.c" bodystart="76" bodyend="78"/>
+        <location file="inc/dht22.h" line="63" column="1" bodyfile="src/dht22.c" bodystart="105" bodyend="107"/>
         <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="16">DHT22_OK</references>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1ad3d02d9f971cc36c866b8759ce3c9bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -163,8 +163,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="70" column="1" bodyfile="src/dht22.c" bodystart="172" bodyend="185"/>
-        <references refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" compoundref="dht22_8c" startline="80" endline="95">DHT22_InitiateTransfer</references>
+        <location file="inc/dht22.h" line="70" column="1" bodyfile="src/dht22.c" bodystart="184" bodyend="197"/>
+        <references refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" compoundref="dht22_8c" startline="69" endline="84">DHT22_InitiateTransfer</references>
         <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="38">DHT22_HandleTypeDef::state</references>
         <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" compoundref="dht22_8h" startline="26">DHT22_RECEIVING</references>
         <references refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" compoundref="dht22_8h" startline="37">DHT22_HandleTypeDef::crcErrorFlag</references>
@@ -197,7 +197,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="76" column="1" bodyfile="src/dht22.c" bodystart="97" bodyend="170"/>
+        <location file="inc/dht22.h" line="76" column="1" bodyfile="src/dht22.c" bodystart="109" bodyend="182"/>
         <references refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" compoundref="dht22_8h" startline="39">DHT22_HandleTypeDef::timHandle</references>
         <references refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" compoundref="dht22_8h" startline="41">DHT22_HandleTypeDef::timChannel</references>
         <references refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" compoundref="dht22_8h" startline="47">DHT22_HandleTypeDef::lastVal</references>
@@ -209,98 +209,6 @@
         <references refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" compoundref="dht22_8h" startline="35">DHT22_HandleTypeDef::temp</references>
         <references refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" compoundref="dht22_8h" startline="36">DHT22_HandleTypeDef::hum</references>
         <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" compoundref="dht22_8h" startline="25">DHT22_RECEIVED</references>
-      </memberdef>
-      <memberdef kind="function" id="dht22_8h_1aa50c742eb8df892ed970ac68c0c09e6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
-        <definition>DHT22_RESULT DHT22_InitiateTransfer</definition>
-        <argsstring>(DHT22_HandleTypeDef *handle)</argsstring>
-        <name>DHT22_InitiateTransfer</name>
-        <param>
-          <type><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref> *</type>
-          <declname>handle</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Initiates a transfer of sensor data <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>handle</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>- a pointer to the DHT22 handle </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="inc/dht22.h" line="82" column="1" bodyfile="src/dht22.c" bodystart="80" bodyend="95"/>
-        <references refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" compoundref="dht22_8c" startline="6" endline="28">DHT22_SetPinOUT</references>
-        <references refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" compoundref="dht22_8h" startline="43">DHT22_HandleTypeDef::gpioPort</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" compoundref="dht22_8h" startline="42">DHT22_HandleTypeDef::gpioPin</references>
-        <references refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" compoundref="dht22_8c" startline="30" endline="55">DHT22_SetPinIN</references>
-        <references refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" compoundref="dht22_8h" startline="44">DHT22_HandleTypeDef::bitPos</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" compoundref="dht22_8h" startline="34">DHT22_HandleTypeDef::bitsRX</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="38">DHT22_HandleTypeDef::state</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" compoundref="dht22_8h" startline="26">DHT22_RECEIVING</references>
-        <references refid="dht22_8c_1a045a01d0be5da934965d41a69ad3cd18" compoundref="dht22_8c" startline="3">DHT22_StartIT</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="16">DHT22_OK</references>
-      </memberdef>
-      <memberdef kind="function" id="dht22_8h_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DHT22_SetPinOUT</definition>
-        <argsstring>(DHT22_HandleTypeDef *handle)</argsstring>
-        <name>DHT22_SetPinOUT</name>
-        <param>
-          <type><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref> *</type>
-          <declname>handle</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Sets up the pin as an output <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>handle</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>- a pointer to the DHT22 handle </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="inc/dht22.h" line="88" column="1" bodyfile="src/dht22.c" bodystart="6" bodyend="28"/>
-        <references refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" compoundref="dht22_8h" startline="45">DHT22_HandleTypeDef::timerIRQn</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" compoundref="dht22_8h" startline="42">DHT22_HandleTypeDef::gpioPin</references>
-        <references refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" compoundref="dht22_8h" startline="43">DHT22_HandleTypeDef::gpioPort</references>
-      </memberdef>
-      <memberdef kind="function" id="dht22_8h_1ad4175670c5d079ac695155e1f2d6122e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DHT22_SetPinIN</definition>
-        <argsstring>(DHT22_HandleTypeDef *handle)</argsstring>
-        <name>DHT22_SetPinIN</name>
-        <param>
-          <type><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref> *</type>
-          <declname>handle</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Sets up the pin as an input <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>handle</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>- a pointer to the DHT22 handle </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="inc/dht22.h" line="94" column="1" bodyfile="src/dht22.c" bodystart="30" bodyend="55"/>
-        <references refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" compoundref="dht22_8h" startline="42">DHT22_HandleTypeDef::gpioPin</references>
-        <references refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" compoundref="dht22_8h" startline="43">DHT22_HandleTypeDef::gpioPort</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" compoundref="dht22_8h" startline="45">DHT22_HandleTypeDef::timerIRQn</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a025afdfcfc3449de5e0c629588497bee" compoundref="dht22_8h" startline="46">DHT22_HandleTypeDef::gpioAlternateFunction</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -357,13 +265,7 @@
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a561512a49c1b6a49d3124eca8d26928b" kindref="member">DHT22_InterruptHandler</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1aa50c742eb8df892ed970ac68c0c09e6f" kindref="member">DHT22_InitiateTransfer</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" kindref="member">DHT22_SetPinOUT</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1ad4175670c5d079ac695155e1f2d6122e" kindref="member">DHT22_SetPinIN</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="inc/dht22.h"/>
   </compounddef>

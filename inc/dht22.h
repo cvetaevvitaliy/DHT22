@@ -75,22 +75,4 @@ DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef* handle);
  */
 void DHT22_InterruptHandler(DHT22_HandleTypeDef* handle);
 
-/**
- * Initiates a transfer of sensor data
- * @param	handle - a pointer to the DHT22 handle
- */
-DHT22_RESULT DHT22_InitiateTransfer(DHT22_HandleTypeDef* handle);
-
-/**
- * Sets up the pin as an output
- * @param	handle - a pointer to the DHT22 handle
- */
-void DHT22_SetPinOUT(DHT22_HandleTypeDef* handle);
-
-/**
- * Sets up the pin as an input
- * @param	handle - a pointer to the DHT22 handle
- */
-void DHT22_SetPinIN(DHT22_HandleTypeDef* handle);
-
 #endif /* DHT22_H */

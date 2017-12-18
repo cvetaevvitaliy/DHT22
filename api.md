@@ -10,14 +10,11 @@
 `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_DeInit`](#dht22_8h_1ada5d62c92505f78d77c3fa785ba8982a)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Deinitializes the DHT22 communication 
 `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_ReadData`](#dht22_8h_1ad3d02d9f971cc36c866b8759ce3c9bfa)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Reads the current temperature and humidity from the sensor 
 `public void `[`DHT22_InterruptHandler`](#dht22_8h_1a561512a49c1b6a49d3124eca8d26928b)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Handles the pin interrupt 
-`public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_InitiateTransfer`](#dht22_8h_1aa50c742eb8df892ed970ac68c0c09e6f)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Initiates a transfer of sensor data 
-`public void `[`DHT22_SetPinOUT`](#dht22_8h_1a5fee0dc6b5cd41cfa086ab69b35ddb5e)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Sets up the pin as an output 
-`public void `[`DHT22_SetPinIN`](#dht22_8h_1ad4175670c5d079ac695155e1f2d6122e)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Sets up the pin as an input 
 `public void `[`DHT22_SetPinOUT`](#dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Sets up the pin as an output 
 `public void `[`DHT22_SetPinIN`](#dht22_8c_1ad4175670c5d079ac695155e1f2d6122e)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Sets up the pin as an input 
+`public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_InitiateTransfer`](#dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Initiates a transfer of sensor data 
 `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_Init`](#dht22_8c_1a29bc88c0b83860a982455f6e81174334)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Initializes the DHT22 communication 
 `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_DeInit`](#dht22_8c_1ada5d62c92505f78d77c3fa785ba8982a)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Deinitializes the DHT22 communication 
-`public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_InitiateTransfer`](#dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Initiates a transfer of sensor data 
 `public void `[`DHT22_InterruptHandler`](#dht22_8c_1a561512a49c1b6a49d3124eca8d26928b)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Handles the pin interrupt 
 `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_ReadData`](#dht22_8c_1ad3d02d9f971cc36c866b8759ce3c9bfa)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)`            | Reads the current temperature and humidity from the sensor 
 `struct `[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def) | This structure hold all the variables necessary for communication with the sensor
@@ -81,24 +78,6 @@ Handles the pin interrupt
 #### Parameters
 * `handle` - a pointer to the DHT22 handle
 
-#### `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_InitiateTransfer`](#dht22_8h_1aa50c742eb8df892ed970ac68c0c09e6f)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)` 
-
-Initiates a transfer of sensor data 
-#### Parameters
-* `handle` - a pointer to the DHT22 handle
-
-#### `public void `[`DHT22_SetPinOUT`](#dht22_8h_1a5fee0dc6b5cd41cfa086ab69b35ddb5e)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)` 
-
-Sets up the pin as an output 
-#### Parameters
-* `handle` - a pointer to the DHT22 handle
-
-#### `public void `[`DHT22_SetPinIN`](#dht22_8h_1ad4175670c5d079ac695155e1f2d6122e)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)` 
-
-Sets up the pin as an input 
-#### Parameters
-* `handle` - a pointer to the DHT22 handle
-
 #### `public void `[`DHT22_SetPinOUT`](#dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)` 
 
 Sets up the pin as an output 
@@ -108,6 +87,12 @@ Sets up the pin as an output
 #### `public void `[`DHT22_SetPinIN`](#dht22_8c_1ad4175670c5d079ac695155e1f2d6122e)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)` 
 
 Sets up the pin as an input 
+#### Parameters
+* `handle` - a pointer to the DHT22 handle
+
+#### `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_InitiateTransfer`](#dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)` 
+
+Initiates a transfer of sensor data 
 #### Parameters
 * `handle` - a pointer to the DHT22 handle
 
@@ -128,12 +113,6 @@ Deinitializes the DHT22 communication
 
 #### Returns
 whether the function was successful or not
-
-#### `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`DHT22_InitiateTransfer`](#dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)` 
-
-Initiates a transfer of sensor data 
-#### Parameters
-* `handle` - a pointer to the DHT22 handle
 
 #### `public void `[`DHT22_InterruptHandler`](#dht22_8c_1a561512a49c1b6a49d3124eca8d26928b)`(`[`DHT22_HandleTypeDef`](#struct_d_h_t22___handle_type_def)` * handle)` 
 
