@@ -17,7 +17,7 @@ timer input capture channel.
 You need to include `dht22.h` file to get access to the functionality provided
 by this library. You also have to compile the `dht22.c` file, together with your
 other source files. You can take a look at the
-[examples](#Examples-&-How-you-can-help) to see how
+[examples](#examples--how-you-can-help) to see how
 that can be done.
 
 ## Requirements

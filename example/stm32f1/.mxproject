@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=/home/peter/CLionProjects/dht22/Inc
+HeaderPath=/home/peter/CLionProjects/DHT22/example/stm32f1/Inc
 HeaderFiles=stm32f1xx_it.h;stm32f1xx_hal_conf.h;main.h;
-SourcePath=/home/peter/CLionProjects/dht22/Src
+SourcePath=/home/peter/CLionProjects/DHT22/example/stm32f1/Src
 SourceFiles=stm32f1xx_it.c;stm32f1xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]
