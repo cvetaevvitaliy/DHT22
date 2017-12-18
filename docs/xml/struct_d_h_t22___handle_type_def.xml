@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_d_h_t22___handle_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>DHT22_HandleTypeDef</compoundname>
+    <includes refid="dht22_8h" local="no">dht22.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t bitsRX[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>bitsRX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="34" column="1" bodyfile="inc/dht22.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="35" column="1" bodyfile="inc/dht22.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float hum</definition>
+        <argsstring></argsstring>
+        <name>hum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="36" column="1" bodyfile="inc/dht22.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crcErrorFlag</definition>
+        <argsstring></argsstring>
+        <name>crcErrorFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="37" column="1" bodyfile="inc/dht22.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" prot="public" static="no" mutable="no">
+        <type><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref></type>
+        <definition>DHT22_STATE state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="38" column="1" bodyfile="inc/dht22.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" prot="public" static="no" mutable="no">
+        <type>TIM_HandleTypeDef</type>
+        <definition>TIM_HandleTypeDef timHandle</definition>
+        <argsstring></argsstring>
+        <name>timHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="39" column="1" bodyfile="inc/dht22.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" prot="public" static="no" mutable="no">
+        <type>TIM_IC_InitTypeDef</type>
+        <definition>TIM_IC_InitTypeDef timICHandle</definition>
+        <argsstring></argsstring>
+        <name>timICHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="40" column="1" bodyfile="inc/dht22.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t timChannel</definition>
+        <argsstring></argsstring>
+        <name>timChannel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="41" column="1" bodyfile="inc/dht22.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t gpioPin</definition>
+        <argsstring></argsstring>
+        <name>gpioPin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="42" column="1" bodyfile="inc/dht22.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" prot="public" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* gpioPort</definition>
+        <argsstring></argsstring>
+        <name>gpioPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="43" column="1" bodyfile="inc/dht22.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bitPos</definition>
+        <argsstring></argsstring>
+        <name>bitPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="44" column="1" bodyfile="inc/dht22.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" prot="public" static="no" mutable="no">
+        <type>IRQn_Type</type>
+        <definition>IRQn_Type timerIRQn</definition>
+        <argsstring></argsstring>
+        <name>timerIRQn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="45" column="1" bodyfile="inc/dht22.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a025afdfcfc3449de5e0c629588497bee" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gpioAlternateFunction</definition>
+        <argsstring></argsstring>
+        <name>gpioAlternateFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="46" column="1" bodyfile="inc/dht22.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lastVal</definition>
+        <argsstring></argsstring>
+        <name>lastVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="47" column="1" bodyfile="inc/dht22.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_h_t22___handle_type_def_1a8a32ad548858efd6b020e49c5da969b4" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* errorCallback) (DHT22_RESULT)</definition>
+        <argsstring>)(DHT22_RESULT)</argsstring>
+        <name>errorCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="48" column="1" bodyfile="inc/dht22.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure hold all the variables necessary for communication with the sensor </para>    </detaileddescription>
+    <location file="inc/dht22.h" line="33" column="1" bodyfile="inc/dht22.h" bodystart="33" bodyend="49"/>
+    <listofallmembers>
+      <member refid="struct_d_h_t22___handle_type_def_1ad92fba41f1ad27de1c712b4add263881" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>bitPos</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a246dd2ae7a9fa409d7ec99782b83edd0" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>bitsRX</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a510dc13f38c68bdb76d40b12b3857160" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>crcErrorFlag</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a8a32ad548858efd6b020e49c5da969b4" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>errorCallback</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a025afdfcfc3449de5e0c629588497bee" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>gpioAlternateFunction</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a699db2851efab53386249e133df1021a" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>gpioPin</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1aa021f52edc668e716cd8de5d4800450d" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>gpioPort</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>hum</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1aa8f2f24cd5c9a580c2719b7b0761a089" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>lastVal</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>state</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>temp</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1af46d768d0122a9752b29eaf00d981041" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>timChannel</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a0c8ca742cd2a7166a8643177bf8bc576" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>timerIRQn</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>timHandle</name></member>
+      <member refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" prot="public" virt="non-virtual"><scope>DHT22_HandleTypeDef</scope><name>timICHandle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
