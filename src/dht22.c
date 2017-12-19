@@ -4,8 +4,7 @@
  * Sets up the pin as an output
  * @param	handle - a pointer to the DHT22 handle
  */
-static void set_pin_out(DHT22_HandleTypeDef* handle) {
-    HAL_NVIC_DisableIRQ(handle->config.timer_irqn);
+static void set_pin_out(dht22* handle) {
     GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.Pin  = handle->config.gpio_pin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
@@ -22,7 +21,7 @@ static void set_pin_out(DHT22_HandleTypeDef* handle) {
  * Sets up the pin as an input
  * @param	handle - a pointer to the DHT22 handle
  */
-static void set_pin_in(DHT22_HandleTypeDef* handle) {
+static void set_pin_in(dht22* handle) {
     GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.Pin  = handle->config.gpio_pin;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
@@ -35,18 +34,15 @@ static void set_pin_in(DHT22_HandleTypeDef* handle) {
     GPIO_InitStruct.Alternate = handle->config.gpio_alternate_function;
 #endif
     HAL_GPIO_Init(handle->config.gpio_port, &GPIO_InitStruct);
-    // TODO: maybe optional vvv
-    HAL_NVIC_SetPriority(handle->config.timer_irqn, 0, 0);
-    HAL_NVIC_EnableIRQ(handle->config.timer_irqn);
 }
 
-DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef* handle) {
+DHT22_RESULT dht22_read_data(dht22* handle) {
     if (handle->state != DHT22_READY) return DHT22_ERROR;
 
     handle->state = DHT22_BUSY;
 
     // clear previous state
-    handle->bit_pos            = -1;
+    handle->bit_pos            = -2;
     handle->last_val           = 0;
     handle->error_flags.parity = false;
     handle->error_flags.timing = false;
@@ -63,19 +59,21 @@ DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef* handle) {
 
     // enable the timer interrupts
     if (HAL_TIM_IC_Start_IT(handle->config.timer,
-                            handle->config.timer_channel) != HAL_OK)
+                            handle->config.timer_channel) != HAL_OK) {
         return DHT22_ERROR;
+    }
 
-    uint32_t startTick = HAL_GetTick();
+    uint32_t start_tick = HAL_GetTick();
 
     // wait for the state machine to finish
     while (handle->state != DHT22_FINISHED &&
-           HAL_GetTick() - startTick < 1000) {}
+           HAL_GetTick() - start_tick < 1000) {}
 
     // disable the timer interrupts
     if (HAL_TIM_IC_Stop_IT(handle->config.timer,
-                           handle->config.timer_channel) != HAL_OK)
+                           handle->config.timer_channel) != HAL_OK) {
         return DHT22_ERROR;
+    }
 
     if (handle->error_flags.timing) return DHT22_TIMING_ERROR;
     if (handle->error_flags.parity) return DHT22_CHECKSUM_ERROR;
@@ -87,14 +85,19 @@ DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef* handle) {
     return DHT22_ERROR;
 }
 
-DHT22_RESULT DHT22_Init(DHT22_Config* config, DHT22_HandleTypeDef* handle) {
+DHT22_RESULT dht22_init(dht22_config* config, dht22* handle) {
     handle->config = *config;
     return DHT22_OK;
 }
 
-DHT22_RESULT DHT22_DeInit(DHT22_HandleTypeDef* handle) { return DHT22_OK; }
+DHT22_RESULT dht22_deinit(dht22* handle) { return DHT22_OK; }
 
-static void write_bit(DHT22_HandleTypeDef* handle, bool bit) {
+/**
+ * Writes a bit to the current bit position (bit_pos) in the rx_buffer
+ * @param handle DHT22 handle
+ * @param bit    bit to store
+ */
+static void write_bit(dht22* handle, bool bit) {
     uint8_t byten = handle->bit_pos / 8;
     uint8_t bitn  = 7 - handle->bit_pos % 8;
     if (bit) {
@@ -104,6 +107,12 @@ static void write_bit(DHT22_HandleTypeDef* handle, bool bit) {
     }
 }
 
+/**
+ * Converts two bytes from rx_buffer into a float according to the format
+ * specified in the datasheet
+ * @param  dht_data pointer to the two bytes to be converted
+ * @return          result of the conversion
+ */
 static float get_float(uint8_t* dht_data) {
     uint16_t v = 0;
     v |= (dht_data[0] & 0x7F) << 8;
@@ -114,7 +123,11 @@ static float get_float(uint8_t* dht_data) {
     return value;
 }
 
-static void finish_rx(DHT22_HandleTypeDef* handle) {
+/**
+ * Perform last steps of reception like parity check, etc.
+ * @param handle DHT22 handle
+ */
+static void finish_rx(dht22* handle) {
     uint8_t sum = 0;
     for (int i = 0; i < 4; i++) sum += handle->rx_buffer[i];
 
@@ -129,18 +142,29 @@ static void finish_rx(DHT22_HandleTypeDef* handle) {
 
 #define BETWEEN(a, b) (dt >= a && dt <= b)
 
-void DHT22_InterruptHandler(DHT22_HandleTypeDef* handle) {
+#define TIMING_ERROR()                               \
+    do {                                             \
+        handle->error_flags.timing = true;           \
+        handle->state              = DHT22_FINISHED; \
+    } while (0)
+
+void dht22_interrupt_handler(dht22* handle) {
     uint16_t val = HAL_TIM_ReadCapturedValue(handle->config.timer,
                                              handle->config.timer_channel);
 
     uint16_t dt = val - handle->last_val;
 
-    if (handle->bit_pos == -1) { // start bit
+    if (handle->bit_pos == -2) { // beginning of the start bit
+        if (BETWEEN(20, 40)) {
+            handle->bit_pos++;
+        } else {
+            TIMING_ERROR();
+        }
+    } else if (handle->bit_pos == -1) { // end of the start bit
         if (BETWEEN(150, 170)) {
             handle->bit_pos++;
         } else {
-            handle->error_flags.timing = true;
-            handle->state              = DHT22_FINISHED;
+            TIMING_ERROR();
         }
     } else {                   // data bits
         if (BETWEEN(70, 90)) { // zero
@@ -150,8 +174,7 @@ void DHT22_InterruptHandler(DHT22_HandleTypeDef* handle) {
             write_bit(handle, true);
             handle->bit_pos++;
         } else { // invalid
-            handle->error_flags.timing = true;
-            handle->state              = DHT22_FINISHED;
+            TIMING_ERROR();
         }
     }
 

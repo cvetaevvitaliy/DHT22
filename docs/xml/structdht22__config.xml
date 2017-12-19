@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structdht22__config" kind="struct" language="C++" prot="public">
+    <compoundname>dht22_config</compoundname>
+    <includes refid="dht22_8h" local="no">dht22.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t gpio_pin</definition>
+        <argsstring></argsstring>
+        <name>gpio_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="37" column="1" bodyfile="inc/dht22.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" prot="public" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* gpio_port</definition>
+        <argsstring></argsstring>
+        <name>gpio_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="38" column="1" bodyfile="inc/dht22.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" prot="public" static="no" mutable="no">
+        <type>TIM_HandleTypeDef *</type>
+        <definition>TIM_HandleTypeDef* timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="39" column="1" bodyfile="inc/dht22.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t timer_channel</definition>
+        <argsstring></argsstring>
+        <name>timer_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="40" column="1" bodyfile="inc/dht22.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is for initializing the sensor handle </para>    </detaileddescription>
+    <location file="inc/dht22.h" line="36" column="1" bodyfile="inc/dht22.h" bodystart="36" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>gpio_pin</name></member>
+      <member refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>gpio_port</name></member>
+      <member refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>timer</name></member>
+      <member refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>timer_channel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

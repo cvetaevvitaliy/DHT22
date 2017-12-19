@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error_5fflags',['error_flags',['../struct_d_h_t22___handle_type_def.html#a80d0ebb2df9c1ace6a102564d135670d',1,'DHT22_HandleTypeDef']]]
+  ['error_5fflags',['error_flags',['../structdht22.html#a03251bc0907d3f2709d4b8550b9e90e3',1,'dht22']]]
 ];

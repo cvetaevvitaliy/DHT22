@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['dht22_5fconfig',['DHT22_Config',['../struct_d_h_t22___config.html',1,'']]],
-  ['dht22_5fhandletypedef',['DHT22_HandleTypeDef',['../struct_d_h_t22___handle_type_def.html',1,'']]]
+  ['dht22',['dht22',['../structdht22.html',1,'']]],
+  ['dht22_5fconfig',['dht22_config',['../structdht22__config.html',1,'']]]
 ];

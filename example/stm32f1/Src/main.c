@@ -59,7 +59,7 @@ DMA_HandleTypeDef  hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-DHT22_HandleTypeDef dht;
+dht22 dht;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,15 +110,14 @@ int main(void) {
 
     /* USER CODE BEGIN 2 */
     {
-        DHT22_Config dht_config;
+        dht22_config dht_config;
 
         dht_config.gpio_pin      = GPIO_PIN_6;
         dht_config.gpio_port     = GPIOA;
         dht_config.timer         = &htim3;
         dht_config.timer_channel = TIM_CHANNEL_1;
-        dht_config.timer_irqn    = TIM3_IRQn;
 
-        if (DHT22_Init(&dht_config, &dht) != DHT22_OK) {
+        if (dht22_init(&dht_config, &dht) != DHT22_OK) {
             // error occured
             _Error_Handler(__FILE__, __LINE__);
         }
@@ -132,7 +131,7 @@ int main(void) {
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        if (DHT22_ReadData(&dht) != DHT22_OK) {
+        if (dht22_read_data(&dht) != DHT22_OK) {
             _Error_Handler(__FILE__, __LINE__);
         }
         int data[2] = {dht.temp * 1000, dht.hum * 1000};

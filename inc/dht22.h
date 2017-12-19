@@ -38,18 +38,16 @@ typedef struct {
     GPIO_TypeDef*      gpio_port;
     TIM_HandleTypeDef* timer;
     uint32_t           timer_channel;
-    IRQn_Type          timer_irqn;
 
 #ifdef STM32F4
     uint32_t gpio_alternate_function;
 #endif
-} DHT22_Config;
+} dht22_config;
 
 /**
  * This structure is the sensor handle
  */
 typedef struct {
-    // RX buffer
     uint8_t  rx_buffer[5];
     int      bit_pos;
     uint16_t last_val;
@@ -58,43 +56,41 @@ typedef struct {
     float temp;
     float hum;
 
-    // State
     DHT22_STATE state;
     struct {
         bool parity : 1;
         bool timing : 1;
     } error_flags;
 
-    // config
-    DHT22_Config config;
-} DHT22_HandleTypeDef;
+    dht22_config config;
+} dht22;
 
 /**
- * Initializes the DHT22 communication
+ * Initializes the DHT22 handle using the provided configuration
  * @param   config - a pointer to the initialization structure
  * @param	handle - a pointer to the DHT22 handle you want to initialize
  * @return	whether the function was successful or not
  */
-DHT22_RESULT DHT22_Init(DHT22_Config* config, DHT22_HandleTypeDef* handle);
+DHT22_RESULT dht22_init(dht22_config* config, dht22* handle);
 
 /**
  * Deinitializes the DHT22 communication
  * @param	handle - a pointer to the DHT22 handle
  * @return	whether the function was successful or not
  */
-DHT22_RESULT DHT22_DeInit(DHT22_HandleTypeDef* handle);
+DHT22_RESULT dht22_deinit(dht22* handle);
 
 /**
  * Reads the current temperature and humidity from the sensor
  * @param	handle - a pointer to the DHT22 handle
  * @return	whether the function was successful or not
  */
-DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef* handle);
+DHT22_RESULT dht22_read_data(dht22* handle);
 
 /**
  * Handles the pin interrupt
  * @param	handle - a pointer to the DHT22 handle
  */
-void DHT22_InterruptHandler(DHT22_HandleTypeDef* handle);
+void dht22_interrupt_handler(dht22* handle);
 
 #endif /* DHT22_H */

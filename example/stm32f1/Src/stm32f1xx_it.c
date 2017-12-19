@@ -37,7 +37,7 @@
 
 /* USER CODE BEGIN 0 */
 #include "dht22.h"
-extern DHT22_HandleTypeDef dht;
+extern dht22 dht;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -45,7 +45,7 @@ extern TIM_HandleTypeDef htim3;
 extern DMA_HandleTypeDef hdma_usart1_tx;
 
 /******************************************************************************/
-/*            Cortex-M3 Processor Interruption and Exception Handlers         */ 
+/*            Cortex-M3 Processor Interruption and Exception Handlers         */
 /******************************************************************************/
 
 /**
@@ -210,7 +210,7 @@ void TIM3_IRQHandler(void)
   /* USER CODE END TIM3_IRQn 0 */
   HAL_TIM_IRQHandler(&htim3);
   /* USER CODE BEGIN TIM3_IRQn 1 */
-  DHT22_InterruptHandler(&dht);
+  dht22_interrupt_handler(&dht);
   /* USER CODE END TIM3_IRQn 1 */
 }
 
