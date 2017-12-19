@@ -25,9 +25,9 @@ typedef enum {
  * Describes the state of the sensor
  */
 typedef enum {
-    DHT22_FINISHED, /*< Data have been received but not yet processed */
-    DHT22_BUSY,     /*< Data from sensor are currently being received */
-    DHT22_READY     /*< The sensor is ready for a next reading */
+    DHT22_READY,   /*< The sensor is ready for a next reading */
+    DHT22_BUSY,    /*< Data from sensor are currently being received */
+    DHT22_FINISHED /*< Data have been received but not yet processed */
 } DHT22_STATE;
 
 /**
@@ -71,11 +71,11 @@ typedef struct {
 
 /**
  * Initializes the DHT22 communication
- * @param   init - a pointer to the initialization structure
+ * @param   config - a pointer to the initialization structure
  * @param	handle - a pointer to the DHT22 handle you want to initialize
  * @return	whether the function was successful or not
  */
-DHT22_RESULT DHT22_Init(DHT22_Config* init, DHT22_HandleTypeDef* handle);
+DHT22_RESULT DHT22_Init(DHT22_Config* config, DHT22_HandleTypeDef* handle);
 
 /**
  * Deinitializes the DHT22 communication
