@@ -1,6 +1,14 @@
 # DHT22 (Under development! Please use [v0.0.1](https://github.com/petoknm/DHT22/releases/tag/v0.0.1) until the new release.)
 Library for STM32 series microcontrollers for reading DHT22 sensor values
 
+## TODO
+ - Implement new timing mechanism
+ - Clean up unnecesarry members from structs
+ - Documentation
+ - More examples
+ - Photos/Videos
+ - v1.0.0
+
 ## Documentation
 You can find [generated documentation here](https://github.com/petoknm/DHT22/blob/master/api.md).
 
