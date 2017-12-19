@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>DHT22: Data Structures</title>
+<title>DHT22: DHT22_InitTypeDef Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,12 +61,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
       <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,17 +80,82 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">Data Structures</div>  </div>
+<div class="title">DHT22_InitTypeDef Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here are the data structures with brief descriptions:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_d_h_t22___handle_type_def.html" target="_self">DHT22_HandleTypeDef</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_d_h_t22___init_type_def.html" target="_self">DHT22_InitTypeDef</a></td><td class="desc"></td></tr>
+
+<p><code>#include &lt;<a class="el" href="dht22_8h_source.html">dht22.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a1468dc79e1c16d2ae8597631191ab190"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t22___init_type_def.html#a1468dc79e1c16d2ae8597631191ab190">gpio_pin</a></td></tr>
+<tr class="separator:a1468dc79e1c16d2ae8597631191ab190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081bd8cbb6d27fdb0ab0681b66cfd080"><td class="memItemLeft" align="right" valign="top">GPIO_TypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t22___init_type_def.html#a081bd8cbb6d27fdb0ab0681b66cfd080">gpio_port</a></td></tr>
+<tr class="separator:a081bd8cbb6d27fdb0ab0681b66cfd080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f2d7e0e880def3262a850626e3df17d"><td class="memItemLeft" align="right" valign="top">TIM_TypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t22___init_type_def.html#a5f2d7e0e880def3262a850626e3df17d">timer</a></td></tr>
+<tr class="separator:a5f2d7e0e880def3262a850626e3df17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9209e1ec26ff459b75d3981ca197ec43"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t22___init_type_def.html#a9209e1ec26ff459b75d3981ca197ec43">timer_channel</a></td></tr>
+<tr class="separator:a9209e1ec26ff459b75d3981ca197ec43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- directory -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This structure is for initializing the sensor handle </p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="a1468dc79e1c16d2ae8597631191ab190"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t gpio_pin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a081bd8cbb6d27fdb0ab0681b66cfd080"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GPIO_TypeDef* gpio_port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5f2d7e0e880def3262a850626e3df17d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TIM_TypeDef* timer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9209e1ec26ff459b75d3981ca197ec43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t timer_channel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>inc/<a class="el" href="dht22_8h_source.html">dht22.h</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

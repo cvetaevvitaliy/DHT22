@@ -28,6 +28,7 @@ For building you need:
 For developing you will also need:
  - clang-format
  - doxygen
+ - graphviz
  - moxygen
 
 ## Building examples

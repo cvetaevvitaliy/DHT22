@@ -109,16 +109,21 @@ int main(void) {
     MX_USART1_UART_Init();
 
     /* USER CODE BEGIN 2 */
-    dht.gpioPin            = GPIO_PIN_6;
-    dht.gpioPort           = GPIOA;
-    dht.timChannel         = TIM_CHANNEL_1;
-    dht.timHandle.Instance = TIM3;
+    {
+        DHT22_InitTypeDef dht_init;
 
-    if (DHT22_Init(&dht) != DHT22_OK) {
-        // error occured
-        while (1)
-            ;
+        dht_init.gpio_pin      = GPIO_PIN_6;
+        dht_init.gpio_port     = GPIOA;
+        dht_init.timer         = TIM3;
+        dht_init.timer_channel = TIM_CHANNEL_1;
+
+        if (DHT22_Init(&dht_init, &dht) != DHT22_OK) {
+            // error occured
+            while (1)
+                ;
+        }
     }
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
