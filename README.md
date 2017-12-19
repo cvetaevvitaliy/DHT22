@@ -2,8 +2,7 @@
 Library for STM32 series microcontrollers for reading DHT22 sensor values
 
 ## TODO
- - Implement new timing mechanism
- - Clean up unnecesarry members from structs
+ - Testing
  - Documentation
  - More examples
  - Photos/Videos
@@ -71,6 +70,11 @@ micros.
 ## Updating documentation
 ```shell
 make clean && make docs
+```
+
+## Formating source code
+```shell
+make format
 ```
 
 ## Implementation details
