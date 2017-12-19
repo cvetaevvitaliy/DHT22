@@ -26,6 +26,7 @@ For building you need:
  - arm-none-eabi-gcc
 
 For developing you will also need:
+ - clang-format
  - doxygen
  - moxygen
 
