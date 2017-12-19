@@ -110,16 +110,17 @@ int main(void) {
 
     /* USER CODE BEGIN 2 */
     {
-        DHT22_InitTypeDef dht_init;
+        DHT22_Config dht_config;
 
-        dht_init.gpio_pin      = GPIO_PIN_6;
-        dht_init.gpio_port     = GPIOA;
-        dht_init.timer         = TIM3;
-        dht_init.timer_channel = TIM_CHANNEL_1;
+        dht_config.gpio_pin      = GPIO_PIN_6;
+        dht_config.gpio_port     = GPIOA;
+        dht_config.timer         = &htim3;
+        dht_config.timer_channel = TIM_CHANNEL_1;
+        dht_config.timer_irqn    = TIM3_IRQn;
 
-        if (DHT22_Init(&dht_init, &dht) != DHT22_OK) {
+        if (DHT22_Init(&dht_config, &dht) != DHT22_OK) {
             // error occured
-            while (1) {}
+            _Error_Handler(__FILE__, __LINE__);
         }
     }
 
@@ -131,9 +132,11 @@ int main(void) {
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        DHT22_ReadData(&dht);
+        if (DHT22_ReadData(&dht) != DHT22_OK) {
+            _Error_Handler(__FILE__, __LINE__);
+        }
         int data[2] = {dht.temp * 1000, dht.hum * 1000};
-        HAL_UART_Transmit_DMA(&huart1, (uint8_t *)data, 8);
+        HAL_UART_Transmit_DMA(&huart1, (uint8_t*)data, 8);
         HAL_Delay(3000);
     }
     /* USER CODE END 3 */
@@ -259,7 +262,7 @@ static void MX_GPIO_Init(void) {
   * @param  None
   * @retval None
   */
-void _Error_Handler(char *file, int line) {
+void _Error_Handler(char* file, int line) {
     /* USER CODE BEGIN Error_Handler_Debug */
     /* User can add his own implementation to report the HAL error return state
      */
@@ -276,7 +279,7 @@ void _Error_Handler(char *file, int line) {
    * @param line: assert_param error line source number
    * @retval None
    */
-void assert_failed(uint8_t *file, uint32_t line) {
+void assert_failed(uint8_t* file, uint32_t line) {
     /* USER CODE BEGIN 6 */
     /* User can add his own implementation to report the file name and line
       number,

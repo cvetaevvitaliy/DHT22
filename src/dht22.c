@@ -1,198 +1,165 @@
 #include "dht22.h"
 
-#define DHT22_StartIT()                                                 \
-    if (HAL_TIM_IC_Start_IT(&handle->timHandle, handle->tim_channel) != \
-        HAL_OK)                                                         \
+#define DHT22_StartIT()                                              \
+    if (HAL_TIM_IC_Start_IT(handle->config.timer,                    \
+                            handle->config.timer_channel) != HAL_OK) \
     return DHT22_ERROR
-#define DHT22_StopIT()                                                         \
-    if (HAL_TIM_IC_Stop_IT(&handle->timHandle, handle->tim_channel) != HAL_OK) \
+#define DHT22_StopIT()                                              \
+    if (HAL_TIM_IC_Stop_IT(handle->config.timer,                    \
+                           handle->config.timer_channel) != HAL_OK) \
     return DHT22_ERROR
+
+#define BETWEEN(a, b) dt >= a&& dt <= b
 
 /**
  * Sets up the pin as an output
  * @param	handle - a pointer to the DHT22 handle
  */
-void DHT22_SetPinOUT(DHT22_HandleTypeDef *handle) {
-
+void DHT22_SetPinOUT(DHT22_HandleTypeDef* handle) {
+    HAL_NVIC_DisableIRQ(handle->config.timer_irqn);
+    GPIO_InitTypeDef GPIO_InitStruct;
+    GPIO_InitStruct.Pin  = handle->config.gpio_pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
 #ifdef STM32F1
-    HAL_NVIC_DisableIRQ(handle->timer_irqn);
-    GPIO_InitTypeDef GPIO_InitStruct;
-    GPIO_InitStruct.Pin   = handle->gpio_pin;
-    GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_OD;
-    GPIO_InitStruct.Pull  = GPIO_PULLUP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(handle->gpio_port, &GPIO_InitStruct);
-#endif
-
-#ifdef STM32F4
-    HAL_NVIC_DisableIRQ(handle->timer_irqn);
-    GPIO_InitTypeDef GPIO_InitStruct;
-    GPIO_InitStruct.Pin   = handle->gpio_pin;
-    GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_OD;
-    GPIO_InitStruct.Pull  = GPIO_PULLUP;
+#else
     GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-    HAL_GPIO_Init(handle->gpio_port, &GPIO_InitStruct);
 #endif
+    HAL_GPIO_Init(handle->config.gpio_port, &GPIO_InitStruct);
 }
 
 /**
  * Sets up the pin as an input
  * @param	handle - a pointer to the DHT22 handle
  */
-void DHT22_SetPinIN(DHT22_HandleTypeDef *handle) {
-
+void DHT22_SetPinIN(DHT22_HandleTypeDef* handle) {
+    GPIO_InitTypeDef GPIO_InitStruct;
+    GPIO_InitStruct.Pin  = handle->config.gpio_pin;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
 #ifdef STM32F1
-    GPIO_InitTypeDef GPIO_InitStruct;
-    GPIO_InitStruct.Pin   = handle->gpio_pin;
     GPIO_InitStruct.Mode  = GPIO_MODE_AF_INPUT;
-    GPIO_InitStruct.Pull  = GPIO_PULLUP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(handle->gpio_port, &GPIO_InitStruct);
-    HAL_NVIC_EnableIRQ(handle->timer_irqn);
-    HAL_NVIC_SetPriority(handle->timer_irqn, 0, 0);
-#endif
-
-#ifdef STM32F4
-    GPIO_InitTypeDef GPIO_InitStruct;
-    GPIO_InitStruct.Pin       = handle->gpio_pin;
+#else
     GPIO_InitStruct.Mode      = GPIO_MODE_AF_OD;
-    GPIO_InitStruct.Pull      = GPIO_PULLUP;
     GPIO_InitStruct.Speed     = GPIO_SPEED_HIGH;
-    GPIO_InitStruct.Alternate = handle->gpio_alternate_function;
-    HAL_GPIO_Init(handle->gpioPort, &GPIO_InitStruct);
-    HAL_NVIC_EnableIRQ(handle->timer_irqn);
-    HAL_NVIC_SetPriority(handle->timer_irqn, 0, 0);
+    GPIO_InitStruct.Alternate = handle->config.gpio_alternate_function;
 #endif
+    HAL_GPIO_Init(handle->config.gpio_port, &GPIO_InitStruct);
+    HAL_NVIC_SetPriority(handle->config.timer_irqn, 0, 0);
+    HAL_NVIC_EnableIRQ(handle->config.timer_irqn);
 }
 
 /**
  * Initiates a transfer of sensor data
  * @param	handle - a pointer to the DHT22 handle
  */
-DHT22_RESULT DHT22_InitiateTransfer(DHT22_HandleTypeDef *handle) {
+DHT22_RESULT DHT22_InitiateTransfer(DHT22_HandleTypeDef* handle) {
+    if (handle->state != DHT22_READY) return DHT22_ERROR;
+
+    handle->bit_pos            = -1;
+    handle->last_val           = 0;
+    handle->error_flags.parity = false;
+    handle->error_flags.timing = false;
+    for (int i = 0; i < 5; i++) handle->rx_buffer[i] = 0;
+
+    handle->state = DHT22_BUSY;
 
     DHT22_SetPinOUT(handle);
-    HAL_GPIO_WritePin(handle->gpio_port, handle->gpio_pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(handle->config.gpio_port, handle->config.gpio_pin,
+                      GPIO_PIN_RESET);
     HAL_Delay(2);
     DHT22_SetPinIN(handle);
-
-    handle->bit_pos = -1;
-    for (int i = 0; i < 5; i++) { handle->rx_buffer[i] = 0; }
-    handle->state = DHT22_RECEIVING;
+    __HAL_TIM_SET_COUNTER(handle->config.timer, 0);
     DHT22_StartIT();
 
     return DHT22_OK;
 }
 
-DHT22_RESULT DHT22_Init(DHT22_InitTypeDef *init, DHT22_HandleTypeDef *handle) {
-    handle->gpio_pin  = init->gpio_pin;
-    handle->gpio_port = init->gpio_port;
-#ifdef STM32F4
-    handle->gpio_alternate_function = init->gpio_alternate_function;
-#endif
-
-    handle->timHandle.Instance = init->timer;
-    handle->tim_channel        = init->timer_channel;
-
-    handle->timHandle.Init.Period        = 0xFFFF;
-    handle->timHandle.Init.Prescaler     = 0;
-    handle->timHandle.Init.ClockDivision = 0;
-    handle->timHandle.Init.CounterMode   = TIM_COUNTERMODE_UP;
-    if (HAL_TIM_IC_Init(&handle->timHandle) != HAL_OK) { return DHT22_ERROR; }
-    handle->timICHandle.ICPolarity  = TIM_ICPOLARITY_FALLING;
-    handle->timICHandle.ICSelection = TIM_ICSELECTION_DIRECTTI;
-    handle->timICHandle.ICPrescaler = TIM_ICPSC_DIV1;
-    handle->timICHandle.ICFilter    = 0;
-    if (HAL_TIM_IC_ConfigChannel(&handle->timHandle, &handle->timICHandle,
-                                 handle->tim_channel) != HAL_OK) {
-        return DHT22_ERROR;
-    }
+DHT22_RESULT DHT22_Init(DHT22_Config* config, DHT22_HandleTypeDef* handle) {
+    handle->config = *config;
     return DHT22_OK;
 }
 
-DHT22_RESULT DHT22_DeInit(DHT22_HandleTypeDef *handle) { return DHT22_OK; }
+DHT22_RESULT DHT22_DeInit(DHT22_HandleTypeDef* handle) { return DHT22_OK; }
 
-void DHT22_InterruptHandler(DHT22_HandleTypeDef *handle) {
+static void write_bit(DHT22_HandleTypeDef* handle, bool bit) {
+    uint8_t byten = handle->bit_pos / 8;
+    uint8_t bitn  = 7 - handle->bit_pos % 8;
+    if (bit) {
+        handle->rx_buffer[byten] |= 1 << bitn;
+    } else {
+        handle->rx_buffer[byten] &= ~(1 << bitn);
+    }
+}
 
-    uint16_t val =
-        HAL_TIM_ReadCapturedValue(&handle->timHandle, handle->tim_channel);
+static float get_float(uint8_t* dht_data) {
+    uint16_t v = 0;
+    v |= (dht_data[0] & 0x7F) << 8;
+    v |= dht_data[1];
 
-    uint32_t freq = HAL_RCC_GetPCLK2Freq();
+    float value = 0.1f * v;
+    if (dht_data[0] & 0x80) value *= -1.0f;
+    return value;
+}
 
-    uint16_t val2;
-    if (val > handle->last_val)
-        val2 = val - handle->last_val;
-    else
-        val2 = 65535 + val - handle->last_val;
+static void finish_rx(DHT22_HandleTypeDef* handle) {
+    uint8_t sum = 0;
+    for (int i = 0; i < 4; i++) sum += handle->rx_buffer[i];
+
+    if (sum == handle->rx_buffer[4]) { // checksums match
+        handle->hum  = get_float(&handle->rx_buffer[0]);
+        handle->temp = get_float(&handle->rx_buffer[2]);
+    } else {
+        handle->error_flags.parity = true;
+    }
+    handle->state = DHT22_FINISHED;
+}
+
+void DHT22_InterruptHandler(DHT22_HandleTypeDef* handle) {
+    uint16_t val = HAL_TIM_ReadCapturedValue(handle->config.timer,
+                                             handle->config.timer_channel);
+
+    uint16_t dt = val - handle->last_val;
+
+    if (handle->bit_pos == -1) { // start bit
+        if (BETWEEN(150, 170)) {
+            handle->bit_pos++;
+        } else {
+            handle->error_flags.timing = true;
+            handle->state              = DHT22_FINISHED;
+        }
+    } else {                   // data bits
+        if (BETWEEN(70, 90)) { // zero
+            write_bit(handle, false);
+        } else if (BETWEEN(110, 130)) { // one
+            write_bit(handle, true);
+        } else { // invalid
+            handle->error_flags.timing = true;
+            handle->state              = DHT22_FINISHED;
+        }
+    }
+
+    if (handle->bit_pos == 40) { // finished
+        finish_rx(handle);
+    }
 
     handle->last_val = val;
-
-    float time = 1000000.0 * val2 / freq;
-
-    if (handle->bit_pos < 0) {
-        if (time > 155.0 && time < 165.0) { handle->bit_pos = 0; }
-    } else if (handle->bit_pos >= 0 && handle->bit_pos < 40) {
-        if (time > 78.0 && time < 97.0) {
-            handle->rx_buffer[handle->bit_pos / 8] &=
-                ~(1 << (7 - handle->bit_pos % 8));
-            handle->bit_pos++;
-        } else if (time > 120.0 && time < 145.0) {
-            handle->rx_buffer[handle->bit_pos / 8] |=
-                1 << (7 - handle->bit_pos % 8);
-            handle->bit_pos++;
-        } else {
-            handle->bit_pos = -1;
-            HAL_TIM_IC_Stop_IT(&handle->timHandle, handle->tim_channel);
-            handle->state = DHT22_READY;
-        }
-    }
-
-    if (handle->bit_pos == 40) {
-        handle->bit_pos = -1;
-        HAL_TIM_IC_Stop_IT(&handle->timHandle, handle->tim_channel);
-        uint8_t sum = 0;
-        for (int i = 0; i < 4; i++) { sum += handle->rx_buffer[i]; }
-        if (sum == handle->rx_buffer[4]) {
-            handle->crc_error_flag = 0;
-
-            int16_t temp10 = 0;
-            if ((handle->rx_buffer[2] & 0x80) == 0x80) {
-                temp10 |= (handle->rx_buffer[2] & 0x7F) << 8;
-                temp10 |= handle->rx_buffer[3];
-                temp10 *= -1;
-            } else {
-                temp10 |= handle->rx_buffer[2] << 8;
-                temp10 |= handle->rx_buffer[3];
-            }
-            handle->temp = 0.1 * temp10;
-
-            int16_t hum10 = 0;
-            if ((handle->rx_buffer[0] & 0x80) == 0x80) {
-                hum10 |= (handle->rx_buffer[0] & 0x7F) << 8;
-                hum10 |= handle->rx_buffer[1];
-                hum10 *= -1;
-            } else {
-                hum10 |= handle->rx_buffer[0] << 8;
-                hum10 |= handle->rx_buffer[1];
-            }
-            handle->hum = 0.1 * hum10;
-        } else {
-            handle->crc_error_flag = 1;
-        }
-        handle->state = DHT22_RECEIVED;
-    }
 }
 
-DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef *handle) {
+DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef* handle) {
     DHT22_InitiateTransfer(handle);
     uint32_t startTick = HAL_GetTick();
-    while (handle->state == DHT22_RECEIVING &&
+
+    while (handle->state != DHT22_FINISHED &&
            HAL_GetTick() - startTick < 1000) {}
-    if (handle->crc_error_flag == 1) { return DHT22_CRC_ERROR; }
-    if (handle->state != DHT22_RECEIVED) {
-        return DHT22_ERROR;
-    } else {
+
+    if (handle->error_flags.timing) return DHT22_TIMING_ERROR;
+    if (handle->error_flags.parity) return DHT22_CHECKSUM_ERROR;
+
+    if (handle->state == DHT22_FINISHED) {
         handle->state = DHT22_READY;
+        return DHT22_OK;
     }
-    return DHT22_OK;
+    return DHT22_ERROR;
 }

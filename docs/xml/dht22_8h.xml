@@ -2,20 +2,32 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="dht22_8h" kind="file" language="C++">
     <compoundname>dht22.h</compoundname>
+    <includes local="no">stdbool.h</includes>
     <includedby refid="dht22_8c" local="yes">src/dht22.c</includedby>
-    <invincdepgraph>
-      <node id="7">
-        <label>inc/dht22.h</label>
-        <link refid="dht22.h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
+    <incdepgraph>
+      <node id="9">
+        <label>stdbool.h</label>
       </node>
       <node id="8">
+        <label>inc/dht22.h</label>
+        <link refid="dht22.h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10">
+        <label>inc/dht22.h</label>
+        <link refid="dht22.h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
         <label>src/dht22.c</label>
         <link refid="dht22_8c"/>
       </node>
     </invincdepgraph>
-    <innerclass refid="struct_d_h_t22___init_type_def" prot="public">DHT22_InitTypeDef</innerclass>
+    <innerclass refid="struct_d_h_t22___config" prot="public">DHT22_Config</innerclass>
     <innerclass refid="struct_d_h_t22___handle_type_def" prot="public">DHT22_HandleTypeDef</innerclass>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" prot="public" static="no">
@@ -34,8 +46,15 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a54070a4d524153da2bcfb47392c981e5" prot="public">
-          <name>DHT22_CRC_ERROR</name>
+        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" prot="public">
+          <name>DHT22_TIMING_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" prot="public">
+          <name>DHT22_CHECKSUM_ERROR</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -47,19 +66,19 @@
 <para>Possible return values of the functions </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="15" column="1" bodyfile="inc/dht22.h" bodystart="15" bodyend="15"/>
+        <location file="inc/dht22.h" line="17" column="1" bodyfile="inc/dht22.h" bodystart="17" bodyend="22"/>
       </memberdef>
       <memberdef kind="enum" id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" prot="public" static="no">
         <name>DHT22_STATE</name>
-        <enumvalue id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" prot="public">
-          <name>DHT22_RECEIVED</name>
+        <enumvalue id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" prot="public">
+          <name>DHT22_FINISHED</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" prot="public">
-          <name>DHT22_RECEIVING</name>
+        <enumvalue id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" prot="public">
+          <name>DHT22_BUSY</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -78,17 +97,17 @@
 <para>Describes the state of the sensor </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="20" column="1" bodyfile="inc/dht22.h" bodystart="20" bodyend="25"/>
+        <location file="inc/dht22.h" line="27" column="1" bodyfile="inc/dht22.h" bodystart="27" bodyend="31"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="dht22_8h_1a9c75b3c36f0920fa6ad3ac5ad8ea2b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="dht22_8h_1ae0a960cf3f32e5f54cbd94b84850f3c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
         <definition>DHT22_RESULT DHT22_Init</definition>
-        <argsstring>(DHT22_InitTypeDef *init, DHT22_HandleTypeDef *handle)</argsstring>
+        <argsstring>(DHT22_Config *init, DHT22_HandleTypeDef *handle)</argsstring>
         <name>DHT22_Init</name>
         <param>
-          <type><ref refid="struct_d_h_t22___init_type_def" kindref="compound">DHT22_InitTypeDef</ref> *</type>
+          <type><ref refid="struct_d_h_t22___config" kindref="compound">DHT22_Config</ref> *</type>
           <declname>init</declname>
         </param>
         <param>
@@ -117,18 +136,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="75" column="1" bodyfile="src/dht22.c" bodystart="89" bodyend="115"/>
-        <references refid="struct_d_h_t22___handle_type_def_1a1468dc79e1c16d2ae8597631191ab190" compoundref="dht22_8h" startline="61">DHT22_HandleTypeDef::gpio_pin</references>
-        <references refid="struct_d_h_t22___init_type_def_1a1468dc79e1c16d2ae8597631191ab190" compoundref="dht22_8h" startline="31">DHT22_InitTypeDef::gpio_pin</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a081bd8cbb6d27fdb0ab0681b66cfd080" compoundref="dht22_8h" startline="62">DHT22_HandleTypeDef::gpio_port</references>
-        <references refid="struct_d_h_t22___init_type_def_1a081bd8cbb6d27fdb0ab0681b66cfd080" compoundref="dht22_8h" startline="32">DHT22_InitTypeDef::gpio_port</references>
-        <references refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" compoundref="dht22_8h" startline="58">DHT22_HandleTypeDef::timHandle</references>
-        <references refid="struct_d_h_t22___init_type_def_1a5f2d7e0e880def3262a850626e3df17d" compoundref="dht22_8h" startline="36">DHT22_InitTypeDef::timer</references>
-        <references refid="struct_d_h_t22___handle_type_def_1ac695785e5005b76ab3d8749095adc661" compoundref="dht22_8h" startline="60">DHT22_HandleTypeDef::tim_channel</references>
-        <references refid="struct_d_h_t22___init_type_def_1a9209e1ec26ff459b75d3981ca197ec43" compoundref="dht22_8h" startline="37">DHT22_InitTypeDef::timer_channel</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" compoundref="dht22_8h" startline="15">DHT22_ERROR</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" compoundref="dht22_8h" startline="59">DHT22_HandleTypeDef::timICHandle</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="15">DHT22_OK</references>
+        <location file="inc/dht22.h" line="78" column="1" bodyfile="src/dht22.c" bodystart="79" bodyend="82"/>
+        <references refid="struct_d_h_t22___handle_type_def_1a0e9b6a7701079d8e775d6e429618f222" compoundref="dht22_8h" startline="69">DHT22_HandleTypeDef::config</references>
+        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="18">DHT22_OK</references>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1ada5d62c92505f78d77c3fa785ba8982a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
@@ -154,8 +164,16 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="82" column="1" bodyfile="src/dht22.c" bodystart="117" bodyend="117"/>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="15">DHT22_OK</references>
+        <location file="inc/dht22.h" line="85" column="1" bodyfile="src/dht22.c" bodystart="84" bodyend="84"/>
+        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="18">DHT22_OK</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a3bdb49ed9986f21df0b78879c749192c" compoundref="dht22_8h" startline="54">DHT22_HandleTypeDef::bit_pos</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a47f38aa1f777ab5c907ec0375eae1344" compoundref="dht22_8h" startline="53">DHT22_HandleTypeDef::rx_buffer</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" compoundref="dht22_8h" startline="59">DHT22_HandleTypeDef::hum</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" compoundref="dht22_8h" startline="58">DHT22_HandleTypeDef::temp</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a80d0ebb2df9c1ace6a102564d135670d">DHT22_HandleTypeDef::error_flags</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a3f32f989e34d67aa0736e2606a255e55" compoundref="dht22_8h" startline="64">DHT22_HandleTypeDef::parity</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="62">DHT22_HandleTypeDef::state</references>
+        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" compoundref="dht22_8h" startline="28">DHT22_FINISHED</references>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1ad3d02d9f971cc36c866b8759ce3c9bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
@@ -181,16 +199,18 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="89" column="1" bodyfile="src/dht22.c" bodystart="194" bodyend="208"/>
-        <references refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" compoundref="dht22_8c" startline="72" endline="87">DHT22_InitiateTransfer</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="55">DHT22_HandleTypeDef::state</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" compoundref="dht22_8h" startline="22">DHT22_RECEIVING</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a0e67f80c1eb86855d0ca1439ecf960c0" compoundref="dht22_8h" startline="54">DHT22_HandleTypeDef::crc_error_flag</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a54070a4d524153da2bcfb47392c981e5" compoundref="dht22_8h" startline="15">DHT22_CRC_ERROR</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" compoundref="dht22_8h" startline="21">DHT22_RECEIVED</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" compoundref="dht22_8h" startline="15">DHT22_ERROR</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" compoundref="dht22_8h" startline="23">DHT22_READY</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="15">DHT22_OK</references>
+        <location file="inc/dht22.h" line="92" column="1" bodyfile="src/dht22.c" bodystart="150" bodyend="165"/>
+        <references refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" compoundref="dht22_8c" startline="57" endline="77">DHT22_InitiateTransfer</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="62">DHT22_HandleTypeDef::state</references>
+        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" compoundref="dht22_8h" startline="28">DHT22_FINISHED</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a80d0ebb2df9c1ace6a102564d135670d">DHT22_HandleTypeDef::error_flags</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a20f65ad56869382ed8681b9dd1aa85d6" compoundref="dht22_8h" startline="65">DHT22_HandleTypeDef::timing</references>
+        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" compoundref="dht22_8h" startline="20">DHT22_TIMING_ERROR</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a3f32f989e34d67aa0736e2606a255e55" compoundref="dht22_8h" startline="64">DHT22_HandleTypeDef::parity</references>
+        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" compoundref="dht22_8h" startline="21">DHT22_CHECKSUM_ERROR</references>
+        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" compoundref="dht22_8h" startline="30">DHT22_READY</references>
+        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="18">DHT22_OK</references>
+        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" compoundref="dht22_8h" startline="19">DHT22_ERROR</references>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1a561512a49c1b6a49d3124eca8d26928b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -215,18 +235,17 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="95" column="1" bodyfile="src/dht22.c" bodystart="119" bodyend="192"/>
-        <references refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" compoundref="dht22_8h" startline="58">DHT22_HandleTypeDef::timHandle</references>
-        <references refid="struct_d_h_t22___handle_type_def_1ac695785e5005b76ab3d8749095adc661" compoundref="dht22_8h" startline="60">DHT22_HandleTypeDef::tim_channel</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a866a73f568a9c1580242de93194402d2" compoundref="dht22_8h" startline="47">DHT22_HandleTypeDef::last_val</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a3bdb49ed9986f21df0b78879c749192c" compoundref="dht22_8h" startline="46">DHT22_HandleTypeDef::bit_pos</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a47f38aa1f777ab5c907ec0375eae1344" compoundref="dht22_8h" startline="45">DHT22_HandleTypeDef::rx_buffer</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="55">DHT22_HandleTypeDef::state</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" compoundref="dht22_8h" startline="23">DHT22_READY</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a0e67f80c1eb86855d0ca1439ecf960c0" compoundref="dht22_8h" startline="54">DHT22_HandleTypeDef::crc_error_flag</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" compoundref="dht22_8h" startline="50">DHT22_HandleTypeDef::temp</references>
-        <references refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" compoundref="dht22_8h" startline="51">DHT22_HandleTypeDef::hum</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" compoundref="dht22_8h" startline="21">DHT22_RECEIVED</references>
+        <location file="inc/dht22.h" line="98" column="1" bodyfile="src/dht22.c" bodystart="119" bodyend="148"/>
+        <references refid="struct_d_h_t22___handle_type_def_1a0e9b6a7701079d8e775d6e429618f222" compoundref="dht22_8h" startline="69">DHT22_HandleTypeDef::config</references>
+        <references refid="struct_d_h_t22___config_1a30b15aedcc086ca7abb69f7ac012ce64" compoundref="dht22_8h" startline="39">DHT22_Config::timer</references>
+        <references refid="struct_d_h_t22___config_1a9209e1ec26ff459b75d3981ca197ec43" compoundref="dht22_8h" startline="40">DHT22_Config::timer_channel</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a866a73f568a9c1580242de93194402d2" compoundref="dht22_8h" startline="55">DHT22_HandleTypeDef::last_val</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a3bdb49ed9986f21df0b78879c749192c" compoundref="dht22_8h" startline="54">DHT22_HandleTypeDef::bit_pos</references>
+        <references refid="dht22_8c_1a49e2b9281e2eb3056ab463dd03891f74" compoundref="dht22_8c" startline="12">BETWEEN</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a80d0ebb2df9c1ace6a102564d135670d">DHT22_HandleTypeDef::error_flags</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a20f65ad56869382ed8681b9dd1aa85d6" compoundref="dht22_8h" startline="65">DHT22_HandleTypeDef::timing</references>
+        <references refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="62">DHT22_HandleTypeDef::state</references>
+        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" compoundref="dht22_8h" startline="28">DHT22_FINISHED</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -245,60 +264,63 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f4xx_hal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>,<sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>,<sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a54070a4d524153da2bcfb47392c981e5" kindref="member">DHT22_CRC_ERROR</ref><sp/>}<sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref>;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="21" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" kindref="member">DHT22_RECEIVED</ref>,<sp/><sp/></highlight><highlight class="comment">/*&lt;<sp/>Data<sp/>have<sp/>been<sp/>received<sp/>but<sp/>not<sp/>yet<sp/>processed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" kindref="member">DHT22_RECEIVING</ref>,<sp/></highlight><highlight class="comment">/*&lt;<sp/>Data<sp/>from<sp/>sensor<sp/>are<sp/>currently<sp/>being<sp/>received<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kindref="member">DHT22_READY</ref><sp/></highlight><highlight class="comment">/*&lt;<sp/>The<sp/>sensor<sp/>has<sp/>finished<sp/>all<sp/>operations<sp/>and<sp/>is<sp/>in<sp/>wait<sp/>state</highlight></codeline>
-<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref>;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="struct_d_h_t22___init_type_def" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31" refid="struct_d_h_t22___init_type_def_1a1468dc79e1c16d2ae8597631191ab190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___init_type_def_1a1468dc79e1c16d2ae8597631191ab190" kindref="member">gpio_pin</ref>;</highlight></codeline>
-<codeline lineno="32" refid="struct_d_h_t22___init_type_def_1a081bd8cbb6d27fdb0ab0681b66cfd080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_TypeDef<sp/>*<ref refid="struct_d_h_t22___init_type_def_1a081bd8cbb6d27fdb0ab0681b66cfd080" kindref="member">gpio_port</ref>;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>gpio_alternate_function;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="struct_d_h_t22___init_type_def_1a5f2d7e0e880def3262a850626e3df17d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_TypeDef<sp/>*<ref refid="struct_d_h_t22___init_type_def_1a5f2d7e0e880def3262a850626e3df17d" kindref="member">timer</ref>;</highlight></codeline>
-<codeline lineno="37" refid="struct_d_h_t22___init_type_def_1a9209e1ec26ff459b75d3981ca197ec43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___init_type_def_1a9209e1ec26ff459b75d3981ca197ec43" kindref="member">timer_channel</ref>;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}<sp/><ref refid="struct_d_h_t22___init_type_def" kindref="compound">DHT22_InitTypeDef</ref>;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="struct_d_h_t22___handle_type_def" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RX<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="struct_d_h_t22___handle_type_def_1a47f38aa1f777ab5c907ec0375eae1344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>rx_buffer[5];</highlight></codeline>
-<codeline lineno="46" refid="struct_d_h_t22___handle_type_def_1a3bdb49ed9986f21df0b78879c749192c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___handle_type_def_1a3bdb49ed9986f21df0b78879c749192c" kindref="member">bit_pos</ref>;</highlight></codeline>
-<codeline lineno="47" refid="struct_d_h_t22___handle_type_def_1a866a73f568a9c1580242de93194402d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_d_h_t22___handle_type_def_1a866a73f568a9c1580242de93194402d2" kindref="member">last_val</ref>;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Readings</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" kindref="member">temp</ref>;</highlight></codeline>
-<codeline lineno="51" refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" kindref="member">hum</ref>;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>State</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="struct_d_h_t22___handle_type_def_1a0e67f80c1eb86855d0ca1439ecf960c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___handle_type_def_1a0e67f80c1eb86855d0ca1439ecf960c0" kindref="member">crc_error_flag</ref>;</highlight></codeline>
-<codeline lineno="55" refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref><sp/><ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>,</highlight></codeline>
+<codeline lineno="19" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>,</highlight></codeline>
+<codeline lineno="20" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" kindref="member">DHT22_TIMING_ERROR</ref>,</highlight></codeline>
+<codeline lineno="21" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" kindref="member">DHT22_CHECKSUM_ERROR</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" kindref="member">DHT22_FINISHED</ref>,<sp/></highlight><highlight class="comment">/*&lt;<sp/>Data<sp/>have<sp/>been<sp/>received<sp/>but<sp/>not<sp/>yet<sp/>processed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" kindref="member">DHT22_BUSY</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&lt;<sp/>Data<sp/>from<sp/>sensor<sp/>are<sp/>currently<sp/>being<sp/>received<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kindref="member">DHT22_READY</ref><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&lt;<sp/>The<sp/>sensor<sp/>is<sp/>ready<sp/>for<sp/>a<sp/>next<sp/>reading<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="struct_d_h_t22___config" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37" refid="struct_d_h_t22___config_1a1468dc79e1c16d2ae8597631191ab190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___config_1a1468dc79e1c16d2ae8597631191ab190" kindref="member">gpio_pin</ref>;</highlight></codeline>
+<codeline lineno="38" refid="struct_d_h_t22___config_1a081bd8cbb6d27fdb0ab0681b66cfd080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_TypeDef*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___config_1a081bd8cbb6d27fdb0ab0681b66cfd080" kindref="member">gpio_port</ref>;</highlight></codeline>
+<codeline lineno="39" refid="struct_d_h_t22___config_1a30b15aedcc086ca7abb69f7ac012ce64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_HandleTypeDef*<sp/><ref refid="struct_d_h_t22___config_1a30b15aedcc086ca7abb69f7ac012ce64" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="40" refid="struct_d_h_t22___config_1a9209e1ec26ff459b75d3981ca197ec43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___config_1a9209e1ec26ff459b75d3981ca197ec43" kindref="member">timer_channel</ref>;</highlight></codeline>
+<codeline lineno="41" refid="struct_d_h_t22___config_1a70cb722279d212fa1c6005742b183b0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IRQn_Type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___config_1a70cb722279d212fa1c6005742b183b0d" kindref="member">timer_irqn</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>gpio_alternate_function;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><ref refid="struct_d_h_t22___config" kindref="compound">DHT22_Config</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="struct_d_h_t22___handle_type_def" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RX<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="struct_d_h_t22___handle_type_def_1a47f38aa1f777ab5c907ec0375eae1344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>rx_buffer[5];</highlight></codeline>
+<codeline lineno="54" refid="struct_d_h_t22___handle_type_def_1a3bdb49ed9986f21df0b78879c749192c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___handle_type_def_1a3bdb49ed9986f21df0b78879c749192c" kindref="member">bit_pos</ref>;</highlight></codeline>
+<codeline lineno="55" refid="struct_d_h_t22___handle_type_def_1a866a73f568a9c1580242de93194402d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_d_h_t22___handle_type_def_1a866a73f568a9c1580242de93194402d2" kindref="member">last_val</ref>;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configuration</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_HandleTypeDef<sp/><sp/><ref refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kindref="member">timHandle</ref>;</highlight></codeline>
-<codeline lineno="59" refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_IC_InitTypeDef<sp/><ref refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kindref="member">timICHandle</ref>;</highlight></codeline>
-<codeline lineno="60" refid="struct_d_h_t22___handle_type_def_1ac695785e5005b76ab3d8749095adc661" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___handle_type_def_1ac695785e5005b76ab3d8749095adc661" kindref="member">tim_channel</ref>;</highlight></codeline>
-<codeline lineno="61" refid="struct_d_h_t22___handle_type_def_1a1468dc79e1c16d2ae8597631191ab190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___handle_type_def_1a1468dc79e1c16d2ae8597631191ab190" kindref="member">gpio_pin</ref>;</highlight></codeline>
-<codeline lineno="62" refid="struct_d_h_t22___handle_type_def_1a081bd8cbb6d27fdb0ab0681b66cfd080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_TypeDef<sp/>*<sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___handle_type_def_1a081bd8cbb6d27fdb0ab0681b66cfd080" kindref="member">gpio_port</ref>;</highlight></codeline>
-<codeline lineno="63" refid="struct_d_h_t22___handle_type_def_1a70cb722279d212fa1c6005742b183b0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IRQn_Type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___handle_type_def_1a70cb722279d212fa1c6005742b183b0d" kindref="member">timer_irqn</ref>;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>gpio_alternate_function;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}<sp/><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1a9c75b3c36f0920fa6ad3ac5ad8ea2b9e" kindref="member">DHT22_Init</ref>(<ref refid="struct_d_h_t22___init_type_def" kindref="compound">DHT22_InitTypeDef</ref><sp/>*init,<sp/><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref><sp/>*handle);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1ada5d62c92505f78d77c3fa785ba8982a" kindref="member">DHT22_DeInit</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref><sp/>*handle);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1ad3d02d9f971cc36c866b8759ce3c9bfa" kindref="member">DHT22_ReadData</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref><sp/>*handle);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a561512a49c1b6a49d3124eca8d26928b" kindref="member">DHT22_InterruptHandler</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref><sp/>*handle);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Readings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" kindref="member">temp</ref>;</highlight></codeline>
+<codeline lineno="59" refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" kindref="member">hum</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>State</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref><sp/><ref refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64" refid="struct_d_h_t22___handle_type_def_1a3f32f989e34d67aa0736e2606a255e55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>parity<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="65" refid="struct_d_h_t22___handle_type_def_1a20f65ad56869382ed8681b9dd1aa85d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>timing<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>error_flags;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>config</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="struct_d_h_t22___handle_type_def_1a0e9b6a7701079d8e775d6e429618f222" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_d_h_t22___config" kindref="compound">DHT22_Config</ref><sp/><ref refid="struct_d_h_t22___handle_type_def_1a0e9b6a7701079d8e775d6e429618f222" kindref="member">config</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1ae0a960cf3f32e5f54cbd94b84850f3c7" kindref="member">DHT22_Init</ref>(<ref refid="struct_d_h_t22___config" kindref="compound">DHT22_Config</ref>*<sp/>init,<sp/><ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1ada5d62c92505f78d77c3fa785ba8982a" kindref="member">DHT22_DeInit</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1ad3d02d9f971cc36c866b8759ce3c9bfa" kindref="member">DHT22_ReadData</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a561512a49c1b6a49d3124eca8d26928b" kindref="member">DHT22_InterruptHandler</ref>(<ref refid="struct_d_h_t22___handle_type_def" kindref="compound">DHT22_HandleTypeDef</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="inc/dht22.h"/>
   </compounddef>

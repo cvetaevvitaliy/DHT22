@@ -93,7 +93,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">dht22.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dht22.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dht22_8h__incl.png" border="0" usemap="#inc_2dht22_8h" alt=""/></div>
+<map name="inc_2dht22_8h" id="inc_2dht22_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="dht22_8h__dep__incl.png" border="0" usemap="#inc_2dht22_8hdep" alt=""/></div>
@@ -106,7 +114,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t22___init_type_def.html">DHT22_InitTypeDef</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t22___config.html">DHT22_Config</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,19 +123,20 @@ Data Structures</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:a1d16fe97ca08e0d2c9b928a36472c633"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a> { <a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76">DHT22_OK</a>, 
 <a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a>, 
-<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a54070a4d524153da2bcfb47392c981e5">DHT22_CRC_ERROR</a>
+<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5">DHT22_TIMING_ERROR</a>, 
+<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e">DHT22_CHECKSUM_ERROR</a>
  }</td></tr>
 <tr class="separator:a1d16fe97ca08e0d2c9b928a36472c633"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73cd960d2d2ae7988ddb46f1c9e49e79"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79">DHT22_STATE</a> { <a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28">DHT22_RECEIVED</a>, 
-<a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b">DHT22_RECEIVING</a>, 
+<tr class="memitem:a73cd960d2d2ae7988ddb46f1c9e49e79"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79">DHT22_STATE</a> { <a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817">DHT22_FINISHED</a>, 
+<a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2">DHT22_BUSY</a>, 
 <a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e">DHT22_READY</a>
  }</td></tr>
 <tr class="separator:a73cd960d2d2ae7988ddb46f1c9e49e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9c75b3c36f0920fa6ad3ac5ad8ea2b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a9c75b3c36f0920fa6ad3ac5ad8ea2b9e">DHT22_Init</a> (<a class="el" href="struct_d_h_t22___init_type_def.html">DHT22_InitTypeDef</a> *init, <a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
-<tr class="separator:a9c75b3c36f0920fa6ad3ac5ad8ea2b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0a960cf3f32e5f54cbd94b84850f3c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#ae0a960cf3f32e5f54cbd94b84850f3c7">DHT22_Init</a> (<a class="el" href="struct_d_h_t22___config.html">DHT22_Config</a> *init, <a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
+<tr class="separator:ae0a960cf3f32e5f54cbd94b84850f3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada5d62c92505f78d77c3fa785ba8982a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#ada5d62c92505f78d77c3fa785ba8982a">DHT22_DeInit</a> (<a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
 <tr class="separator:ada5d62c92505f78d77c3fa785ba8982a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d02d9f971cc36c866b8759ce3c9bfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#ad3d02d9f971cc36c866b8759ce3c9bfa">DHT22_ReadData</a> (<a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
@@ -151,7 +160,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1"></a>DHT22_ERROR&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633a54070a4d524153da2bcfb47392c981e5"></a>DHT22_CRC_ERROR&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5"></a>DHT22_TIMING_ERROR&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e"></a>DHT22_CHECKSUM_ERROR&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -168,9 +179,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Describes the state of the sensor </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28"></a>DHT22_RECEIVED&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817"></a>DHT22_FINISHED&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b"></a>DHT22_RECEIVING&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2"></a>DHT22_BUSY&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e"></a>DHT22_READY&#160;</td><td class="fielddoc">
 </td></tr>
@@ -202,14 +213,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9c75b3c36f0920fa6ad3ac5ad8ea2b9e"></a>
+<a class="anchor" id="ae0a960cf3f32e5f54cbd94b84850f3c7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a> DHT22_Init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_d_h_t22___init_type_def.html">DHT22_InitTypeDef</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_d_h_t22___config.html">DHT22_Config</a> *&#160;</td>
           <td class="paramname"><em>init</em>, </td>
         </tr>
         <tr>
@@ -296,7 +307,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 19 2017 12:16:15 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 19 2017 18:12:51 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

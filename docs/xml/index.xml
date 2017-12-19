@@ -1,36 +1,35 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="struct_d_h_t22___config" kind="struct"><name>DHT22_Config</name>
+    <member refid="struct_d_h_t22___config_1a1468dc79e1c16d2ae8597631191ab190" kind="variable"><name>gpio_pin</name></member>
+    <member refid="struct_d_h_t22___config_1a081bd8cbb6d27fdb0ab0681b66cfd080" kind="variable"><name>gpio_port</name></member>
+    <member refid="struct_d_h_t22___config_1a30b15aedcc086ca7abb69f7ac012ce64" kind="variable"><name>timer</name></member>
+    <member refid="struct_d_h_t22___config_1a9209e1ec26ff459b75d3981ca197ec43" kind="variable"><name>timer_channel</name></member>
+    <member refid="struct_d_h_t22___config_1a70cb722279d212fa1c6005742b183b0d" kind="variable"><name>timer_irqn</name></member>
+  </compound>
   <compound refid="struct_d_h_t22___handle_type_def" kind="struct"><name>DHT22_HandleTypeDef</name>
     <member refid="struct_d_h_t22___handle_type_def_1a47f38aa1f777ab5c907ec0375eae1344" kind="variable"><name>rx_buffer</name></member>
     <member refid="struct_d_h_t22___handle_type_def_1a3bdb49ed9986f21df0b78879c749192c" kind="variable"><name>bit_pos</name></member>
     <member refid="struct_d_h_t22___handle_type_def_1a866a73f568a9c1580242de93194402d2" kind="variable"><name>last_val</name></member>
     <member refid="struct_d_h_t22___handle_type_def_1a24d61a35b72d7299eb6b5f48e71a571b" kind="variable"><name>temp</name></member>
     <member refid="struct_d_h_t22___handle_type_def_1a38adb4de3d9d0391675c323d13503af7" kind="variable"><name>hum</name></member>
-    <member refid="struct_d_h_t22___handle_type_def_1a0e67f80c1eb86855d0ca1439ecf960c0" kind="variable"><name>crc_error_flag</name></member>
     <member refid="struct_d_h_t22___handle_type_def_1a2f85ff3689520d5276c9431da0f45378" kind="variable"><name>state</name></member>
-    <member refid="struct_d_h_t22___handle_type_def_1aa809f49efcf3fd6f8ccc4a2a9c7542fa" kind="variable"><name>timHandle</name></member>
-    <member refid="struct_d_h_t22___handle_type_def_1a887d46837de5ea18a249bc23e027db50" kind="variable"><name>timICHandle</name></member>
-    <member refid="struct_d_h_t22___handle_type_def_1ac695785e5005b76ab3d8749095adc661" kind="variable"><name>tim_channel</name></member>
-    <member refid="struct_d_h_t22___handle_type_def_1a1468dc79e1c16d2ae8597631191ab190" kind="variable"><name>gpio_pin</name></member>
-    <member refid="struct_d_h_t22___handle_type_def_1a081bd8cbb6d27fdb0ab0681b66cfd080" kind="variable"><name>gpio_port</name></member>
-    <member refid="struct_d_h_t22___handle_type_def_1a70cb722279d212fa1c6005742b183b0d" kind="variable"><name>timer_irqn</name></member>
-  </compound>
-  <compound refid="struct_d_h_t22___init_type_def" kind="struct"><name>DHT22_InitTypeDef</name>
-    <member refid="struct_d_h_t22___init_type_def_1a1468dc79e1c16d2ae8597631191ab190" kind="variable"><name>gpio_pin</name></member>
-    <member refid="struct_d_h_t22___init_type_def_1a081bd8cbb6d27fdb0ab0681b66cfd080" kind="variable"><name>gpio_port</name></member>
-    <member refid="struct_d_h_t22___init_type_def_1a5f2d7e0e880def3262a850626e3df17d" kind="variable"><name>timer</name></member>
-    <member refid="struct_d_h_t22___init_type_def_1a9209e1ec26ff459b75d3981ca197ec43" kind="variable"><name>timer_channel</name></member>
+    <member refid="struct_d_h_t22___handle_type_def_1a3f32f989e34d67aa0736e2606a255e55" kind="variable"><name>parity</name></member>
+    <member refid="struct_d_h_t22___handle_type_def_1a20f65ad56869382ed8681b9dd1aa85d6" kind="variable"><name>timing</name></member>
+    <member refid="struct_d_h_t22___handle_type_def_1a80d0ebb2df9c1ace6a102564d135670d" kind="variable"><name>error_flags</name></member>
+    <member refid="struct_d_h_t22___handle_type_def_1a0e9b6a7701079d8e775d6e429618f222" kind="variable"><name>config</name></member>
   </compound>
   <compound refid="dht22_8h" kind="file"><name>dht22.h</name>
     <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kind="enum"><name>DHT22_RESULT</name></member>
     <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kind="enumvalue"><name>DHT22_OK</name></member>
     <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kind="enumvalue"><name>DHT22_ERROR</name></member>
-    <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a54070a4d524153da2bcfb47392c981e5" kind="enumvalue"><name>DHT22_CRC_ERROR</name></member>
+    <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" kind="enumvalue"><name>DHT22_TIMING_ERROR</name></member>
+    <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" kind="enumvalue"><name>DHT22_CHECKSUM_ERROR</name></member>
     <member refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kind="enum"><name>DHT22_STATE</name></member>
-    <member refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79ab0aa75ca7a64b7bbe4497c2f97890a28" kind="enumvalue"><name>DHT22_RECEIVED</name></member>
-    <member refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79add9d6406d0a286291d1f39c6aefe3b0b" kind="enumvalue"><name>DHT22_RECEIVING</name></member>
+    <member refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" kind="enumvalue"><name>DHT22_FINISHED</name></member>
+    <member refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" kind="enumvalue"><name>DHT22_BUSY</name></member>
     <member refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kind="enumvalue"><name>DHT22_READY</name></member>
-    <member refid="dht22_8h_1a9c75b3c36f0920fa6ad3ac5ad8ea2b9e" kind="function"><name>DHT22_Init</name></member>
+    <member refid="dht22_8h_1ae0a960cf3f32e5f54cbd94b84850f3c7" kind="function"><name>DHT22_Init</name></member>
     <member refid="dht22_8h_1ada5d62c92505f78d77c3fa785ba8982a" kind="function"><name>DHT22_DeInit</name></member>
     <member refid="dht22_8h_1ad3d02d9f971cc36c866b8759ce3c9bfa" kind="function"><name>DHT22_ReadData</name></member>
     <member refid="dht22_8h_1a561512a49c1b6a49d3124eca8d26928b" kind="function"><name>DHT22_InterruptHandler</name></member>
@@ -38,11 +37,15 @@
   <compound refid="dht22_8c" kind="file"><name>dht22.c</name>
     <member refid="dht22_8c_1a045a01d0be5da934965d41a69ad3cd18" kind="define"><name>DHT22_StartIT</name></member>
     <member refid="dht22_8c_1ac4102d598485c6a623db004f78622aca" kind="define"><name>DHT22_StopIT</name></member>
+    <member refid="dht22_8c_1a49e2b9281e2eb3056ab463dd03891f74" kind="define"><name>BETWEEN</name></member>
     <member refid="dht22_8c_1a5fee0dc6b5cd41cfa086ab69b35ddb5e" kind="function"><name>DHT22_SetPinOUT</name></member>
     <member refid="dht22_8c_1ad4175670c5d079ac695155e1f2d6122e" kind="function"><name>DHT22_SetPinIN</name></member>
     <member refid="dht22_8c_1aa50c742eb8df892ed970ac68c0c09e6f" kind="function"><name>DHT22_InitiateTransfer</name></member>
-    <member refid="dht22_8c_1a9c75b3c36f0920fa6ad3ac5ad8ea2b9e" kind="function"><name>DHT22_Init</name></member>
+    <member refid="dht22_8c_1a77f7d41fb384d3f9ba418d491871bffb" kind="function"><name>DHT22_Init</name></member>
     <member refid="dht22_8c_1ada5d62c92505f78d77c3fa785ba8982a" kind="function"><name>DHT22_DeInit</name></member>
+    <member refid="dht22_8c_1aaf170310d73d58a8326b573497990bd8" kind="function"><name>write_bit</name></member>
+    <member refid="dht22_8c_1ab95eb6a0a585144280871c8c456cf49f" kind="function"><name>get_float</name></member>
+    <member refid="dht22_8c_1a1f08e8456448c71b13b4f5bd80be9585" kind="function"><name>finish_rx</name></member>
     <member refid="dht22_8c_1a561512a49c1b6a49d3124eca8d26928b" kind="function"><name>DHT22_InterruptHandler</name></member>
     <member refid="dht22_8c_1ad3d02d9f971cc36c866b8759ce3c9bfa" kind="function"><name>DHT22_ReadData</name></member>
   </compound>

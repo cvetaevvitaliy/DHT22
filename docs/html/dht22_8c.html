@@ -108,6 +108,8 @@ Macros</h2></td></tr>
 <tr class="separator:a045a01d0be5da934965d41a69ad3cd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4102d598485c6a623db004f78622aca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8c.html#ac4102d598485c6a623db004f78622aca">DHT22_StopIT</a>()</td></tr>
 <tr class="separator:ac4102d598485c6a623db004f78622aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e2b9281e2eb3056ab463dd03891f74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8c.html#a49e2b9281e2eb3056ab463dd03891f74">BETWEEN</a>(a,  b)&#160;&#160;&#160;dt &gt;= a&amp;&amp; dt &lt;= b</td></tr>
+<tr class="separator:a49e2b9281e2eb3056ab463dd03891f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -117,8 +119,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad4175670c5d079ac695155e1f2d6122e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50c742eb8df892ed970ac68c0c09e6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8c.html#aa50c742eb8df892ed970ac68c0c09e6f">DHT22_InitiateTransfer</a> (<a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
 <tr class="separator:aa50c742eb8df892ed970ac68c0c09e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c75b3c36f0920fa6ad3ac5ad8ea2b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8c.html#a9c75b3c36f0920fa6ad3ac5ad8ea2b9e">DHT22_Init</a> (<a class="el" href="struct_d_h_t22___init_type_def.html">DHT22_InitTypeDef</a> *init, <a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
-<tr class="separator:a9c75b3c36f0920fa6ad3ac5ad8ea2b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f7d41fb384d3f9ba418d491871bffb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8c.html#a77f7d41fb384d3f9ba418d491871bffb">DHT22_Init</a> (<a class="el" href="struct_d_h_t22___config.html">DHT22_Config</a> *config, <a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
+<tr class="separator:a77f7d41fb384d3f9ba418d491871bffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada5d62c92505f78d77c3fa785ba8982a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8c.html#ada5d62c92505f78d77c3fa785ba8982a">DHT22_DeInit</a> (<a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
 <tr class="separator:ada5d62c92505f78d77c3fa785ba8982a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561512a49c1b6a49d3124eca8d26928b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8c.html#a561512a49c1b6a49d3124eca8d26928b">DHT22_InterruptHandler</a> (<a class="el" href="struct_d_h_t22___handle_type_def.html">DHT22_HandleTypeDef</a> *handle)</td></tr>
@@ -127,6 +129,32 @@ Functions</h2></td></tr>
 <tr class="separator:ad3d02d9f971cc36c866b8759ce3c9bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a49e2b9281e2eb3056ab463dd03891f74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BETWEEN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;dt &gt;= a&amp;&amp; dt &lt;= b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a045a01d0be5da934965d41a69ad3cd18"></a>
 <div class="memitem">
 <div class="memproto">
@@ -139,7 +167,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (HAL_TIM_IC_Start_IT(&amp;handle-&gt;timHandle, handle-&gt;tim_channel) != \</div><div class="line">        HAL_OK)                                                         \</div><div class="line">    return <a class="code" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a></div><div class="ttc" id="dht22_8h_html_a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1"><div class="ttname"><a href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a></div><div class="ttdef"><b>Definition:</b> dht22.h:15</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (HAL_TIM_IC_Start_IT(handle-&gt;config.timer,                    \</div><div class="line">                            handle-&gt;config.timer_channel) != HAL_OK) \</div><div class="line">    return <a class="code" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a></div><div class="ttc" id="dht22_8h_html_a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1"><div class="ttname"><a href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a></div><div class="ttdef"><b>Definition:</b> dht22.h:19</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -155,7 +183,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (HAL_TIM_IC_Stop_IT(&amp;handle-&gt;timHandle, handle-&gt;tim_channel) != HAL_OK) \</div><div class="line">    return <a class="code" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a></div><div class="ttc" id="dht22_8h_html_a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1"><div class="ttname"><a href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a></div><div class="ttdef"><b>Definition:</b> dht22.h:15</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (HAL_TIM_IC_Stop_IT(handle-&gt;config.timer,                    \</div><div class="line">                           handle-&gt;config.timer_channel) != HAL_OK) \</div><div class="line">    return <a class="code" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a></div><div class="ttc" id="dht22_8h_html_a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1"><div class="ttname"><a href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a></div><div class="ttdef"><b>Definition:</b> dht22.h:19</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -183,14 +211,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9c75b3c36f0920fa6ad3ac5ad8ea2b9e"></a>
+<a class="anchor" id="a77f7d41fb384d3f9ba418d491871bffb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a> DHT22_Init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_d_h_t22___init_type_def.html">DHT22_InitTypeDef</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_d_h_t22___config.html">DHT22_Config</a> *&#160;</td>
           <td class="paramname"><em>init</em>, </td>
         </tr>
         <tr>
@@ -354,7 +382,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 19 2017 12:16:15 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 19 2017 18:12:51 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
