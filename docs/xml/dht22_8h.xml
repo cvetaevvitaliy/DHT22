@@ -232,7 +232,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Handles the pin interrupt <parameterlist kind="param"><parameteritem>
+<para>Handles the timer interrupt <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>handle</parametername>
 </parameternamelist>

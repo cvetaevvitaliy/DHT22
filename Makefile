@@ -1,6 +1,7 @@
 sources := \
 $(wildcard inc/*.h) \
-$(wildcard src/*.c)
+$(wildcard src/*.c) \
+$(wildcard example/general/*)
 
 docs: $(sources)
 	doxygen

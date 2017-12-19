@@ -88,7 +88,7 @@ DHT22_RESULT dht22_deinit(dht22* handle);
 DHT22_RESULT dht22_read_data(dht22* handle);
 
 /**
- * Handles the pin interrupt
+ * Handles the timer interrupt
  * @param	handle - a pointer to the DHT22 handle
  */
 void dht22_interrupt_handler(dht22* handle);

@@ -48,7 +48,7 @@
 #include "stm32f1xx_hal.h"
 
 /* USER CODE BEGIN Includes */
-#include "dht22.h"
+#include "example.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -59,7 +59,6 @@ DMA_HandleTypeDef  hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-dht22 dht;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -109,34 +108,14 @@ int main(void) {
     MX_USART1_UART_Init();
 
     /* USER CODE BEGIN 2 */
-    {
-        dht22_config dht_config;
-
-        dht_config.gpio_pin      = GPIO_PIN_6;
-        dht_config.gpio_port     = GPIOA;
-        dht_config.timer         = &htim3;
-        dht_config.timer_channel = TIM_CHANNEL_1;
-
-        if (dht22_init(&dht_config, &dht) != DHT22_OK) {
-            // error occured
-            _Error_Handler(__FILE__, __LINE__);
-        }
-    }
-
+    example();
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1) {
         /* USER CODE END WHILE */
-
         /* USER CODE BEGIN 3 */
-        if (dht22_read_data(&dht) != DHT22_OK) {
-            _Error_Handler(__FILE__, __LINE__);
-        }
-        int data[2] = {dht.temp * 1000, dht.hum * 1000};
-        HAL_UART_Transmit_DMA(&huart1, (uint8_t*)data, 8);
-        HAL_Delay(3000);
     }
     /* USER CODE END 3 */
 }
