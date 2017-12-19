@@ -5,13 +5,11 @@ Library for STM32 series microcontrollers for reading DHT22 sensor values
 You can find [generated documentation here](https://github.com/petoknm/DHT22/blob/master/api.md).
 
 ## Hardware setup
-DHT22 uses a one data pin that needs to be connected to a timer input capture
-channel. In the examples those are:
- - STM32F1 => PA6
- - STM32F4 => PC6
-
-Of course you can choose a different pin as long as the pin can be used as a
-timer input capture channel.
+DHT22 uses one data pin that needs to be connected to a timer input capture
+channel. For each example there is a `README.md` file (e.g.
+`example/stm32f1/README.md`) describing the harware
+setup used in the particular example. Of course you can choose a different pin
+as long as the pin can be used as a timer input capture channel.
 
 ## Software setup
 You need to include `dht22.h` file to get access to the functionality provided
@@ -19,6 +17,21 @@ by this library. You also have to compile the `dht22.c` file, together with your
 other source files. You can take a look at the
 [examples](#examples--how-you-can-help) to see how
 that can be done.
+
+### Timer setup
+This library requires a 16bit timer to be configured such that its counting
+frequency is **1MHz**. All measurements inside the library are relative to that
+and rely on that calibration.
+
+Example:
+ - timer_clock = 8MHz
+ - timer_prescaler = timer_clock / 1MHz = 8
+
+Now that you know the timer prescaler you need to make sure that the timer
+prescaler register has a value 1 less that that.
+
+Example:
+ - timer_prescaler = 8 => TIMx_PSC = 7
 
 ## Requirements
 For building you need:

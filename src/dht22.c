@@ -77,9 +77,7 @@ DHT22_RESULT DHT22_InitiateTransfer(DHT22_HandleTypeDef *handle) {
     DHT22_SetPinIN(handle);
 
     handle->bit_pos = -1;
-    for (int i = 0; i < 5; i++) {
-        handle->rx_buffer[i] = 0;
-    }
+    for (int i = 0; i < 5; i++) { handle->rx_buffer[i] = 0; }
     handle->state = DHT22_RECEIVING;
     DHT22_StartIT();
 
@@ -100,9 +98,7 @@ DHT22_RESULT DHT22_Init(DHT22_InitTypeDef *init, DHT22_HandleTypeDef *handle) {
     handle->timHandle.Init.Prescaler     = 0;
     handle->timHandle.Init.ClockDivision = 0;
     handle->timHandle.Init.CounterMode   = TIM_COUNTERMODE_UP;
-    if (HAL_TIM_IC_Init(&handle->timHandle) != HAL_OK) {
-        return DHT22_ERROR;
-    }
+    if (HAL_TIM_IC_Init(&handle->timHandle) != HAL_OK) { return DHT22_ERROR; }
     handle->timICHandle.ICPolarity  = TIM_ICPOLARITY_FALLING;
     handle->timICHandle.ICSelection = TIM_ICSELECTION_DIRECTTI;
     handle->timICHandle.ICPrescaler = TIM_ICPSC_DIV1;
@@ -134,9 +130,7 @@ void DHT22_InterruptHandler(DHT22_HandleTypeDef *handle) {
     float time = 1000000.0 * val2 / freq;
 
     if (handle->bit_pos < 0) {
-        if (time > 155.0 && time < 165.0) {
-            handle->bit_pos = 0;
-        }
+        if (time > 155.0 && time < 165.0) { handle->bit_pos = 0; }
     } else if (handle->bit_pos >= 0 && handle->bit_pos < 40) {
         if (time > 78.0 && time < 97.0) {
             handle->rx_buffer[handle->bit_pos / 8] &=
@@ -157,9 +151,7 @@ void DHT22_InterruptHandler(DHT22_HandleTypeDef *handle) {
         handle->bit_pos = -1;
         HAL_TIM_IC_Stop_IT(&handle->timHandle, handle->tim_channel);
         uint8_t sum = 0;
-        for (int i = 0; i < 4; i++) {
-            sum += handle->rx_buffer[i];
-        }
+        for (int i = 0; i < 4; i++) { sum += handle->rx_buffer[i]; }
         if (sum == handle->rx_buffer[4]) {
             handle->crc_error_flag = 0;
 
@@ -194,11 +186,9 @@ void DHT22_InterruptHandler(DHT22_HandleTypeDef *handle) {
 DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef *handle) {
     DHT22_InitiateTransfer(handle);
     uint32_t startTick = HAL_GetTick();
-    while (handle->state == DHT22_RECEIVING && HAL_GetTick() - startTick < 1000)
-        ;
-    if (handle->crc_error_flag == 1) {
-        return DHT22_CRC_ERROR;
-    }
+    while (handle->state == DHT22_RECEIVING &&
+           HAL_GetTick() - startTick < 1000) {}
+    if (handle->crc_error_flag == 1) { return DHT22_CRC_ERROR; }
     if (handle->state != DHT22_RECEIVED) {
         return DHT22_ERROR;
     } else {

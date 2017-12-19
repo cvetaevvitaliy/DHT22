@@ -119,8 +119,7 @@ int main(void) {
 
         if (DHT22_Init(&dht_init, &dht) != DHT22_OK) {
             // error occured
-            while (1)
-                ;
+            while (1) {}
         }
     }
 
@@ -189,9 +188,9 @@ static void MX_TIM3_Init(void) {
     TIM_IC_InitTypeDef      sConfigIC;
 
     htim3.Instance               = TIM3;
-    htim3.Init.Prescaler         = 0;
+    htim3.Init.Prescaler         = 7;
     htim3.Init.CounterMode       = TIM_COUNTERMODE_UP;
-    htim3.Init.Period            = 0;
+    htim3.Init.Period            = 65535;
     htim3.Init.ClockDivision     = TIM_CLOCKDIVISION_DIV1;
     htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
     if (HAL_TIM_IC_Init(&htim3) != HAL_OK) {
@@ -205,7 +204,7 @@ static void MX_TIM3_Init(void) {
         _Error_Handler(__FILE__, __LINE__);
     }
 
-    sConfigIC.ICPolarity  = TIM_INPUTCHANNELPOLARITY_RISING;
+    sConfigIC.ICPolarity  = TIM_INPUTCHANNELPOLARITY_FALLING;
     sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
     sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
     sConfigIC.ICFilter    = 0;
@@ -218,7 +217,7 @@ static void MX_TIM3_Init(void) {
 static void MX_USART1_UART_Init(void) {
 
     huart1.Instance          = USART1;
-    huart1.Init.BaudRate     = 115200;
+    huart1.Init.BaudRate     = 57600;
     huart1.Init.WordLength   = UART_WORDLENGTH_8B;
     huart1.Init.StopBits     = UART_STOPBITS_1;
     huart1.Init.Parity       = UART_PARITY_NONE;
@@ -264,8 +263,7 @@ void _Error_Handler(char *file, int line) {
     /* USER CODE BEGIN Error_Handler_Debug */
     /* User can add his own implementation to report the HAL error return state
      */
-    while (1) {
-    }
+    while (1) {}
     /* USER CODE END Error_Handler_Debug */
 }
 
