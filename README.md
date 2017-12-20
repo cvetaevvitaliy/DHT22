@@ -8,6 +8,11 @@ Library for STM32 series microcontrollers for reading DHT22 sensor values
  - Photos/Videos
  - v1.0.0
 
+## Example
+Check out the [general example](https://github.com/petoknm/DHT22/blob/master/example/general) that all
+the microcontroller specific examples link to. This demostrates that the library
+is fully portable across all the STM32 families.
+
 ## Documentation
 You can find [generated documentation here](https://github.com/petoknm/DHT22/blob/master/api.md).
 

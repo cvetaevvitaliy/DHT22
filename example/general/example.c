@@ -1,4 +1,5 @@
 #include "example.h"
+#include "example_defs.h"
 
 dht22 dht;
 
