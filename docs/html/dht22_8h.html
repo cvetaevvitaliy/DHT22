@@ -98,8 +98,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Include dependency graph for dht22.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="dht22_8h__incl.png" border="0" usemap="#inc_2dht22_8h" alt=""/></div>
-<map name="inc_2dht22_8h" id="inc_2dht22_8h">
-</map>
 </div>
 </div>
 <p><a href="dht22_8h_source.html">Go to the source code of this file.</a></p>
@@ -158,12 +156,16 @@ Functions</h2></td></tr>
 <p>Possible return values of the functions. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76"></a>DHT22_OK&#160;</td><td class="fielddoc">
+<p>Function call was successful. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1"></a>DHT22_ERROR&#160;</td><td class="fielddoc">
+<p>Function call was unsuccessful. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5"></a>DHT22_TIMING_ERROR&#160;</td><td class="fielddoc">
+<p>Timing error was detected. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e"></a>DHT22_CHECKSUM_ERROR&#160;</td><td class="fielddoc">
+<p>Checksum error was detected. </p>
 </td></tr>
 </table>
 
@@ -182,10 +184,13 @@ Functions</h2></td></tr>
 <p>Describes the state of the sensor. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e"></a>DHT22_READY&#160;</td><td class="fielddoc">
+<p>The sensor is ready for next measurement. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2"></a>DHT22_BUSY&#160;</td><td class="fielddoc">
+<p>The sensor is currently receiving data. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817"></a>DHT22_FINISHED&#160;</td><td class="fielddoc">
+<p>The sensor finished receiving data, data are awaiting processing. </p>
 </td></tr>
 </table>
 
@@ -305,7 +310,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 20 2017 17:12:55 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 20 2017 18:20:06 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

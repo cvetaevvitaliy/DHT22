@@ -10,12 +10,12 @@
         <argsstring></argsstring>
         <name>gpio_pin</name>
         <briefdescription>
-        </briefdescription>
+<para>GPIO pin connected to the DHT22 sensor. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="37" column="1" bodyfile="inc/dht22.h" bodystart="37" bodyend="-1"/>
+        <location file="inc/dht22.h" line="61" column="1" bodyfile="inc/dht22.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" prot="public" static="no" mutable="no">
         <type>GPIO_TypeDef *</type>
@@ -23,12 +23,12 @@
         <argsstring></argsstring>
         <name>gpio_port</name>
         <briefdescription>
-        </briefdescription>
+<para>GPIO port associated with the <computeroutput>gpio_pin</computeroutput> </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="38" column="1" bodyfile="inc/dht22.h" bodystart="38" bodyend="-1"/>
+        <location file="inc/dht22.h" line="65" column="1" bodyfile="inc/dht22.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" prot="public" static="no" mutable="no">
         <type>TIM_HandleTypeDef *</type>
@@ -36,12 +36,12 @@
         <argsstring></argsstring>
         <name>timer</name>
         <briefdescription>
-        </briefdescription>
+<para>Calibrated timer used for time measurements. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="39" column="1" bodyfile="inc/dht22.h" bodystart="39" bodyend="-1"/>
+        <location file="inc/dht22.h" line="69" column="1" bodyfile="inc/dht22.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -49,19 +49,19 @@
         <argsstring></argsstring>
         <name>timer_channel</name>
         <briefdescription>
-        </briefdescription>
+<para>Input capture channel of the timer to be used for time measurements. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="40" column="1" bodyfile="inc/dht22.h" bodystart="40" bodyend="-1"/>
+        <location file="inc/dht22.h" line="73" column="1" bodyfile="inc/dht22.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This structure is for initializing the sensor handle. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="inc/dht22.h" line="36" column="1" bodyfile="inc/dht22.h" bodystart="36" bodyend="45"/>
+    <location file="inc/dht22.h" line="57" column="1" bodyfile="inc/dht22.h" bodystart="57" bodyend="81"/>
     <listofallmembers>
       <member refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>gpio_pin</name></member>
       <member refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>gpio_port</name></member>

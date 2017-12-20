@@ -10,25 +10,25 @@
         <argsstring>[5]</argsstring>
         <name>rx_buffer</name>
         <briefdescription>
-        </briefdescription>
+<para>Buffer for receiving data (40bits = 5bytes) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="51" column="1" bodyfile="inc/dht22.h" bodystart="51" bodyend="-1"/>
+        <location file="inc/dht22.h" line="90" column="1" bodyfile="inc/dht22.h" bodystart="90" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structdht22_1a3bdb49ed9986f21df0b78879c749192c" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int bit_pos</definition>
+      <memberdef kind="variable" id="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t bit_pos</definition>
         <argsstring></argsstring>
         <name>bit_pos</name>
         <briefdescription>
-        </briefdescription>
+<para>Current position of the bit being received (from -2 to 40) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="52" column="1" bodyfile="inc/dht22.h" bodystart="52" bodyend="-1"/>
+        <location file="inc/dht22.h" line="95" column="1" bodyfile="inc/dht22.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a866a73f568a9c1580242de93194402d2" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -36,12 +36,12 @@
         <argsstring></argsstring>
         <name>last_val</name>
         <briefdescription>
-        </briefdescription>
+<para>Timestamp of the last input capture. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Used for calculating duration between input captures and therefore the pulse length. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="53" column="1" bodyfile="inc/dht22.h" bodystart="53" bodyend="-1"/>
+        <location file="inc/dht22.h" line="101" column="1" bodyfile="inc/dht22.h" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a24d61a35b72d7299eb6b5f48e71a571b" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -49,12 +49,12 @@
         <argsstring></argsstring>
         <name>temp</name>
         <briefdescription>
-        </briefdescription>
+<para>Temperature reading. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="56" column="1" bodyfile="inc/dht22.h" bodystart="56" bodyend="-1"/>
+        <location file="inc/dht22.h" line="106" column="1" bodyfile="inc/dht22.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a38adb4de3d9d0391675c323d13503af7" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -62,12 +62,12 @@
         <argsstring></argsstring>
         <name>hum</name>
         <briefdescription>
-        </briefdescription>
+<para>Humidity reading. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="57" column="1" bodyfile="inc/dht22.h" bodystart="57" bodyend="-1"/>
+        <location file="inc/dht22.h" line="111" column="1" bodyfile="inc/dht22.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a2f85ff3689520d5276c9431da0f45378" prot="public" static="no" mutable="no">
         <type><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref></type>
@@ -75,12 +75,12 @@
         <argsstring></argsstring>
         <name>state</name>
         <briefdescription>
-        </briefdescription>
+<para>Current state of the sensor. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="59" column="1" bodyfile="inc/dht22.h" bodystart="59" bodyend="-1"/>
+        <location file="inc/dht22.h" line="116" column="1" bodyfile="inc/dht22.h" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a3f32f989e34d67aa0736e2606a255e55" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -89,12 +89,12 @@
         <name>parity</name>
         <bitfield> 1</bitfield>
         <briefdescription>
-        </briefdescription>
+<para>Set when the checksum is incorrent. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="61" column="1" bodyfile="inc/dht22.h" bodystart="61" bodyend="-1"/>
+        <location file="inc/dht22.h" line="125" column="1" bodyfile="inc/dht22.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -103,12 +103,12 @@
         <name>timing</name>
         <bitfield> 1</bitfield>
         <briefdescription>
-        </briefdescription>
+<para>Set when the timing of the pulses coming from the sensor is invalid. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="62" column="1" bodyfile="inc/dht22.h" bodystart="62" bodyend="-1"/>
+        <location file="inc/dht22.h" line="130" column="1" bodyfile="inc/dht22.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a03251bc0907d3f2709d4b8550b9e90e3" prot="public" static="no" mutable="no">
         <type>struct dht22::@0</type>
@@ -116,12 +116,12 @@
         <argsstring></argsstring>
         <name>error_flags</name>
         <briefdescription>
-        </briefdescription>
+<para>Error flags. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="63" column="1"/>
+        <location file="inc/dht22.h" line="131" column="1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" prot="public" static="no" mutable="no">
         <type><ref refid="structdht22__config" kindref="compound">dht22_config</ref></type>
@@ -129,12 +129,12 @@
         <argsstring></argsstring>
         <name>config</name>
         <briefdescription>
-        </briefdescription>
+<para>Configuration of the sensor. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="65" column="1" bodyfile="inc/dht22.h" bodystart="65" bodyend="-1"/>
+        <location file="inc/dht22.h" line="136" column="1" bodyfile="inc/dht22.h" bodystart="136" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -154,9 +154,9 @@
         <link refid="structdht22__config"/>
       </node>
     </collaborationgraph>
-    <location file="inc/dht22.h" line="50" column="1" bodyfile="inc/dht22.h" bodystart="50" bodyend="66"/>
+    <location file="inc/dht22.h" line="86" column="1" bodyfile="inc/dht22.h" bodystart="86" bodyend="137"/>
     <listofallmembers>
-      <member refid="structdht22_1a3bdb49ed9986f21df0b78879c749192c" prot="public" virt="non-virtual"><scope>dht22</scope><name>bit_pos</name></member>
+      <member refid="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" prot="public" virt="non-virtual"><scope>dht22</scope><name>bit_pos</name></member>
       <member refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" prot="public" virt="non-virtual"><scope>dht22</scope><name>config</name></member>
       <member refid="structdht22_1a03251bc0907d3f2709d4b8550b9e90e3" prot="public" virt="non-virtual"><scope>dht22</scope><name>error_flags</name></member>
       <member refid="structdht22_1a38adb4de3d9d0391675c323d13503af7" prot="public" virt="non-virtual"><scope>dht22</scope><name>hum</name></member>

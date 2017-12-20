@@ -19,10 +19,10 @@ Possible return values of the functions.
 
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
-DHT22_OK            | 
-DHT22_ERROR            | 
-DHT22_TIMING_ERROR            | 
-DHT22_CHECKSUM_ERROR            | 
+DHT22_OK            | Function call was successful.
+DHT22_ERROR            | Function call was unsuccessful.
+DHT22_TIMING_ERROR            | Timing error was detected.
+DHT22_CHECKSUM_ERROR            | Checksum error was detected.
 
 #### `enum `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79) 
 
@@ -30,9 +30,9 @@ Describes the state of the sensor.
 
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
-DHT22_READY            | 
-DHT22_BUSY            | 
-DHT22_FINISHED            | 
+DHT22_READY            | The sensor is ready for next measurement.
+DHT22_BUSY            | The sensor is currently receiving data.
+DHT22_FINISHED            | The sensor finished receiving data, data are awaiting processing.
 
 #### `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`dht22_init`](#dht22_8h_1ab1c585a3f37b65ba94f3b6d0d95c548b)`(`[`dht22_config`](#structdht22__config)` * config,`[`dht22`](#structdht22)` * handle)` 
 
@@ -81,38 +81,60 @@ This structure is the sensor handle.
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`public uint8_t `[`rx_buffer`](#structdht22_1a47f38aa1f777ab5c907ec0375eae1344) | 
-`public int `[`bit_pos`](#structdht22_1a3bdb49ed9986f21df0b78879c749192c) | 
-`public uint16_t `[`last_val`](#structdht22_1a866a73f568a9c1580242de93194402d2) | 
-`public float `[`temp`](#structdht22_1a24d61a35b72d7299eb6b5f48e71a571b) | 
-`public float `[`hum`](#structdht22_1a38adb4de3d9d0391675c323d13503af7) | 
-`public `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)` `[`state`](#structdht22_1a2f85ff3689520d5276c9431da0f45378) | 
-`public bool `[`parity`](#structdht22_1a3f32f989e34d67aa0736e2606a255e55) | 
-`public bool `[`timing`](#structdht22_1a20f65ad56869382ed8681b9dd1aa85d6) | 
-`public struct dht22::@0 `[`error_flags`](#structdht22_1a03251bc0907d3f2709d4b8550b9e90e3) | 
-`public `[`dht22_config`](#structdht22__config)` `[`config`](#structdht22_1ab326e0814c94b277efd81f8527ccc3d8) | 
+`public uint8_t `[`rx_buffer`](#structdht22_1a47f38aa1f777ab5c907ec0375eae1344) | Buffer for receiving data (40bits = 5bytes)
+`public int8_t `[`bit_pos`](#structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb) | Current position of the bit being received (from -2 to 40)
+`public uint16_t `[`last_val`](#structdht22_1a866a73f568a9c1580242de93194402d2) | Timestamp of the last input capture.
+`public float `[`temp`](#structdht22_1a24d61a35b72d7299eb6b5f48e71a571b) | Temperature reading.
+`public float `[`hum`](#structdht22_1a38adb4de3d9d0391675c323d13503af7) | Humidity reading.
+`public `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)` `[`state`](#structdht22_1a2f85ff3689520d5276c9431da0f45378) | Current state of the sensor.
+`public bool `[`parity`](#structdht22_1a3f32f989e34d67aa0736e2606a255e55) | Set when the checksum is incorrent.
+`public bool `[`timing`](#structdht22_1a20f65ad56869382ed8681b9dd1aa85d6) | Set when the timing of the pulses coming from the sensor is invalid.
+`public struct dht22::@0 `[`error_flags`](#structdht22_1a03251bc0907d3f2709d4b8550b9e90e3) | Error flags.
+`public `[`dht22_config`](#structdht22__config)` `[`config`](#structdht22_1ab326e0814c94b277efd81f8527ccc3d8) | Configuration of the sensor.
 
 ## Members
 
 #### `public uint8_t `[`rx_buffer`](#structdht22_1a47f38aa1f777ab5c907ec0375eae1344) 
 
-#### `public int `[`bit_pos`](#structdht22_1a3bdb49ed9986f21df0b78879c749192c) 
+Buffer for receiving data (40bits = 5bytes)
+
+#### `public int8_t `[`bit_pos`](#structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb) 
+
+Current position of the bit being received (from -2 to 40)
 
 #### `public uint16_t `[`last_val`](#structdht22_1a866a73f568a9c1580242de93194402d2) 
 
+Timestamp of the last input capture.
+
+Used for calculating duration between input captures and therefore the pulse length.
+
 #### `public float `[`temp`](#structdht22_1a24d61a35b72d7299eb6b5f48e71a571b) 
+
+Temperature reading.
 
 #### `public float `[`hum`](#structdht22_1a38adb4de3d9d0391675c323d13503af7) 
 
+Humidity reading.
+
 #### `public `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)` `[`state`](#structdht22_1a2f85ff3689520d5276c9431da0f45378) 
+
+Current state of the sensor.
 
 #### `public bool `[`parity`](#structdht22_1a3f32f989e34d67aa0736e2606a255e55) 
 
+Set when the checksum is incorrent.
+
 #### `public bool `[`timing`](#structdht22_1a20f65ad56869382ed8681b9dd1aa85d6) 
+
+Set when the timing of the pulses coming from the sensor is invalid.
 
 #### `public struct dht22::@0 `[`error_flags`](#structdht22_1a03251bc0907d3f2709d4b8550b9e90e3) 
 
+Error flags.
+
 #### `public `[`dht22_config`](#structdht22__config)` `[`config`](#structdht22_1ab326e0814c94b277efd81f8527ccc3d8) 
+
+Configuration of the sensor.
 
 # struct `dht22_config` 
 
@@ -122,19 +144,27 @@ This structure is for initializing the sensor handle.
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`public uint16_t `[`gpio_pin`](#structdht22__config_1a1468dc79e1c16d2ae8597631191ab190) | 
-`public GPIO_TypeDef * `[`gpio_port`](#structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080) | 
-`public TIM_HandleTypeDef * `[`timer`](#structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64) | 
-`public uint32_t `[`timer_channel`](#structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43) | 
+`public uint16_t `[`gpio_pin`](#structdht22__config_1a1468dc79e1c16d2ae8597631191ab190) | GPIO pin connected to the DHT22 sensor.
+`public GPIO_TypeDef * `[`gpio_port`](#structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080) | GPIO port associated with the `gpio_pin`
+`public TIM_HandleTypeDef * `[`timer`](#structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64) | Calibrated timer used for time measurements.
+`public uint32_t `[`timer_channel`](#structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43) | Input capture channel of the timer to be used for time measurements.
 
 ## Members
 
 #### `public uint16_t `[`gpio_pin`](#structdht22__config_1a1468dc79e1c16d2ae8597631191ab190) 
 
+GPIO pin connected to the DHT22 sensor.
+
 #### `public GPIO_TypeDef * `[`gpio_port`](#structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080) 
+
+GPIO port associated with the `gpio_pin`
 
 #### `public TIM_HandleTypeDef * `[`timer`](#structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64) 
 
+Calibrated timer used for time measurements.
+
 #### `public uint32_t `[`timer_channel`](#structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43) 
+
+Input capture channel of the timer to be used for time measurements.
 
 Generated by [Moxygen](https://sourcey.com/moxygen)

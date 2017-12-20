@@ -15,9 +15,21 @@
  * Possible return values of the functions
  */
 typedef enum {
+    /**
+     * Function call was successful
+     */
     DHT22_OK,
+    /**
+     * Function call was unsuccessful
+     */
     DHT22_ERROR,
+    /**
+     * Timing error was detected
+     */
     DHT22_TIMING_ERROR,
+    /**
+     * Checksum error was detected
+     */
     DHT22_CHECKSUM_ERROR
 } DHT22_RESULT;
 
@@ -25,21 +37,45 @@ typedef enum {
  * Describes the state of the sensor
  */
 typedef enum {
-    DHT22_READY,   /*< The sensor is ready for a next reading */
-    DHT22_BUSY,    /*< Data from sensor are currently being received */
-    DHT22_FINISHED /*< Data have been received but not yet processed */
+    /**
+     * The sensor is ready for next measurement
+     */
+    DHT22_READY,
+    /**
+     * The sensor is currently receiving data
+     */
+    DHT22_BUSY,
+    /**
+     * The sensor finished receiving data, data are awaiting processing
+     */
+    DHT22_FINISHED
 } DHT22_STATE;
 
 /**
  * This structure is for initializing the sensor handle
  */
 typedef struct {
-    uint16_t           gpio_pin;
-    GPIO_TypeDef*      gpio_port;
+    /**
+     * GPIO pin connected to the DHT22 sensor
+     */
+    uint16_t gpio_pin;
+    /**
+     * GPIO port associated with the `gpio_pin`
+     */
+    GPIO_TypeDef* gpio_port;
+    /**
+     * Calibrated timer used for time measurements
+     */
     TIM_HandleTypeDef* timer;
-    uint32_t           timer_channel;
+    /**
+     * Input capture channel of the timer to be used for time measurements
+     */
+    uint32_t timer_channel;
 
 #ifdef STM32F4
+    /**
+     * Alternate function of the GPIO pin when it is used by timer input channel
+     */
     uint32_t gpio_alternate_function;
 #endif
 } dht22_config;
@@ -48,20 +84,55 @@ typedef struct {
  * This structure is the sensor handle
  */
 typedef struct {
-    uint8_t  rx_buffer[5];
-    int      bit_pos;
+    /**
+     * Buffer for receiving data (40bits = 5bytes)
+     */
+    uint8_t rx_buffer[5];
+
+    /**
+     * Current position of the bit being received (from -2 to 40)
+     */
+    int8_t bit_pos;
+
+    /**
+     * Timestamp of the last input capture. Used for calculating duration
+     * between input captures and therefore the pulse length.
+     */
     uint16_t last_val;
 
-    // Readings
+    /**
+     * Temperature reading
+     */
     float temp;
+
+    /**
+     * Humidity reading
+     */
     float hum;
 
+    /**
+     * Current state of the sensor
+     */
     DHT22_STATE state;
+
+    /**
+     * Error flags
+     */
     struct {
+        /**
+         * Set when the checksum is incorrent
+         */
         bool parity : 1;
+
+        /**
+         * Set when the timing of the pulses coming from the sensor is invalid
+         */
         bool timing : 1;
     } error_flags;
 
+    /**
+     * Configuration of the sensor
+     */
     dht22_config config;
 } dht22;
 
