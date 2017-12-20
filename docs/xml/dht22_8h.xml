@@ -3,30 +3,17 @@
   <compounddef id="dht22_8h" kind="file" language="C++">
     <compoundname>dht22.h</compoundname>
     <includes local="no">stdbool.h</includes>
-    <includedby refid="dht22_8c" local="yes">src/dht22.c</includedby>
     <incdepgraph>
-      <node id="9">
+      <node id="4">
         <label>stdbool.h</label>
       </node>
-      <node id="8">
+      <node id="3">
         <label>inc/dht22.h</label>
         <link refid="dht22.h"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="10">
-        <label>inc/dht22.h</label>
-        <link refid="dht22.h"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>src/dht22.c</label>
-        <link refid="dht22_8c"/>
-      </node>
-    </invincdepgraph>
     <innerclass refid="structdht22__config" prot="public">dht22_config</innerclass>
     <innerclass refid="structdht22" prot="public">dht22</innerclass>
       <sectiondef kind="enum">
@@ -61,9 +48,9 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-        </briefdescription>
+<para>Possible return values of the functions. </para>        </briefdescription>
         <detaileddescription>
-<para>Possible return values of the functions </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="inc/dht22.h" line="17" column="1" bodyfile="inc/dht22.h" bodystart="17" bodyend="22"/>
@@ -92,9 +79,9 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-        </briefdescription>
+<para>Describes the state of the sensor. </para>        </briefdescription>
         <detaileddescription>
-<para>Describes the state of the sensor </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="inc/dht22.h" line="27" column="1" bodyfile="inc/dht22.h" bodystart="27" bodyend="31"/>
@@ -115,9 +102,9 @@
           <declname>handle</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Initializes the DHT22 handle using the provided configuration. </para>        </briefdescription>
         <detaileddescription>
-<para>Initializes the DHT22 handle using the provided configuration <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>config</parametername>
 </parameternamelist>
@@ -136,9 +123,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="74" column="1" bodyfile="src/dht22.c" bodystart="88" bodyend="91"/>
-        <references refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" compoundref="dht22_8h" startline="65">dht22::config</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="18">DHT22_OK</references>
+        <location file="inc/dht22.h" line="74" column="1"/>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1af88e368924c132ae5b1dc20205019207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
@@ -150,9 +135,9 @@
           <declname>handle</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Deinitializes the DHT22 communication. </para>        </briefdescription>
         <detaileddescription>
-<para>Deinitializes the DHT22 communication <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>handle</parametername>
 </parameternamelist>
@@ -164,16 +149,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="81" column="1" bodyfile="src/dht22.c" bodystart="93" bodyend="93"/>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="18">DHT22_OK</references>
-        <references refid="structdht22_1a3bdb49ed9986f21df0b78879c749192c" compoundref="dht22_8h" startline="52">dht22::bit_pos</references>
-        <references refid="structdht22_1a47f38aa1f777ab5c907ec0375eae1344" compoundref="dht22_8h" startline="51">dht22::rx_buffer</references>
-        <references refid="structdht22_1a38adb4de3d9d0391675c323d13503af7" compoundref="dht22_8h" startline="57">dht22::hum</references>
-        <references refid="structdht22_1a24d61a35b72d7299eb6b5f48e71a571b" compoundref="dht22_8h" startline="56">dht22::temp</references>
-        <references refid="structdht22_1a03251bc0907d3f2709d4b8550b9e90e3">dht22::error_flags</references>
-        <references refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" compoundref="dht22_8h" startline="61">dht22::parity</references>
-        <references refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="59">dht22::state</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" compoundref="dht22_8h" startline="30">DHT22_FINISHED</references>
+        <location file="inc/dht22.h" line="81" column="1"/>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1a4bc9e0ef8d5951f1da6c527096d0389c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
@@ -185,9 +161,9 @@
           <declname>handle</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Reads the current temperature and humidity from the sensor. </para>        </briefdescription>
         <detaileddescription>
-<para>Reads the current temperature and humidity from the sensor <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>handle</parametername>
 </parameternamelist>
@@ -199,26 +175,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="88" column="1" bodyfile="src/dht22.c" bodystart="39" bodyend="86"/>
-        <references refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" compoundref="dht22_8h" startline="59">dht22::state</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" compoundref="dht22_8h" startline="28">DHT22_READY</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" compoundref="dht22_8h" startline="19">DHT22_ERROR</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" compoundref="dht22_8h" startline="29">DHT22_BUSY</references>
-        <references refid="structdht22_1a3bdb49ed9986f21df0b78879c749192c" compoundref="dht22_8h" startline="52">dht22::bit_pos</references>
-        <references refid="structdht22_1a866a73f568a9c1580242de93194402d2" compoundref="dht22_8h" startline="53">dht22::last_val</references>
-        <references refid="structdht22_1a03251bc0907d3f2709d4b8550b9e90e3">dht22::error_flags</references>
-        <references refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" compoundref="dht22_8h" startline="61">dht22::parity</references>
-        <references refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" compoundref="dht22_8h" startline="62">dht22::timing</references>
-        <references refid="structdht22_1a47f38aa1f777ab5c907ec0375eae1344" compoundref="dht22_8h" startline="51">dht22::rx_buffer</references>
-        <references refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" compoundref="dht22_8h" startline="65">dht22::config</references>
-        <references refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" compoundref="dht22_8h" startline="38">dht22_config::gpio_port</references>
-        <references refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" compoundref="dht22_8h" startline="37">dht22_config::gpio_pin</references>
-        <references refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" compoundref="dht22_8h" startline="39">dht22_config::timer</references>
-        <references refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" compoundref="dht22_8h" startline="40">dht22_config::timer_channel</references>
-        <references refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" compoundref="dht22_8h" startline="30">DHT22_FINISHED</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" compoundref="dht22_8h" startline="20">DHT22_TIMING_ERROR</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" compoundref="dht22_8h" startline="21">DHT22_CHECKSUM_ERROR</references>
-        <references refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" compoundref="dht22_8h" startline="18">DHT22_OK</references>
+        <location file="inc/dht22.h" line="88" column="1"/>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,9 +187,9 @@
           <declname>handle</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Handles the timer interrupt. </para>        </briefdescription>
         <detaileddescription>
-<para>Handles the timer interrupt <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>handle</parametername>
 </parameternamelist>
@@ -243,14 +200,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="94" column="1" bodyfile="src/dht22.c" bodystart="151" bodyend="186"/>
-        <references refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" compoundref="dht22_8h" startline="65">dht22::config</references>
-        <references refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" compoundref="dht22_8h" startline="39">dht22_config::timer</references>
-        <references refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" compoundref="dht22_8h" startline="40">dht22_config::timer_channel</references>
-        <references refid="structdht22_1a866a73f568a9c1580242de93194402d2" compoundref="dht22_8h" startline="53">dht22::last_val</references>
-        <references refid="structdht22_1a3bdb49ed9986f21df0b78879c749192c" compoundref="dht22_8h" startline="52">dht22::bit_pos</references>
-        <references refid="dht22_8c_1a49e2b9281e2eb3056ab463dd03891f74" compoundref="dht22_8c" startline="143">BETWEEN</references>
-        <references refid="dht22_8c_1a1192e506d4a87efdd7c82c096fcaaa25" compoundref="dht22_8c" startline="145">TIMING_ERROR</references>
+        <location file="inc/dht22.h" line="94" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -33,21 +33,6 @@
     <member refid="dht22_8h_1a4bc9e0ef8d5951f1da6c527096d0389c" kind="function"><name>dht22_read_data</name></member>
     <member refid="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" kind="function"><name>dht22_interrupt_handler</name></member>
   </compound>
-  <compound refid="dht22_8c" kind="file"><name>dht22.c</name>
-    <member refid="dht22_8c_1a49e2b9281e2eb3056ab463dd03891f74" kind="define"><name>BETWEEN</name></member>
-    <member refid="dht22_8c_1a1192e506d4a87efdd7c82c096fcaaa25" kind="define"><name>TIMING_ERROR</name></member>
-    <member refid="dht22_8c_1ac3296e2b990db22a8c9192e5d1822dee" kind="function"><name>set_pin_out</name></member>
-    <member refid="dht22_8c_1a92433501aeecd6a1692354a91e533cc0" kind="function"><name>set_pin_in</name></member>
-    <member refid="dht22_8c_1a4bc9e0ef8d5951f1da6c527096d0389c" kind="function"><name>dht22_read_data</name></member>
-    <member refid="dht22_8c_1ab1c585a3f37b65ba94f3b6d0d95c548b" kind="function"><name>dht22_init</name></member>
-    <member refid="dht22_8c_1af88e368924c132ae5b1dc20205019207" kind="function"><name>dht22_deinit</name></member>
-    <member refid="dht22_8c_1aefb830b1f86633ee181f44df0ae614f1" kind="function"><name>write_bit</name></member>
-    <member refid="dht22_8c_1ab95eb6a0a585144280871c8c456cf49f" kind="function"><name>get_float</name></member>
-    <member refid="dht22_8c_1a6125f5172ab863446075761e2e010d2d" kind="function"><name>finish_rx</name></member>
-    <member refid="dht22_8c_1a6119816d8ad1b38b7c732472bba7b0ec" kind="function"><name>dht22_interrupt_handler</name></member>
-  </compound>
   <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
-  </compound>
-  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>
 </doxygenindex>

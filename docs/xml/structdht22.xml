@@ -138,9 +138,9 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>This structure is the sensor handle. </para>    </briefdescription>
     <detaileddescription>
-<para>This structure is the sensor handle </para>    </detaileddescription>
+    </detaileddescription>
     <collaborationgraph>
       <node id="6">
         <label>dht22</label>

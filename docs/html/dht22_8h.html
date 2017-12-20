@@ -98,13 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Include dependency graph for dht22.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="dht22_8h__incl.png" border="0" usemap="#inc_2dht22_8h" alt=""/></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="dht22_8h__dep__incl.png" border="0" usemap="#inc_2dht22_8hdep" alt=""/></div>
-<map name="inc_2dht22_8hdep" id="inc_2dht22_8hdep">
-<area shape="rect" id="node2" href="dht22_8c.html" title="src/dht22.c" alt="" coords="5,80,92,107"/>
+<map name="inc_2dht22_8h" id="inc_2dht22_8h">
 </map>
 </div>
 </div>
@@ -113,8 +107,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdht22__config.html">dht22_config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure is for initializing the sensor handle.  <a href="structdht22__config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdht22.html">dht22</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure is the sensor handle.  <a href="structdht22.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -123,23 +119,29 @@ Enumerations</h2></td></tr>
 <a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a>, 
 <a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5">DHT22_TIMING_ERROR</a>, 
 <a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e">DHT22_CHECKSUM_ERROR</a>
- }</td></tr>
+ }<tr class="memdesc:a1d16fe97ca08e0d2c9b928a36472c633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible return values of the functions.  <a href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a1d16fe97ca08e0d2c9b928a36472c633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73cd960d2d2ae7988ddb46f1c9e49e79"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79">DHT22_STATE</a> { <a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e">DHT22_READY</a>, 
 <a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2">DHT22_BUSY</a>, 
 <a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817">DHT22_FINISHED</a>
- }</td></tr>
+ }<tr class="memdesc:a73cd960d2d2ae7988ddb46f1c9e49e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the state of the sensor.  <a href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a73cd960d2d2ae7988ddb46f1c9e49e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab1c585a3f37b65ba94f3b6d0d95c548b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#ab1c585a3f37b65ba94f3b6d0d95c548b">dht22_init</a> (<a class="el" href="structdht22__config.html">dht22_config</a> *config, <a class="el" href="structdht22.html">dht22</a> *handle)</td></tr>
+<tr class="memdesc:ab1c585a3f37b65ba94f3b6d0d95c548b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the DHT22 handle using the provided configuration.  <a href="#ab1c585a3f37b65ba94f3b6d0d95c548b">More...</a><br /></td></tr>
 <tr class="separator:ab1c585a3f37b65ba94f3b6d0d95c548b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af88e368924c132ae5b1dc20205019207"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#af88e368924c132ae5b1dc20205019207">dht22_deinit</a> (<a class="el" href="structdht22.html">dht22</a> *handle)</td></tr>
+<tr class="memdesc:af88e368924c132ae5b1dc20205019207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the DHT22 communication.  <a href="#af88e368924c132ae5b1dc20205019207">More...</a><br /></td></tr>
 <tr class="separator:af88e368924c132ae5b1dc20205019207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bc9e0ef8d5951f1da6c527096d0389c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a4bc9e0ef8d5951f1da6c527096d0389c">dht22_read_data</a> (<a class="el" href="structdht22.html">dht22</a> *handle)</td></tr>
+<tr class="memdesc:a4bc9e0ef8d5951f1da6c527096d0389c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the current temperature and humidity from the sensor.  <a href="#a4bc9e0ef8d5951f1da6c527096d0389c">More...</a><br /></td></tr>
 <tr class="separator:a4bc9e0ef8d5951f1da6c527096d0389c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6119816d8ad1b38b7c732472bba7b0ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a6119816d8ad1b38b7c732472bba7b0ec">dht22_interrupt_handler</a> (<a class="el" href="structdht22.html">dht22</a> *handle)</td></tr>
+<tr class="memdesc:a6119816d8ad1b38b7c732472bba7b0ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the timer interrupt.  <a href="#a6119816d8ad1b38b7c732472bba7b0ec">More...</a><br /></td></tr>
 <tr class="separator:a6119816d8ad1b38b7c732472bba7b0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -152,7 +154,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Possible return values of the functions </p>
+
+<p>Possible return values of the functions. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76"></a>DHT22_OK&#160;</td><td class="fielddoc">
 </td></tr>
@@ -175,7 +178,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Describes the state of the sensor </p>
+
+<p>Describes the state of the sensor. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e"></a>DHT22_READY&#160;</td><td class="fielddoc">
 </td></tr>
@@ -201,7 +205,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Deinitializes the DHT22 communication </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Deinitializes the DHT22 communication. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handle</td><td>- a pointer to the DHT22 handle </td></tr>
   </table>
@@ -234,7 +240,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initializes the DHT22 handle using the provided configuration </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Initializes the DHT22 handle using the provided configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>- a pointer to the initialization structure </td></tr>
     <tr><td class="paramname">handle</td><td>- a pointer to the DHT22 handle you want to initialize </td></tr>
@@ -258,7 +266,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Handles the timer interrupt </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Handles the timer interrupt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handle</td><td>- a pointer to the DHT22 handle </td></tr>
   </table>
@@ -280,7 +290,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Reads the current temperature and humidity from the sensor </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Reads the current temperature and humidity from the sensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handle</td><td>- a pointer to the DHT22 handle </td></tr>
   </table>
@@ -293,7 +305,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 20 2017 12:29:23 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 20 2017 17:12:55 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
