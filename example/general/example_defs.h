@@ -1,6 +1,8 @@
 #ifndef EXAMPLE_DEFS_H
 #define EXAMPLE_DEFS_H
 
+#include "dht22.h"
+
 #ifdef STM32F1
 extern TIM_HandleTypeDef  htim3;
 extern UART_HandleTypeDef huart1;
