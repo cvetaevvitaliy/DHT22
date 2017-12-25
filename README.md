@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/petoknm/DHT22.svg?branch=master)](https://travis-ci.org/petoknm/DHT22)
+
 # DHT22 (Under development! Please use [v0.0.1](https://github.com/petoknm/DHT22/releases/tag/v0.0.1) until the new release.)
 Library for STM32 series microcontrollers for reading DHT22 sensor values
 
