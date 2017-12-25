@@ -74,7 +74,7 @@ micros.
 
 ## Updating documentation
 ```shell
-make clean && make docs
+make docs
 ```
 
 ## Formating source code
