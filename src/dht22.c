@@ -166,11 +166,11 @@ void dht22_interrupt_handler(dht22* handle) {
         } else {
             TIMING_ERROR();
         }
-    } else {                   // data bits
-        if (BETWEEN(70, 90)) { // zero
+    } else {                    // data bits
+        if (BETWEEN(70, 100)) { // zero
             write_bit(handle, false);
             handle->bit_pos++;
-        } else if (BETWEEN(110, 130)) { // one
+        } else if (BETWEEN(110, 150)) { // one
             write_bit(handle, true);
             handle->bit_pos++;
         } else { // invalid
