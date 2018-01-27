@@ -10,6 +10,7 @@ extern UART_HandleTypeDef huart1;
 #define PORT GPIOA
 #define TIMER &htim3
 #define TIMER_CHANNEL TIM_CHANNEL_1
+#define UART &huart1
 #endif
 
 #endif // EXAMPLE_DEFS_H

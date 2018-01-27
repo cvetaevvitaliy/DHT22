@@ -90,7 +90,7 @@ typedef struct {
     uint8_t rx_buffer[5];
 
     /**
-     * Current position of the bit being received (from -2 to 40)
+     * Current position of the bit being received (from -1 to 40)
      */
     int8_t bit_pos;
 

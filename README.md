@@ -4,11 +4,16 @@
 Library for STM32 series microcontrollers for reading DHT22 sensor values
 
 ## TODO
+ - Provide simple example and fully-featured example usage
  - Testing
+ - Use cmake
  - Documentation
  - More examples
  - Photos/Videos
  - v1.0.0
+ - a possible debugging improvement would be pin change interrupt on both
+rising and falling edges to gain more timing information and deduce the cause
+of the failure
 
 ## Example
 Check out the [general example](https://github.com/petoknm/DHT22/blob/master/example/general) that all

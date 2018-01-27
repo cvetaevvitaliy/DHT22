@@ -42,7 +42,7 @@ DHT22_RESULT dht22_read_data(dht22* handle) {
     handle->state = DHT22_BUSY;
 
     // clear previous state
-    handle->bit_pos            = -2;
+    handle->bit_pos            = -1;
     handle->last_val           = 0;
     handle->error_flags.parity = false;
     handle->error_flags.timing = false;
@@ -154,23 +154,20 @@ void dht22_interrupt_handler(dht22* handle) {
 
     uint16_t dt = val - handle->last_val;
 
-    if (handle->bit_pos == -2) { // beginning of the start bit
-        if (BETWEEN(20, 40)) {
+    if (handle->bit_pos == -1) { // end of the start bit
+        if (BETWEEN(120, 200)) { // [20 to 40]us + 80us + 80us - CPU time
             handle->bit_pos++;
-        } else {
-            TIMING_ERROR();
-        }
-    } else if (handle->bit_pos == -1) { // end of the start bit
-        if (BETWEEN(150, 170)) {
-            handle->bit_pos++;
+        } else if (BETWEEN(0, 40)) { // [20-40]us - CPU time
+            // fast CPU, caught beginning of the start bit
+            // do nothing
         } else {
             TIMING_ERROR();
         }
     } else {                    // data bits
-        if (BETWEEN(70, 100)) { // zero
+        if (BETWEEN(70, 100)) { // zero: 50us + [26-28]us
             write_bit(handle, false);
             handle->bit_pos++;
-        } else if (BETWEEN(110, 150)) { // one
+        } else if (BETWEEN(110, 150)) { // one: 50us + 70us
             write_bit(handle, true);
             handle->bit_pos++;
         } else { // invalid

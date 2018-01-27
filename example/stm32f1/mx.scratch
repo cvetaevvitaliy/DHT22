@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-<ProjectName>/home/peter/CLionProjects/DHT22/example/stm32f1/\dht22</ProjectName>
+<ProjectName>/home/peter/Programming/Atom/DHT22/example/stm32f1/\dht22</ProjectName>
 <CMSIS>Drivers/CMSIS</CMSIS>
 <HAL_Driver>/home/peter/Software/STM32CubeMX/Repository//STM32Cube_FW_F1_V1.6.0/Drivers/CMSIS</HAL_Driver>
 
@@ -30,7 +30,7 @@
     	<board>custom</board>
 			
     <usedDebug>true</usedDebug>
-    	<debugprobe></debugprobe>
+    	<debugprobe>swd</debugprobe>
     <optimization></optimization>
     <icfloc>0</icfloc>
     <Adefines>
