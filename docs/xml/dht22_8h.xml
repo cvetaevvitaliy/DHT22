@@ -1,23 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dht22_8h" kind="file" language="C++">
     <compoundname>dht22.h</compoundname>
     <includes local="no">stdbool.h</includes>
     <incdepgraph>
-      <node id="4">
+      <node id="1">
         <label>stdbool.h</label>
       </node>
-      <node id="3">
+      <node id="0">
         <label>inc/dht22.h</label>
-        <link refid="dht22.h"/>
-        <childnode refid="4" relation="include">
+        <link refid="dht22_8h"/>
+        <childnode refid="1" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <innerclass refid="structdht22__config" prot="public">dht22_config</innerclass>
     <innerclass refid="structdht22" prot="public">dht22</innerclass>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" prot="public" static="no">
+      <memberdef kind="enum" id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" prot="public" static="no" strong="no">
+        <type></type>
         <name>DHT22_RESULT</name>
         <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" prot="public">
           <name>DHT22_OK</name>
@@ -55,7 +56,8 @@
         </inbodydescription>
         <location file="inc/dht22.h" line="17" column="1" bodyfile="inc/dht22.h" bodystart="17" bodyend="34"/>
       </memberdef>
-      <memberdef kind="enum" id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" prot="public" static="no">
+      <memberdef kind="enum" id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" prot="public" static="no" strong="no">
+        <type></type>
         <name>DHT22_STATE</name>
         <enumvalue id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" prot="public">
           <name>DHT22_READY</name>
@@ -260,9 +262,9 @@
 <codeline lineno="116" refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref><sp/><ref refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="125" refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>parity<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="125" refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" kindref="member">parity</ref><sp/>:<sp/>1;</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130" refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>timing<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="130" refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" kindref="member">timing</ref><sp/>:<sp/>1;</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>error_flags;</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
 <codeline lineno="136" refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdht22__config" kindref="compound">dht22_config</ref><sp/><ref refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" kindref="member">config</ref>;</highlight></codeline>

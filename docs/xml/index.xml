@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
   <compound refid="structdht22" kind="struct"><name>dht22</name>
     <member refid="structdht22_1a47f38aa1f777ab5c907ec0375eae1344" kind="variable"><name>rx_buffer</name></member>
     <member refid="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" kind="variable"><name>bit_pos</name></member>

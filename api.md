@@ -82,7 +82,7 @@ This structure is the sensor handle.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 `public uint8_t `[`rx_buffer`](#structdht22_1a47f38aa1f777ab5c907ec0375eae1344) | Buffer for receiving data (40bits = 5bytes)
-`public int8_t `[`bit_pos`](#structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb) | Current position of the bit being received (from -2 to 40)
+`public int8_t `[`bit_pos`](#structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb) | Current position of the bit being received (from -1 to 40)
 `public uint16_t `[`last_val`](#structdht22_1a866a73f568a9c1580242de93194402d2) | Timestamp of the last input capture.
 `public float `[`temp`](#structdht22_1a24d61a35b72d7299eb6b5f48e71a571b) | Temperature reading.
 `public float `[`hum`](#structdht22_1a38adb4de3d9d0391675c323d13503af7) | Humidity reading.
@@ -100,7 +100,7 @@ Buffer for receiving data (40bits = 5bytes)
 
 #### `public int8_t `[`bit_pos`](#structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb) 
 
-Current position of the bit being received (from -2 to 40)
+Current position of the bit being received (from -1 to 40)
 
 #### `public uint16_t `[`last_val`](#structdht22_1a866a73f568a9c1580242de93194402d2) 
 
