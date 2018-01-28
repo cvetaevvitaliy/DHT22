@@ -4,7 +4,8 @@
 Library for STM32 series microcontrollers for reading DHT22 sensor values
 
 ## TODO
- - Provide simple example and fully-featured example usage
+ - Better error reporting (more specific error states)
+ - libopencm3 support
  - Testing
  - Use cmake
  - Documentation
@@ -16,9 +17,16 @@ rising and falling edges to gain more timing information and deduce the cause
 of the failure
 
 ## Example
-Check out the [general example](https://github.com/petoknm/DHT22/blob/master/example/general) that all
-the microcontroller specific examples link to. This demostrates that the library
-is fully portable across all the STM32 families.
+ - [simple example (no error handling)](https://github.com/petoknm/DHT22/blob/master/example/general/example-simple.c)
+ - [example with error handling](https://github.com/petoknm/DHT22/blob/master/example/general/example.c)
+
+ The general example is used by all
+ the microcontroller specific examples. This demostrates that the library
+ is fully portable across all the STM32 families.
+
+Used in projects:
+ - [dht22-datalogger](https://github.com/petoknm/dht22-datalogger/tree/master/fw)
+
 
 ## Documentation
 You can find [generated documentation here](https://github.com/petoknm/DHT22/blob/master/api.md).
@@ -51,6 +59,14 @@ prescaler register has a value 1 less that that.
 
 Example:
  - timer_prescaler = 8 => TIMx_PSC = 7
+
+And don't forget to register `dht22_interrupt_handler` in your the timer interrupt handler. Here is an example:
+```c
+void TIM3_IRQHandler(void) {
+    HAL_TIM_IRQHandler(&htim3);
+    dht22_interrupt_handler(&dht); // <--- Let the DHT22 library do all the necessary calculations
+}
+```
 
 ## Requirements
 For building you need:
