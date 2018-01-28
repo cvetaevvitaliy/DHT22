@@ -3,7 +3,7 @@ $(wildcard inc/*.h) \
 $(wildcard src/*.c) \
 $(wildcard example/general/*)
 
-docs: $(sources)
+docs: $(sources) Doxyfile
 	doxygen
 	moxygen docs/xml
 
