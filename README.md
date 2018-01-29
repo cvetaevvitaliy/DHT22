@@ -60,7 +60,7 @@ prescaler register has a value 1 less that that.
 Example:
  - timer_prescaler = 8 => TIMx_PSC = 7
 
-And don't forget to register `dht22_interrupt_handler` in your the timer interrupt handler. Here is an example:
+And don't forget to register `dht22_interrupt_handler` in your timer interrupt handler. Here is an example:
 ```c
 void TIM3_IRQHandler(void) {
     HAL_TIM_IRQHandler(&htim3);
