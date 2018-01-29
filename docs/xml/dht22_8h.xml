@@ -179,6 +179,58 @@
         </inbodydescription>
         <location file="inc/dht22.h" line="159" column="1"/>
       </memberdef>
+      <memberdef kind="function" id="dht22_8h_1a8e7d4088235734416133d613076292b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float dht22_get_temp</definition>
+        <argsstring>(dht22 *handle)</argsstring>
+        <name>dht22_get_temp</name>
+        <param>
+          <type><ref refid="structdht22" kindref="compound">dht22</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Extract the current temperature as a float. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a pointer to the DHT22 handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>temperature in degrees Celsius </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dht22_8h_1a3c3a8020a175b494867bedd8af785224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float dht22_get_hum</definition>
+        <argsstring>(dht22 *handle)</argsstring>
+        <name>dht22_get_hum</name>
+        <param>
+          <type><ref refid="structdht22" kindref="compound">dht22</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Extract the current humidity as a float. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a pointer to the DHT22 handle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>relative humidity in percent </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="173" column="1"/>
+      </memberdef>
       <memberdef kind="function" id="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void dht22_interrupt_handler</definition>
@@ -202,7 +254,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="165" column="1"/>
+        <location file="inc/dht22.h" line="179" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -255,9 +307,9 @@
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
 <codeline lineno="101" refid="structdht22_1a866a73f568a9c1580242de93194402d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdht22_1a866a73f568a9c1580242de93194402d2" kindref="member">last_val</ref>;</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106" refid="structdht22_1a24d61a35b72d7299eb6b5f48e71a571b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structdht22_1a24d61a35b72d7299eb6b5f48e71a571b" kindref="member">temp</ref>;</highlight></codeline>
+<codeline lineno="106" refid="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" kindref="member">temp</ref>;</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111" refid="structdht22_1a38adb4de3d9d0391675c323d13503af7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structdht22_1a38adb4de3d9d0391675c323d13503af7" kindref="member">hum</ref>;</highlight></codeline>
+<codeline lineno="111" refid="structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e" kindref="member">hum</ref>;</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
 <codeline lineno="116" refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref><sp/><ref refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
@@ -276,9 +328,13 @@
 <codeline lineno="153"><highlight class="normal"></highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1a4bc9e0ef8d5951f1da6c527096d0389c" kindref="member">dht22_read_data</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="165"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" kindref="member">dht22_interrupt_handler</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="166"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a8e7d4088235734416133d613076292b0" kindref="member">dht22_get_temp</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a3c3a8020a175b494867bedd8af785224" kindref="member">dht22_get_hum</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" kindref="member">dht22_interrupt_handler</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="inc/dht22.h"/>
   </compounddef>

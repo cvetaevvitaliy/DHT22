@@ -101,14 +101,14 @@ typedef struct {
     uint16_t last_val;
 
     /**
-     * Temperature reading
+     * Temperature reading in tenths of a degree (152 => 15.2 degC)
      */
-    float temp;
+    int16_t temp;
 
     /**
-     * Humidity reading
+     * Humidity reading in tenths of a percent (0-1000 => 0-100 %RH)
      */
-    float hum;
+    uint16_t hum;
 
     /**
      * Current state of the sensor
@@ -157,6 +157,20 @@ DHT22_RESULT dht22_deinit(dht22* handle);
  * @return	whether the function was successful or not
  */
 DHT22_RESULT dht22_read_data(dht22* handle);
+
+/**
+ * Extract the current temperature as a float
+ * @param  handle - a pointer to the DHT22 handle
+ * @return  temperature in degrees Celsius
+ */
+float dht22_get_temp(dht22* handle);
+
+/**
+ * Extract the current humidity as a float
+ * @param  handle - a pointer to the DHT22 handle
+ * @return  relative humidity in percent
+ */
+float dht22_get_hum(dht22* handle);
 
 /**
  * Handles the timer interrupt

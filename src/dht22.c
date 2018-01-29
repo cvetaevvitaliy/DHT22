@@ -108,22 +108,6 @@ static void write_bit(dht22* handle, bool bit) {
 }
 
 /**
- * Converts two bytes from rx_buffer into a float according to the format
- * specified in the datasheet
- * @param  dht_data pointer to the two bytes to be converted
- * @return          result of the conversion
- */
-static float get_float(uint8_t* dht_data) {
-    uint16_t v = 0;
-    v |= (dht_data[0] & 0x7F) << 8;
-    v |= dht_data[1];
-
-    float value = 0.1f * v;
-    if (dht_data[0] & 0x80) value *= -1.0f;
-    return value;
-}
-
-/**
  * Perform last steps of reception like parity check, etc.
  * @param handle DHT22 handle
  */
@@ -132,8 +116,14 @@ static void finish_rx(dht22* handle) {
     for (int i = 0; i < 4; i++) sum += handle->rx_buffer[i];
 
     if (sum == handle->rx_buffer[4]) { // checksums match
-        handle->hum  = get_float(&handle->rx_buffer[0]);
-        handle->temp = get_float(&handle->rx_buffer[2]);
+        // convert big endian to native endianness
+        handle->hum = (handle->rx_buffer[0] << 8) | handle->rx_buffer[1];
+        handle->temp =
+            ((handle->rx_buffer[2] & 0x7F) << 8) | handle->rx_buffer[3];
+
+        if (handle->rx_buffer[2] & 0x80) { // sign bit
+            handle->temp *= -1;            // negative result
+        }
     } else {
         handle->error_flags.parity = true;
     }
@@ -181,3 +171,7 @@ void dht22_interrupt_handler(dht22* handle) {
 
     handle->last_val = val;
 }
+
+float dht22_get_temp(dht22* handle) { return handle->temp * 0.1f; }
+
+float dht22_get_hum(dht22* handle) { return handle->hum * 0.1f; }

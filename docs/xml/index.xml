@@ -4,8 +4,8 @@
     <member refid="structdht22_1a47f38aa1f777ab5c907ec0375eae1344" kind="variable"><name>rx_buffer</name></member>
     <member refid="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" kind="variable"><name>bit_pos</name></member>
     <member refid="structdht22_1a866a73f568a9c1580242de93194402d2" kind="variable"><name>last_val</name></member>
-    <member refid="structdht22_1a24d61a35b72d7299eb6b5f48e71a571b" kind="variable"><name>temp</name></member>
-    <member refid="structdht22_1a38adb4de3d9d0391675c323d13503af7" kind="variable"><name>hum</name></member>
+    <member refid="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" kind="variable"><name>temp</name></member>
+    <member refid="structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e" kind="variable"><name>hum</name></member>
     <member refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" kind="variable"><name>state</name></member>
     <member refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" kind="variable"><name>parity</name></member>
     <member refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" kind="variable"><name>timing</name></member>
@@ -31,6 +31,8 @@
     <member refid="dht22_8h_1ab1c585a3f37b65ba94f3b6d0d95c548b" kind="function"><name>dht22_init</name></member>
     <member refid="dht22_8h_1af88e368924c132ae5b1dc20205019207" kind="function"><name>dht22_deinit</name></member>
     <member refid="dht22_8h_1a4bc9e0ef8d5951f1da6c527096d0389c" kind="function"><name>dht22_read_data</name></member>
+    <member refid="dht22_8h_1a8e7d4088235734416133d613076292b0" kind="function"><name>dht22_get_temp</name></member>
+    <member refid="dht22_8h_1a3c3a8020a175b494867bedd8af785224" kind="function"><name>dht22_get_hum</name></member>
     <member refid="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" kind="function"><name>dht22_interrupt_handler</name></member>
   </compound>
   <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>

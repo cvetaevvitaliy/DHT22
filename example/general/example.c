@@ -28,11 +28,7 @@ void example() {
     while (1) {
         if ((r = dht22_read_data(&dht)) != DHT22_OK) error(r, dht.bit_pos);
 
-        float temp = dht.temp;
-        float hum  = dht.hum;
-
-        snprintf(str, 32, "temp: %d, hum: %d\r\n", (int)(temp * 10),
-                 (int)(hum * 10));
+        snprintf(str, 32, "temp: %d, hum: %d\r\n", dht.temp, dht.hum);
         HAL_UART_Transmit_DMA(UART, (uint8_t*)str, strlen(str));
 
         HAL_Delay(3000);

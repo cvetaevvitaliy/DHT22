@@ -93,12 +93,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a866a73f568a9c1580242de93194402d2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdht22.html#a866a73f568a9c1580242de93194402d2">last_val</a></td></tr>
 <tr class="memdesc:a866a73f568a9c1580242de93194402d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp of the last input capture.  <a href="#a866a73f568a9c1580242de93194402d2">More...</a><br /></td></tr>
 <tr class="separator:a866a73f568a9c1580242de93194402d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24d61a35b72d7299eb6b5f48e71a571b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdht22.html#a24d61a35b72d7299eb6b5f48e71a571b">temp</a></td></tr>
-<tr class="memdesc:a24d61a35b72d7299eb6b5f48e71a571b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature reading.  <a href="#a24d61a35b72d7299eb6b5f48e71a571b">More...</a><br /></td></tr>
-<tr class="separator:a24d61a35b72d7299eb6b5f48e71a571b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38adb4de3d9d0391675c323d13503af7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdht22.html#a38adb4de3d9d0391675c323d13503af7">hum</a></td></tr>
-<tr class="memdesc:a38adb4de3d9d0391675c323d13503af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Humidity reading.  <a href="#a38adb4de3d9d0391675c323d13503af7">More...</a><br /></td></tr>
-<tr class="separator:a38adb4de3d9d0391675c323d13503af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54baf6d3cf7819fd576efcdeb5ed6d98"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdht22.html#a54baf6d3cf7819fd576efcdeb5ed6d98">temp</a></td></tr>
+<tr class="memdesc:a54baf6d3cf7819fd576efcdeb5ed6d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature reading in tenths of a degree (152 =&gt; 15.2 degC)  <a href="#a54baf6d3cf7819fd576efcdeb5ed6d98">More...</a><br /></td></tr>
+<tr class="separator:a54baf6d3cf7819fd576efcdeb5ed6d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6fb5ed5185ad6cc0bc9525c34b7d53e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdht22.html#ae6fb5ed5185ad6cc0bc9525c34b7d53e">hum</a></td></tr>
+<tr class="memdesc:ae6fb5ed5185ad6cc0bc9525c34b7d53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Humidity reading in tenths of a percent (0-1000 =&gt; 0-100 RH)  <a href="#ae6fb5ed5185ad6cc0bc9525c34b7d53e">More...</a><br /></td></tr>
+<tr class="separator:ae6fb5ed5185ad6cc0bc9525c34b7d53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f85ff3689520d5276c9431da0f45378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79">DHT22_STATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdht22.html#a2f85ff3689520d5276c9431da0f45378">state</a></td></tr>
 <tr class="memdesc:a2f85ff3689520d5276c9431da0f45378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state of the sensor.  <a href="#a2f85ff3689520d5276c9431da0f45378">More...</a><br /></td></tr>
 <tr class="separator:a2f85ff3689520d5276c9431da0f45378"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,19 +167,19 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a38adb4de3d9d0391675c323d13503af7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38adb4de3d9d0391675c323d13503af7">&#9670;&nbsp;</a></span>hum</h2>
+<a id="ae6fb5ed5185ad6cc0bc9525c34b7d53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6fb5ed5185ad6cc0bc9525c34b7d53e">&#9670;&nbsp;</a></span>hum</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float hum</td>
+          <td class="memname">uint16_t hum</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Humidity reading. </p>
+<p>Humidity reading in tenths of a percent (0-1000 =&gt; 0-100 RH) </p>
 
 </div>
 </div>
@@ -248,19 +248,19 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a24d61a35b72d7299eb6b5f48e71a571b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24d61a35b72d7299eb6b5f48e71a571b">&#9670;&nbsp;</a></span>temp</h2>
+<a id="a54baf6d3cf7819fd576efcdeb5ed6d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54baf6d3cf7819fd576efcdeb5ed6d98">&#9670;&nbsp;</a></span>temp</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float temp</td>
+          <td class="memname">int16_t temp</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Temperature reading. </p>
+<p>Temperature reading in tenths of a degree (152 =&gt; 15.2 degC) </p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ Data Fields</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 28 2018 14:09:48 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 29 2018 23:04:15 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

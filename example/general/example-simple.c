@@ -17,8 +17,13 @@ void example() {
     while (1) {
         dht22_read_data(&dht);
 
-        // Use temp and hum fields from the dht struct
+        // To access measurements in tenths of their respective units
+        // (0.1 degC, 0.1 %RH) use temp and hum fields from the dht22 struct
         // f(dht.temp, dht.hum);
+
+        // Or get measurements as floats
+        float temp = dht22_get_temp(&dht);
+        float hum  = dht22_get_hum(&dht);
 
         HAL_Delay(3000);
     }
