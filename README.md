@@ -25,7 +25,7 @@ of the failure
  is fully portable across all the STM32 families.
 
 Used in projects:
- - [dht22-datalogger](https://github.com/petoknm/dht22-datalogger/tree/master/fw)
+ - [dht22-datalogger](https://github.com/petoknm/dht22-datalogger/tree/master)
 
 
 ## Documentation
