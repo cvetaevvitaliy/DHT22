@@ -113,7 +113,7 @@ typedef struct {
     /**
      * Current state of the sensor
      */
-    DHT22_STATE state;
+    volatile DHT22_STATE state;
 
     /**
      * Error flags
