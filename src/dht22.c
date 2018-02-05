@@ -9,7 +9,7 @@ static void set_pin_out(dht22* handle) {
     GPIO_InitStruct.Pin  = handle->config.gpio_pin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
-#ifdef STM32F1
+#if defined STM32F0 || defined STM32F1
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 #else
     GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
@@ -25,7 +25,10 @@ static void set_pin_in(dht22* handle) {
     GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.Pin  = handle->config.gpio_pin;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
-#ifdef STM32F1
+#if defined STM32F0
+    GPIO_InitStruct.Mode  = GPIO_MODE_AF_OD;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+#elif defined STM32F1
     GPIO_InitStruct.Mode  = GPIO_MODE_AF_INPUT;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 #else

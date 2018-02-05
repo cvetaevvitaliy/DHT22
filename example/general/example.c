@@ -7,7 +7,7 @@ dht22 dht;
 static void error(DHT22_RESULT res, int bit_pos) {
     char msg[64];
     snprintf(msg, 64, "Error occured %d (bit_pos=%d)\r\n", res, bit_pos);
-    HAL_UART_Transmit_DMA(UART, (uint8_t*)msg, strlen(msg));
+    HAL_UART_Transmit(UART, (uint8_t*)msg, strlen(msg), 100);
     while (1) {}
 }
 
@@ -29,7 +29,7 @@ void example() {
         if ((r = dht22_read_data(&dht)) != DHT22_OK) error(r, dht.bit_pos);
 
         snprintf(str, 32, "temp: %d, hum: %d\r\n", dht.temp, dht.hum);
-        HAL_UART_Transmit_DMA(UART, (uint8_t*)str, strlen(str));
+        HAL_UART_Transmit(UART, (uint8_t*)str, strlen(str), 100);
 
         HAL_Delay(3000);
     }

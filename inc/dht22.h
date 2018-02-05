@@ -1,11 +1,11 @@
 #ifndef DHT22_H
 #define DHT22_H
 
-#ifdef STM32F1
+#if defined STM32F0
+#include "stm32f0xx_hal.h"
+#elif defined STM32F1
 #include "stm32f1xx_hal.h"
-#endif
-
-#ifdef STM32F4
+#elif defined STM32F4
 #include "stm32f4xx_hal.h"
 #endif
 

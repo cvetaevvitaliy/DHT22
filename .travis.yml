@@ -18,5 +18,7 @@ before_script:
     - export BINPATH=$PWD/gcc-arm-none-eabi-5_4-2016q3/bin
 
 script:
-    - cd example/stm32f1
+    - cd example/stm32f0
+    - make
+    - cd ../stm32f1
     - make
