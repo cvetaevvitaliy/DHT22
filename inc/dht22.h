@@ -20,17 +20,29 @@ typedef enum {
      */
     DHT22_OK,
     /**
-     * Function call was unsuccessful
+     * Device busy (already reading data)
      */
-    DHT22_ERROR,
+    DHT22_ERROR_BUSY,
     /**
-     * Timing error was detected
+     * Timer could not be started
      */
-    DHT22_TIMING_ERROR,
+    DHT22_ERROR_TIMER_START,
     /**
-     * Checksum error was detected
+     * Timer could not be stopped
      */
-    DHT22_CHECKSUM_ERROR
+    DHT22_ERROR_TIMER_STOP,
+    /**
+     * Protocol timing error. Look at timer calibration setup section in README
+     */
+    DHT22_ERROR_TIMING,
+    /**
+     * Data received is corrupted
+     */
+    DHT22_ERROR_CHECKSUM,
+    /**
+     * Device did not respond in time
+     */
+    DHT22_ERROR_TIMEOUT
 } DHT22_RESULT;
 
 /**

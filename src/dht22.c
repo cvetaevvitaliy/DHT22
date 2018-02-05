@@ -37,7 +37,7 @@ static void set_pin_in(dht22* handle) {
 }
 
 DHT22_RESULT dht22_read_data(dht22* handle) {
-    if (handle->state != DHT22_READY) return DHT22_ERROR;
+    if (handle->state != DHT22_READY) return DHT22_ERROR_BUSY;
 
     handle->state = DHT22_BUSY;
 
@@ -60,7 +60,7 @@ DHT22_RESULT dht22_read_data(dht22* handle) {
     // enable the timer interrupts
     if (HAL_TIM_IC_Start_IT(handle->config.timer,
                             handle->config.timer_channel) != HAL_OK) {
-        return DHT22_ERROR;
+        return DHT22_ERROR_TIMER_START;
     }
 
     uint32_t start_tick = HAL_GetTick();
@@ -72,17 +72,17 @@ DHT22_RESULT dht22_read_data(dht22* handle) {
     // disable the timer interrupts
     if (HAL_TIM_IC_Stop_IT(handle->config.timer,
                            handle->config.timer_channel) != HAL_OK) {
-        return DHT22_ERROR;
+        return DHT22_ERROR_TIMER_STOP;
     }
 
-    if (handle->error_flags.timing) return DHT22_TIMING_ERROR;
-    if (handle->error_flags.parity) return DHT22_CHECKSUM_ERROR;
+    if (handle->error_flags.timing) return DHT22_ERROR_TIMING;
+    if (handle->error_flags.parity) return DHT22_ERROR_CHECKSUM;
 
     if (handle->state == DHT22_FINISHED) {
         handle->state = DHT22_READY;
         return DHT22_OK;
     }
-    return DHT22_ERROR;
+    return DHT22_ERROR_TIMEOUT;
 }
 
 DHT22_RESULT dht22_init(dht22_config* config, dht22* handle) {
@@ -93,7 +93,7 @@ DHT22_RESULT dht22_init(dht22_config* config, dht22* handle) {
 DHT22_RESULT dht22_deinit(dht22* handle) { return DHT22_OK; }
 
 /**
- * Writes a bit to the current bit position (bit_pos) in the rx_buffer
+ * Writes a bit to the current bit position (bit_pos) in the rx_buffer and increment the bit position
  * @param handle DHT22 handle
  * @param bit    bit to store
  */
@@ -105,6 +105,7 @@ static void write_bit(dht22* handle, bool bit) {
     } else {
         handle->rx_buffer[byten] &= ~(1 << bitn);
     }
+    handle->bit_pos++;
 }
 
 /**
@@ -156,10 +157,8 @@ void dht22_interrupt_handler(dht22* handle) {
     } else {                    // data bits
         if (BETWEEN(70, 100)) { // zero: 50us + [26-28]us
             write_bit(handle, false);
-            handle->bit_pos++;
         } else if (BETWEEN(110, 150)) { // one: 50us + 70us
             write_bit(handle, true);
-            handle->bit_pos++;
         } else { // invalid
             TIMING_ERROR();
         }
