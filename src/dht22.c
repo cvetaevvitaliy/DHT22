@@ -93,7 +93,8 @@ DHT22_RESULT dht22_init(dht22_config* config, dht22* handle) {
 DHT22_RESULT dht22_deinit(dht22* handle) { return DHT22_OK; }
 
 /**
- * Writes a bit to the current bit position (bit_pos) in the rx_buffer and increment the bit position
+ * Writes a bit to the current bit position (bit_pos) in the rx_buffer and
+ * increment the bit position
  * @param handle DHT22 handle
  * @param bit    bit to store
  */

@@ -27,24 +27,45 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" prot="public">
-          <name>DHT22_ERROR</name>
+        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a699859fbf9e4960d1e4e120796a424e0" prot="public">
+          <name>DHT22_ERROR_BUSY</name>
           <briefdescription>
-<para>Function call was unsuccessful. </para>          </briefdescription>
+<para>Device busy (already reading data) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" prot="public">
-          <name>DHT22_TIMING_ERROR</name>
+        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a99be083c7c9b1671efba537378fb9ce1" prot="public">
+          <name>DHT22_ERROR_TIMER_START</name>
           <briefdescription>
-<para>Timing error was detected. </para>          </briefdescription>
+<para>Timer could not be started. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" prot="public">
-          <name>DHT22_CHECKSUM_ERROR</name>
+        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a2d55392e9e81e822db0e7d3b57828b63" prot="public">
+          <name>DHT22_ERROR_TIMER_STOP</name>
           <briefdescription>
-<para>Checksum error was detected. </para>          </briefdescription>
+<para>Timer could not be stopped. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a77182151f4e7ae128d5b022a70481ab7" prot="public">
+          <name>DHT22_ERROR_TIMING</name>
+          <briefdescription>
+<para>Protocol timing error. </para>          </briefdescription>
+          <detaileddescription>
+<para>Look at timer calibration setup section in README </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a4d57734d974bf868dcb611e4375ad62c" prot="public">
+          <name>DHT22_ERROR_CHECKSUM</name>
+          <briefdescription>
+<para>Data received is corrupted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a2ee35643fc5d37d64843b26aa9c544b8" prot="public">
+          <name>DHT22_ERROR_TIMEOUT</name>
+          <briefdescription>
+<para>Device did not respond in time. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -54,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="17" column="1" bodyfile="inc/dht22.h" bodystart="17" bodyend="34"/>
+        <location file="inc/dht22.h" line="17" column="1" bodyfile="inc/dht22.h" bodystart="17" bodyend="46"/>
       </memberdef>
       <memberdef kind="enum" id="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" prot="public" static="no" strong="no">
         <type></type>
@@ -86,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="39" column="1" bodyfile="inc/dht22.h" bodystart="39" bodyend="52"/>
+        <location file="inc/dht22.h" line="51" column="1" bodyfile="inc/dht22.h" bodystart="51" bodyend="64"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -125,7 +146,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="145" column="1"/>
+        <location file="inc/dht22.h" line="160" column="1"/>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1af88e368924c132ae5b1dc20205019207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
@@ -151,7 +172,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="152" column="1"/>
+        <location file="inc/dht22.h" line="167" column="1"/>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1a4bc9e0ef8d5951f1da6c527096d0389c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref></type>
@@ -177,7 +198,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="159" column="1"/>
+        <location file="inc/dht22.h" line="174" column="1"/>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1a8e7d4088235734416133d613076292b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -203,7 +224,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="166" column="1"/>
+        <location file="inc/dht22.h" line="181" column="1"/>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1a3c3a8020a175b494867bedd8af785224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -229,7 +250,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="173" column="1"/>
+        <location file="inc/dht22.h" line="188" column="1"/>
       </memberdef>
       <memberdef kind="function" id="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -254,7 +275,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="179" column="1"/>
+        <location file="inc/dht22.h" line="194" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -277,64 +298,67 @@
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="21" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kindref="member">DHT22_OK</ref>,</highlight></codeline>
-<codeline lineno="25" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1" kindref="member">DHT22_ERROR</ref>,</highlight></codeline>
-<codeline lineno="29" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5" kindref="member">DHT22_TIMING_ERROR</ref>,</highlight></codeline>
-<codeline lineno="33" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e" kindref="member">DHT22_CHECKSUM_ERROR</ref></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}<sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="43" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kindref="member">DHT22_READY</ref>,</highlight></codeline>
-<codeline lineno="47" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" kindref="member">DHT22_BUSY</ref>,</highlight></codeline>
-<codeline lineno="51" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" kindref="member">DHT22_FINISHED</ref></highlight></codeline>
-<codeline lineno="52"><highlight class="normal">}<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref>;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="structdht22__config" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="61" refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" kindref="member">gpio_pin</ref>;</highlight></codeline>
-<codeline lineno="65" refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_TypeDef*<sp/><ref refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" kindref="member">gpio_port</ref>;</highlight></codeline>
-<codeline lineno="69" refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_HandleTypeDef*<sp/><ref refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" kindref="member">timer</ref>;</highlight></codeline>
-<codeline lineno="73" refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" kindref="member">timer_channel</ref>;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>gpio_alternate_function;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal">}<sp/><ref refid="structdht22__config" kindref="compound">dht22_config</ref>;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="structdht22" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="90" refid="structdht22_1a47f38aa1f777ab5c907ec0375eae1344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>rx_buffer[5];</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95" refid="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" kindref="member">bit_pos</ref>;</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101" refid="structdht22_1a866a73f568a9c1580242de93194402d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdht22_1a866a73f568a9c1580242de93194402d2" kindref="member">last_val</ref>;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106" refid="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" kindref="member">temp</ref>;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111" refid="structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e" kindref="member">hum</ref>;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116" refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref><sp/><ref refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="25" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a699859fbf9e4960d1e4e120796a424e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a699859fbf9e4960d1e4e120796a424e0" kindref="member">DHT22_ERROR_BUSY</ref>,</highlight></codeline>
+<codeline lineno="29" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a99be083c7c9b1671efba537378fb9ce1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a99be083c7c9b1671efba537378fb9ce1" kindref="member">DHT22_ERROR_TIMER_START</ref>,</highlight></codeline>
+<codeline lineno="33" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a2d55392e9e81e822db0e7d3b57828b63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a2d55392e9e81e822db0e7d3b57828b63" kindref="member">DHT22_ERROR_TIMER_STOP</ref>,</highlight></codeline>
+<codeline lineno="37" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a77182151f4e7ae128d5b022a70481ab7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a77182151f4e7ae128d5b022a70481ab7" kindref="member">DHT22_ERROR_TIMING</ref>,</highlight></codeline>
+<codeline lineno="41" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a4d57734d974bf868dcb611e4375ad62c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a4d57734d974bf868dcb611e4375ad62c" kindref="member">DHT22_ERROR_CHECKSUM</ref>,</highlight></codeline>
+<codeline lineno="45" refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a2ee35643fc5d37d64843b26aa9c544b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a2ee35643fc5d37d64843b26aa9c544b8" kindref="member">DHT22_ERROR_TIMEOUT</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e" kindref="member">DHT22_READY</ref>,</highlight></codeline>
+<codeline lineno="59" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2" kindref="member">DHT22_BUSY</ref>,</highlight></codeline>
+<codeline lineno="63" refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817" kindref="member">DHT22_FINISHED</ref></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}<sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="structdht22__config" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73" refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" kindref="member">gpio_pin</ref>;</highlight></codeline>
+<codeline lineno="77" refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_TypeDef*<sp/><ref refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" kindref="member">gpio_port</ref>;</highlight></codeline>
+<codeline lineno="81" refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TIM_HandleTypeDef*<sp/><ref refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" kindref="member">timer_channel</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>STM32F4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>gpio_alternate_function;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}<sp/><ref refid="structdht22__config" kindref="compound">dht22_config</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structdht22" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102" refid="structdht22_1a47f38aa1f777ab5c907ec0375eae1344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>rx_buffer[5];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" kindref="member">bit_pos</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="structdht22_1a866a73f568a9c1580242de93194402d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdht22_1a866a73f568a9c1580242de93194402d2" kindref="member">last_val</ref>;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="125" refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" kindref="member">parity</ref><sp/>:<sp/>1;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130" refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" kindref="member">timing</ref><sp/>:<sp/>1;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>error_flags;</highlight></codeline>
+<codeline lineno="121" refid="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" kindref="member">temp</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e" kindref="member">hum</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="structdht22_1af799de51d08e1100efcf4beda40e1b8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref><sp/><ref refid="structdht22_1af799de51d08e1100efcf4beda40e1b8b" kindref="member">state</ref>;</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136" refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdht22__config" kindref="compound">dht22_config</ref><sp/><ref refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" kindref="member">config</ref>;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal">}<sp/><ref refid="structdht22" kindref="compound">dht22</ref>;</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1ab1c585a3f37b65ba94f3b6d0d95c548b" kindref="member">dht22_init</ref>(<ref refid="structdht22__config" kindref="compound">dht22_config</ref>*<sp/>config,<sp/><ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1af88e368924c132ae5b1dc20205019207" kindref="member">dht22_deinit</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140" refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" kindref="member">parity</ref><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" kindref="member">timing</ref><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>error_flags;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdht22__config" kindref="compound">dht22_config</ref><sp/><ref refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" kindref="member">config</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}<sp/><ref refid="structdht22" kindref="compound">dht22</ref>;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1a4bc9e0ef8d5951f1da6c527096d0389c" kindref="member">dht22_read_data</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="166"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a8e7d4088235734416133d613076292b0" kindref="member">dht22_get_temp</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight></codeline>
-<codeline lineno="173"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a3c3a8020a175b494867bedd8af785224" kindref="member">dht22_get_hum</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" kindref="member">dht22_interrupt_handler</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1ab1c585a3f37b65ba94f3b6d0d95c548b" kindref="member">dht22_init</ref>(<ref refid="structdht22__config" kindref="compound">dht22_config</ref>*<sp/>config,<sp/><ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1af88e368924c132ae5b1dc20205019207" kindref="member">dht22_deinit</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><ref refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kindref="member">DHT22_RESULT</ref><sp/><ref refid="dht22_8h_1a4bc9e0ef8d5951f1da6c527096d0389c" kindref="member">dht22_read_data</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a8e7d4088235734416133d613076292b0" kindref="member">dht22_get_temp</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a3c3a8020a175b494867bedd8af785224" kindref="member">dht22_get_hum</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dht22_8h_1a6119816d8ad1b38b7c732472bba7b0ec" kindref="member">dht22_interrupt_handler</ref>(<ref refid="structdht22" kindref="compound">dht22</ref>*<sp/>handle);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="inc/dht22.h"/>
   </compounddef>

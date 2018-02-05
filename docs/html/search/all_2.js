@@ -3,10 +3,14 @@ var searchData=
   ['dht22',['dht22',['../structdht22.html',1,'']]],
   ['dht22_2eh',['dht22.h',['../dht22_8h.html',1,'']]],
   ['dht22_5fbusy',['DHT22_BUSY',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2',1,'dht22.h']]],
-  ['dht22_5fchecksum_5ferror',['DHT22_CHECKSUM_ERROR',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e',1,'dht22.h']]],
   ['dht22_5fconfig',['dht22_config',['../structdht22__config.html',1,'']]],
   ['dht22_5fdeinit',['dht22_deinit',['../dht22_8h.html#af88e368924c132ae5b1dc20205019207',1,'dht22.h']]],
-  ['dht22_5ferror',['DHT22_ERROR',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1',1,'dht22.h']]],
+  ['dht22_5ferror_5fbusy',['DHT22_ERROR_BUSY',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a699859fbf9e4960d1e4e120796a424e0',1,'dht22.h']]],
+  ['dht22_5ferror_5fchecksum',['DHT22_ERROR_CHECKSUM',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a4d57734d974bf868dcb611e4375ad62c',1,'dht22.h']]],
+  ['dht22_5ferror_5ftimeout',['DHT22_ERROR_TIMEOUT',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a2ee35643fc5d37d64843b26aa9c544b8',1,'dht22.h']]],
+  ['dht22_5ferror_5ftimer_5fstart',['DHT22_ERROR_TIMER_START',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a99be083c7c9b1671efba537378fb9ce1',1,'dht22.h']]],
+  ['dht22_5ferror_5ftimer_5fstop',['DHT22_ERROR_TIMER_STOP',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a2d55392e9e81e822db0e7d3b57828b63',1,'dht22.h']]],
+  ['dht22_5ferror_5ftiming',['DHT22_ERROR_TIMING',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a77182151f4e7ae128d5b022a70481ab7',1,'dht22.h']]],
   ['dht22_5ffinished',['DHT22_FINISHED',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79aeb92f9329a3747c586851824186a5817',1,'dht22.h']]],
   ['dht22_5fget_5fhum',['dht22_get_hum',['../dht22_8h.html#a3c3a8020a175b494867bedd8af785224',1,'dht22.h']]],
   ['dht22_5fget_5ftemp',['dht22_get_temp',['../dht22_8h.html#a8e7d4088235734416133d613076292b0',1,'dht22.h']]],
@@ -16,6 +20,5 @@ var searchData=
   ['dht22_5fread_5fdata',['dht22_read_data',['../dht22_8h.html#a4bc9e0ef8d5951f1da6c527096d0389c',1,'dht22.h']]],
   ['dht22_5fready',['DHT22_READY',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e',1,'dht22.h']]],
   ['dht22_5fresult',['DHT22_RESULT',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633',1,'dht22.h']]],
-  ['dht22_5fstate',['DHT22_STATE',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79',1,'dht22.h']]],
-  ['dht22_5ftiming_5ferror',['DHT22_TIMING_ERROR',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5',1,'dht22.h']]]
+  ['dht22_5fstate',['DHT22_STATE',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79',1,'dht22.h']]]
 ];

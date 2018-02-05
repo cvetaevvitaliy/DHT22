@@ -103,6 +103,9 @@ typedef struct {
 
     /**
      * Current position of the bit being received (from -1 to 40)
+     * -1 = start bit
+     *  0 = 0th bit
+     *  ...
      */
     int8_t bit_pos;
 

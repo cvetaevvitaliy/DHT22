@@ -22,9 +22,12 @@ Possible return values of the functions.
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DHT22_OK            | Function call was successful.
-DHT22_ERROR            | Function call was unsuccessful.
-DHT22_TIMING_ERROR            | Timing error was detected.
-DHT22_CHECKSUM_ERROR            | Checksum error was detected.
+DHT22_ERROR_BUSY            | Device busy (already reading data)
+DHT22_ERROR_TIMER_START            | Timer could not be started.
+DHT22_ERROR_TIMER_STOP            | Timer could not be stopped.
+DHT22_ERROR_TIMING            | Protocol timing error.
+DHT22_ERROR_CHECKSUM            | Data received is corrupted.
+DHT22_ERROR_TIMEOUT            | Device did not respond in time.
 
 #### `enum `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79) 
 
@@ -104,11 +107,11 @@ This structure is the sensor handle.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 `public uint8_t `[`rx_buffer`](#structdht22_1a47f38aa1f777ab5c907ec0375eae1344) | Buffer for receiving data (40bits = 5bytes)
-`public int8_t `[`bit_pos`](#structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb) | Current position of the bit being received (from -1 to 40)
+`public int8_t `[`bit_pos`](#structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb) | Current position of the bit being received (from -1 to 40) -1 = start bit 0 = 0th bit ...
 `public uint16_t `[`last_val`](#structdht22_1a866a73f568a9c1580242de93194402d2) | Timestamp of the last input capture.
 `public int16_t `[`temp`](#structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98) | Temperature reading in tenths of a degree (152 => 15.2 degC)
 `public uint16_t `[`hum`](#structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e) | Humidity reading in tenths of a percent (0-1000 => 0-100 RH)
-`public `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)` `[`state`](#structdht22_1a2f85ff3689520d5276c9431da0f45378) | Current state of the sensor.
+`public `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)` `[`state`](#structdht22_1af799de51d08e1100efcf4beda40e1b8b) | Current state of the sensor.
 `public bool `[`parity`](#structdht22_1a3f32f989e34d67aa0736e2606a255e55) | Set when the checksum is incorrent.
 `public bool `[`timing`](#structdht22_1a20f65ad56869382ed8681b9dd1aa85d6) | Set when the timing of the pulses coming from the sensor is invalid.
 `public struct dht22::@0 `[`error_flags`](#structdht22_1a03251bc0907d3f2709d4b8550b9e90e3) | Error flags.
@@ -122,7 +125,7 @@ Buffer for receiving data (40bits = 5bytes)
 
 #### `public int8_t `[`bit_pos`](#structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb) 
 
-Current position of the bit being received (from -1 to 40)
+Current position of the bit being received (from -1 to 40) -1 = start bit 0 = 0th bit ...
 
 #### `public uint16_t `[`last_val`](#structdht22_1a866a73f568a9c1580242de93194402d2) 
 
@@ -138,7 +141,7 @@ Temperature reading in tenths of a degree (152 => 15.2 degC)
 
 Humidity reading in tenths of a percent (0-1000 => 0-100 RH)
 
-#### `public `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)` `[`state`](#structdht22_1a2f85ff3689520d5276c9431da0f45378) 
+#### `public `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)` `[`state`](#structdht22_1af799de51d08e1100efcf4beda40e1b8b) 
 
 Current state of the sensor.
 

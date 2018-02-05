@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="90" column="1" bodyfile="inc/dht22.h" bodystart="90" bodyend="-1"/>
+        <location file="inc/dht22.h" line="102" column="1" bodyfile="inc/dht22.h" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" prot="public" static="no" mutable="no">
         <type>int8_t</type>
@@ -23,12 +23,12 @@
         <argsstring></argsstring>
         <name>bit_pos</name>
         <briefdescription>
-<para>Current position of the bit being received (from -1 to 40) </para>        </briefdescription>
+<para>Current position of the bit being received (from -1 to 40) -1 = start bit 0 = 0th bit ... </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="95" column="1" bodyfile="inc/dht22.h" bodystart="95" bodyend="-1"/>
+        <location file="inc/dht22.h" line="110" column="1" bodyfile="inc/dht22.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a866a73f568a9c1580242de93194402d2" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -41,7 +41,7 @@
 <para>Used for calculating duration between input captures and therefore the pulse length. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="101" column="1" bodyfile="inc/dht22.h" bodystart="101" bodyend="-1"/>
+        <location file="inc/dht22.h" line="116" column="1" bodyfile="inc/dht22.h" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" prot="public" static="no" mutable="no">
         <type>int16_t</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="106" column="1" bodyfile="inc/dht22.h" bodystart="106" bodyend="-1"/>
+        <location file="inc/dht22.h" line="121" column="1" bodyfile="inc/dht22.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1ae6fb5ed5185ad6cc0bc9525c34b7d53e" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -67,11 +67,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="111" column="1" bodyfile="inc/dht22.h" bodystart="111" bodyend="-1"/>
+        <location file="inc/dht22.h" line="126" column="1" bodyfile="inc/dht22.h" bodystart="126" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structdht22_1a2f85ff3689520d5276c9431da0f45378" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structdht22_1af799de51d08e1100efcf4beda40e1b8b" prot="public" static="no" mutable="no">
         <type><ref refid="dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79" kindref="member">DHT22_STATE</ref></type>
-        <definition>DHT22_STATE state</definition>
+        <definition>volatile DHT22_STATE state</definition>
         <argsstring></argsstring>
         <name>state</name>
         <briefdescription>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="116" column="1" bodyfile="inc/dht22.h" bodystart="116" bodyend="-1"/>
+        <location file="inc/dht22.h" line="131" column="1" bodyfile="inc/dht22.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a3f32f989e34d67aa0736e2606a255e55" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="125" column="1" bodyfile="inc/dht22.h" bodystart="125" bodyend="-1"/>
+        <location file="inc/dht22.h" line="140" column="1" bodyfile="inc/dht22.h" bodystart="140" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="130" column="1" bodyfile="inc/dht22.h" bodystart="130" bodyend="-1"/>
+        <location file="inc/dht22.h" line="145" column="1" bodyfile="inc/dht22.h" bodystart="145" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1a03251bc0907d3f2709d4b8550b9e90e3" prot="public" static="no" mutable="no">
         <type>struct dht22::@0</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="131" column="1"/>
+        <location file="inc/dht22.h" line="146" column="1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" prot="public" static="no" mutable="no">
         <type><ref refid="structdht22__config" kindref="compound">dht22_config</ref></type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="136" column="1" bodyfile="inc/dht22.h" bodystart="136" bodyend="-1"/>
+        <location file="inc/dht22.h" line="151" column="1" bodyfile="inc/dht22.h" bodystart="151" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -154,7 +154,7 @@
         <link refid="structdht22__config"/>
       </node>
     </collaborationgraph>
-    <location file="inc/dht22.h" line="86" column="1" bodyfile="inc/dht22.h" bodystart="86" bodyend="137"/>
+    <location file="inc/dht22.h" line="98" column="1" bodyfile="inc/dht22.h" bodystart="98" bodyend="152"/>
     <listofallmembers>
       <member refid="structdht22_1aa5c499727bc97d11b526ea2dc1eec4fb" prot="public" virt="non-virtual"><scope>dht22</scope><name>bit_pos</name></member>
       <member refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" prot="public" virt="non-virtual"><scope>dht22</scope><name>config</name></member>
@@ -163,7 +163,7 @@
       <member refid="structdht22_1a866a73f568a9c1580242de93194402d2" prot="public" virt="non-virtual"><scope>dht22</scope><name>last_val</name></member>
       <member refid="structdht22_1a3f32f989e34d67aa0736e2606a255e55" prot="public" virt="non-virtual"><scope>dht22</scope><name>parity</name></member>
       <member refid="structdht22_1a47f38aa1f777ab5c907ec0375eae1344" prot="public" virt="non-virtual"><scope>dht22</scope><name>rx_buffer</name></member>
-      <member refid="structdht22_1a2f85ff3689520d5276c9431da0f45378" prot="public" virt="non-virtual"><scope>dht22</scope><name>state</name></member>
+      <member refid="structdht22_1af799de51d08e1100efcf4beda40e1b8b" prot="public" virt="non-virtual"><scope>dht22</scope><name>state</name></member>
       <member refid="structdht22_1a54baf6d3cf7819fd576efcdeb5ed6d98" prot="public" virt="non-virtual"><scope>dht22</scope><name>temp</name></member>
       <member refid="structdht22_1a20f65ad56869382ed8681b9dd1aa85d6" prot="public" virt="non-virtual"><scope>dht22</scope><name>timing</name></member>
     </listofallmembers>

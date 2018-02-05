@@ -94,10 +94,16 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a1d16fe97ca08e0d2c9b928a36472c633"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a> { <a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76">DHT22_OK</a>, 
-<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1">DHT22_ERROR</a>, 
-<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5">DHT22_TIMING_ERROR</a>, 
-<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e">DHT22_CHECKSUM_ERROR</a>
+<tr class="memitem:a1d16fe97ca08e0d2c9b928a36472c633"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">DHT22_RESULT</a> { <br />
+&#160;&#160;<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76">DHT22_OK</a>, 
+<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a699859fbf9e4960d1e4e120796a424e0">DHT22_ERROR_BUSY</a>, 
+<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a99be083c7c9b1671efba537378fb9ce1">DHT22_ERROR_TIMER_START</a>, 
+<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a2d55392e9e81e822db0e7d3b57828b63">DHT22_ERROR_TIMER_STOP</a>, 
+<br />
+&#160;&#160;<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a77182151f4e7ae128d5b022a70481ab7">DHT22_ERROR_TIMING</a>, 
+<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a4d57734d974bf868dcb611e4375ad62c">DHT22_ERROR_CHECKSUM</a>, 
+<a class="el" href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a2ee35643fc5d37d64843b26aa9c544b8">DHT22_ERROR_TIMEOUT</a>
+<br />
  }</td></tr>
 <tr class="memdesc:a1d16fe97ca08e0d2c9b928a36472c633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible return values of the functions.  <a href="dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633">More...</a><br /></td></tr>
 <tr class="separator:a1d16fe97ca08e0d2c9b928a36472c633"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,11 +152,18 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76"></a>DHT22_OK&#160;</td><td class="fielddoc"><p>Function call was successful. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633aeae0b1006927b44bdc5fc81649aabaf1"></a>DHT22_ERROR&#160;</td><td class="fielddoc"><p>Function call was unsuccessful. </p>
+<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633a699859fbf9e4960d1e4e120796a424e0"></a>DHT22_ERROR_BUSY&#160;</td><td class="fielddoc"><p>Device busy (already reading data) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633a403a5dfe74ccad98a28bb168f46ba6a5"></a>DHT22_TIMING_ERROR&#160;</td><td class="fielddoc"><p>Timing error was detected. </p>
+<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633a99be083c7c9b1671efba537378fb9ce1"></a>DHT22_ERROR_TIMER_START&#160;</td><td class="fielddoc"><p>Timer could not be started. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633abeb8a3283bb01449c62aaca24c0b697e"></a>DHT22_CHECKSUM_ERROR&#160;</td><td class="fielddoc"><p>Checksum error was detected. </p>
+<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633a2d55392e9e81e822db0e7d3b57828b63"></a>DHT22_ERROR_TIMER_STOP&#160;</td><td class="fielddoc"><p>Timer could not be stopped. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633a77182151f4e7ae128d5b022a70481ab7"></a>DHT22_ERROR_TIMING&#160;</td><td class="fielddoc"><p>Protocol timing error. </p>
+<p>Look at timer calibration setup section in README </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633a4d57734d974bf868dcb611e4375ad62c"></a>DHT22_ERROR_CHECKSUM&#160;</td><td class="fielddoc"><p>Data received is corrupted. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1d16fe97ca08e0d2c9b928a36472c633a2ee35643fc5d37d64843b26aa9c544b8"></a>DHT22_ERROR_TIMEOUT&#160;</td><td class="fielddoc"><p>Device did not respond in time. </p>
 </td></tr>
 </table>
 
@@ -356,7 +369,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 29 2018 23:04:15 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 5 2018 18:37:09 for DHT22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
