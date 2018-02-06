@@ -22,3 +22,5 @@ script:
     - make
     - cd ../stm32f1
     - make
+    - cd ../stm32f4
+    - make

@@ -4,6 +4,7 @@
 Library for STM32 series microcontrollers for reading DHT22 sensor values
 
 ## TODO
+ - test stm32f4 example
  - libopencm3 support
  - Testing
  - Use cmake

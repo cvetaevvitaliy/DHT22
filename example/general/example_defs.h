@@ -23,6 +23,16 @@ extern UART_HandleTypeDef huart1;
 #define TIMER_CHANNEL TIM_CHANNEL_1
 #define UART &huart1
 
+#elif defined STM32F4
+
+extern TIM_HandleTypeDef  htim14;
+extern UART_HandleTypeDef huart1;
+#define PIN GPIO_PIN_7
+#define PORT GPIOA
+#define TIMER &htim14
+#define TIMER_CHANNEL TIM_CHANNEL_1
+#define UART &huart1
+
 #endif
 
 #endif // EXAMPLE_DEFS_H
