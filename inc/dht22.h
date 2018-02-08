@@ -11,7 +11,19 @@
 
 #include <stdbool.h>
 
-typedef enum { DHT11, DHT22 } DHT_TYPE;
+/**
+ * Type of sensor
+ */
+typedef enum {
+    /**
+     * Supports: DHT11
+     */
+    DHT11,
+    /**
+     * Supports: DHT22, AM2302, AM2320
+     */
+    DHT22
+} DHT_TYPE;
 
 /**
  * Possible return values of the functions

@@ -2,7 +2,7 @@
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`enum `[`DHT_TYPE`](#dht22_8h_1ad3b59f69d042d7024972ca827e359dee)            | 
+`enum `[`DHT_TYPE`](#dht22_8h_1ad3b59f69d042d7024972ca827e359dee)            | Type of sensor.
 `enum `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)            | Possible return values of the functions.
 `enum `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)            | Describes the state of the sensor.
 `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`dht22_init`](#dht22_8h_1ab1c585a3f37b65ba94f3b6d0d95c548b)`(`[`dht22_config`](#structdht22__config)` * config,`[`dht22`](#structdht22)` * handle)`            | Initializes the DHT22 handle using the provided configuration.
@@ -18,10 +18,12 @@
 
 #### `enum `[`DHT_TYPE`](#dht22_8h_1ad3b59f69d042d7024972ca827e359dee) 
 
+Type of sensor.
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
-DHT11            | 
-DHT22            | 
+DHT11            | Supports: DHT11.
+DHT22            | Supports: DHT22, AM2302, AM2320.
 
 #### `enum `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633) 
 
