@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['dht22',['dht22',['../structdht22.html',1,'']]],
+  ['dht11',['DHT11',['../dht22_8h.html#ad3b59f69d042d7024972ca827e359deeac787700a72e9e1ab11c5135833176f87',1,'dht22.h']]],
+  ['dht22',['dht22',['../structdht22.html',1,'dht22'],['../dht22_8h.html#ad3b59f69d042d7024972ca827e359deea751933a6e30ed5eeefb2c7c7b5e52602',1,'DHT22():&#160;dht22.h']]],
   ['dht22_2eh',['dht22.h',['../dht22_8h.html',1,'']]],
   ['dht22_5fbusy',['DHT22_BUSY',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2',1,'dht22.h']]],
   ['dht22_5fconfig',['dht22_config',['../structdht22__config.html',1,'']]],
@@ -20,5 +21,6 @@ var searchData=
   ['dht22_5fread_5fdata',['dht22_read_data',['../dht22_8h.html#a4bc9e0ef8d5951f1da6c527096d0389c',1,'dht22.h']]],
   ['dht22_5fready',['DHT22_READY',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79aff1b5848a95cb30baa49a6cf57ff732e',1,'dht22.h']]],
   ['dht22_5fresult',['DHT22_RESULT',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633',1,'dht22.h']]],
-  ['dht22_5fstate',['DHT22_STATE',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79',1,'dht22.h']]]
+  ['dht22_5fstate',['DHT22_STATE',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79',1,'dht22.h']]],
+  ['dht_5ftype',['DHT_TYPE',['../dht22_8h.html#ad3b59f69d042d7024972ca827e359dee',1,'dht22.h']]]
 ];

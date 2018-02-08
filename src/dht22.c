@@ -131,7 +131,7 @@ static void finish_rx(dht22* handle) {
     if (handle->config.type == DHT11) {
         // assuming rx_buffer[1] & rx_buffer[3] are always zero
         // limits the range of temperature to only non-negative values
-        handle->hum = handle->rx_buffer[0] * 10;
+        handle->hum  = handle->rx_buffer[0] * 10;
         handle->temp = handle->rx_buffer[2] * 10;
     } else {
         handle->hum = (handle->rx_buffer[0] << 8) | handle->rx_buffer[1];

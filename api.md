@@ -2,6 +2,7 @@
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
+`enum `[`DHT_TYPE`](#dht22_8h_1ad3b59f69d042d7024972ca827e359dee)            | 
 `enum `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)            | Possible return values of the functions.
 `enum `[`DHT22_STATE`](#dht22_8h_1a73cd960d2d2ae7988ddb46f1c9e49e79)            | Describes the state of the sensor.
 `public `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633)` `[`dht22_init`](#dht22_8h_1ab1c585a3f37b65ba94f3b6d0d95c548b)`(`[`dht22_config`](#structdht22__config)` * config,`[`dht22`](#structdht22)` * handle)`            | Initializes the DHT22 handle using the provided configuration.
@@ -14,6 +15,13 @@
 `struct `[`dht22_config`](#structdht22__config) | This structure is for initializing the sensor handle.
 
 ## Members
+
+#### `enum `[`DHT_TYPE`](#dht22_8h_1ad3b59f69d042d7024972ca827e359dee) 
+
+ Values                         | Descriptions                                
+--------------------------------|---------------------------------------------
+DHT11            | 
+DHT22            | 
 
 #### `enum `[`DHT22_RESULT`](#dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633) 
 
@@ -169,12 +177,17 @@ This structure is for initializing the sensor handle.
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
+`public `[`DHT_TYPE`](#dht22_8h_1ad3b59f69d042d7024972ca827e359dee)` `[`type`](#structdht22__config_1a76a0c57fd14d633a3177d6c89bcd45e7) | Type of the DHT sensor (DHT11/DHT22)
 `public uint16_t `[`gpio_pin`](#structdht22__config_1a1468dc79e1c16d2ae8597631191ab190) | GPIO pin connected to the DHT22 sensor.
 `public GPIO_TypeDef * `[`gpio_port`](#structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080) | GPIO port associated with the `gpio_pin`
 `public TIM_HandleTypeDef * `[`timer`](#structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64) | Calibrated timer used for time measurements.
 `public uint32_t `[`timer_channel`](#structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43) | Input capture channel of the timer to be used for time measurements.
 
 ## Members
+
+#### `public `[`DHT_TYPE`](#dht22_8h_1ad3b59f69d042d7024972ca827e359dee)` `[`type`](#structdht22__config_1a76a0c57fd14d633a3177d6c89bcd45e7) 
+
+Type of the DHT sensor (DHT11/DHT22)
 
 #### `public uint16_t `[`gpio_pin`](#structdht22__config_1a1468dc79e1c16d2ae8597631191ab190) 
 

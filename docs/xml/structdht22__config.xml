@@ -4,6 +4,19 @@
     <compoundname>dht22_config</compoundname>
     <includes refid="dht22_8h" local="no">dht22.h</includes>
       <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdht22__config_1a76a0c57fd14d633a3177d6c89bcd45e7" prot="public" static="no" mutable="no">
+        <type><ref refid="dht22_8h_1ad3b59f69d042d7024972ca827e359dee" kindref="member">DHT_TYPE</ref></type>
+        <definition>DHT_TYPE type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Type of the DHT sensor (DHT11/DHT22) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/dht22.h" line="75" column="1" bodyfile="inc/dht22.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
         <definition>uint16_t gpio_pin</definition>
@@ -15,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="73" column="1" bodyfile="inc/dht22.h" bodystart="73" bodyend="-1"/>
+        <location file="inc/dht22.h" line="79" column="1" bodyfile="inc/dht22.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" prot="public" static="no" mutable="no">
         <type>GPIO_TypeDef *</type>
@@ -28,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="77" column="1" bodyfile="inc/dht22.h" bodystart="77" bodyend="-1"/>
+        <location file="inc/dht22.h" line="83" column="1" bodyfile="inc/dht22.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" prot="public" static="no" mutable="no">
         <type>TIM_HandleTypeDef *</type>
@@ -41,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="81" column="1" bodyfile="inc/dht22.h" bodystart="81" bodyend="-1"/>
+        <location file="inc/dht22.h" line="87" column="1" bodyfile="inc/dht22.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -54,19 +67,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/dht22.h" line="85" column="1" bodyfile="inc/dht22.h" bodystart="85" bodyend="-1"/>
+        <location file="inc/dht22.h" line="91" column="1" bodyfile="inc/dht22.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This structure is for initializing the sensor handle. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="inc/dht22.h" line="69" column="1" bodyfile="inc/dht22.h" bodystart="69" bodyend="93"/>
+    <location file="inc/dht22.h" line="71" column="1" bodyfile="inc/dht22.h" bodystart="71" bodyend="99"/>
     <listofallmembers>
       <member refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>gpio_pin</name></member>
       <member refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>gpio_port</name></member>
       <member refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>timer</name></member>
       <member refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>timer_channel</name></member>
+      <member refid="structdht22__config_1a76a0c57fd14d633a3177d6c89bcd45e7" prot="public" virt="non-virtual"><scope>dht22_config</scope><name>type</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

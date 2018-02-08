@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['dht11',['DHT11',['../dht22_8h.html#ad3b59f69d042d7024972ca827e359deeac787700a72e9e1ab11c5135833176f87',1,'dht22.h']]],
+  ['dht22',['DHT22',['../dht22_8h.html#ad3b59f69d042d7024972ca827e359deea751933a6e30ed5eeefb2c7c7b5e52602',1,'dht22.h']]],
   ['dht22_5fbusy',['DHT22_BUSY',['../dht22_8h.html#a73cd960d2d2ae7988ddb46f1c9e49e79a8ece4dd3d8c2333e0ad655c44afac0e2',1,'dht22.h']]],
   ['dht22_5ferror_5fbusy',['DHT22_ERROR_BUSY',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a699859fbf9e4960d1e4e120796a424e0',1,'dht22.h']]],
   ['dht22_5ferror_5fchecksum',['DHT22_ERROR_CHECKSUM',['../dht22_8h.html#a1d16fe97ca08e0d2c9b928a36472c633a4d57734d974bf868dcb611e4375ad62c',1,'dht22.h']]],

@@ -11,9 +11,7 @@
 
 #include <stdbool.h>
 
-typedef enum {
-    DHT11, DHT22
-} DHT_TYPE;
+typedef enum { DHT11, DHT22 } DHT_TYPE;
 
 /**
  * Possible return values of the functions

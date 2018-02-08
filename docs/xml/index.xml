@@ -13,12 +13,16 @@
     <member refid="structdht22_1ab326e0814c94b277efd81f8527ccc3d8" kind="variable"><name>config</name></member>
   </compound>
   <compound refid="structdht22__config" kind="struct"><name>dht22_config</name>
+    <member refid="structdht22__config_1a76a0c57fd14d633a3177d6c89bcd45e7" kind="variable"><name>type</name></member>
     <member refid="structdht22__config_1a1468dc79e1c16d2ae8597631191ab190" kind="variable"><name>gpio_pin</name></member>
     <member refid="structdht22__config_1a081bd8cbb6d27fdb0ab0681b66cfd080" kind="variable"><name>gpio_port</name></member>
     <member refid="structdht22__config_1a30b15aedcc086ca7abb69f7ac012ce64" kind="variable"><name>timer</name></member>
     <member refid="structdht22__config_1a9209e1ec26ff459b75d3981ca197ec43" kind="variable"><name>timer_channel</name></member>
   </compound>
   <compound refid="dht22_8h" kind="file"><name>dht22.h</name>
+    <member refid="dht22_8h_1ad3b59f69d042d7024972ca827e359dee" kind="enum"><name>DHT_TYPE</name></member>
+    <member refid="dht22_8h_1ad3b59f69d042d7024972ca827e359deeac787700a72e9e1ab11c5135833176f87" kind="enumvalue"><name>DHT11</name></member>
+    <member refid="dht22_8h_1ad3b59f69d042d7024972ca827e359deea751933a6e30ed5eeefb2c7c7b5e52602" kind="enumvalue"><name>DHT22</name></member>
     <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633" kind="enum"><name>DHT22_RESULT</name></member>
     <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a5fce7d39386d669757a5ef19ff864b76" kind="enumvalue"><name>DHT22_OK</name></member>
     <member refid="dht22_8h_1a1d16fe97ca08e0d2c9b928a36472c633a699859fbf9e4960d1e4e120796a424e0" kind="enumvalue"><name>DHT22_ERROR_BUSY</name></member>
