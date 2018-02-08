@@ -11,6 +11,10 @@
 
 #include <stdbool.h>
 
+typedef enum {
+    DHT11, DHT22
+} DHT_TYPE;
+
 /**
  * Possible return values of the functions
  */
@@ -67,6 +71,10 @@ typedef enum {
  * This structure is for initializing the sensor handle
  */
 typedef struct {
+    /**
+     * Type of the DHT sensor (DHT11/DHT22)
+     */
+    DHT_TYPE type;
     /**
      * GPIO pin connected to the DHT22 sensor
      */

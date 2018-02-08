@@ -7,6 +7,7 @@ void example() {
 
     dht22_config dht_config;
 
+    dht_config.type          = DHT22;
     dht_config.gpio_pin      = PIN;
     dht_config.gpio_port     = PORT;
     dht_config.timer         = TIMER;

@@ -1,7 +1,12 @@
-[![Build Status](https://travis-ci.org/petoknm/DHT22.svg?branch=master)](https://travis-ci.org/petoknm/DHT22)
-
-# DHT22
+# DHT22 [![Build Status](https://travis-ci.org/petoknm/DHT22.svg?branch=master)](https://travis-ci.org/petoknm/DHT22)
 Library for STM32 series microcontrollers for reading DHT22 sensor values
+
+## Supported sensors
+`sensor_name (DHT_TYPE to use)`
+ - DHT11 (DHT11)
+ - DHT22 (DHT22)
+ - AM2302 (DHT22)
+ - AM2320 (DHT22) (remember to ground pin 3 to choose DHT protocol)
 
 ## TODO
  - test stm32f4 example

@@ -120,8 +120,20 @@ static void finish_rx(dht22* handle) {
     uint8_t sum = 0;
     for (int i = 0; i < 4; i++) sum += handle->rx_buffer[i];
 
-    if (sum == handle->rx_buffer[4]) { // checksums match
-        // convert big endian to native endianness
+    handle->state = DHT22_FINISHED;
+
+    if (sum != handle->rx_buffer[4]) { // checksums do not match
+        handle->error_flags.parity = true;
+        return;
+    }
+
+    // convert big endian to native endianness
+    if (handle->config.type == DHT11) {
+        // assuming rx_buffer[1] & rx_buffer[3] are always zero
+        // limits the range of temperature to only non-negative values
+        handle->hum = handle->rx_buffer[0] * 10;
+        handle->temp = handle->rx_buffer[2] * 10;
+    } else {
         handle->hum = (handle->rx_buffer[0] << 8) | handle->rx_buffer[1];
         handle->temp =
             ((handle->rx_buffer[2] & 0x7F) << 8) | handle->rx_buffer[3];
@@ -129,10 +141,7 @@ static void finish_rx(dht22* handle) {
         if (handle->rx_buffer[2] & 0x80) { // sign bit
             handle->temp *= -1;            // negative result
         }
-    } else {
-        handle->error_flags.parity = true;
     }
-    handle->state = DHT22_FINISHED;
 }
 
 #define BETWEEN(a, b) (dt >= a && dt <= b)
